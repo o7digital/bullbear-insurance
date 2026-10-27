@@ -1,0 +1,5 @@
+---
+import Page from '../layouts/Page.astro';
+import blocks from '../data/privacy.json';
+---
+<Page title="Aviso de privacidad" description="Aviso de privacidad publicado por Bull & Bear Insurance Broker, fechado el 1 de enero de 2024."><div class="legal-copy"><p class="source-note">Reproducción del aviso publicado en el sitio actual. Su actualización y adecuación a futuros proveedores de formularios deberán validarse antes de activar la recopilación de datos.</p>{blocks.map(block => block.tag === 'li' ? <p>• {block.text}</p> : <p class={block.text === block.text.toUpperCase() ? 'legal-heading' : undefined}>{block.text}</p>)}</div></Page>

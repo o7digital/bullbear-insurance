@@ -1,0 +1,62 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "astro",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "installCommand": "npm ci",
+  "trailingSlash": true,
+  "git": {
+    "deploymentEnabled": {
+      "main": false
+    }
+  },
+  "redirects": [
+    {
+      "source": "/formulario-danos/",
+      "destination": "/contacto/#interest-form",
+      "statusCode": 301
+    },
+    {
+      "source": "/formulario-cuidado-de-personas/",
+      "destination": "/contacto/#interest-form",
+      "statusCode": 301
+    },
+    {
+      "source": "/formulario-automoviles/",
+      "destination": "/contacto/#interest-form",
+      "statusCode": 301
+    },
+    {
+      "source": "/contacto-lineas-financieras/",
+      "destination": "/contacto/#interest-form",
+      "statusCode": 301
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'; form-action 'none'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"
+        }
+      ]
+    }
+  ]
+}

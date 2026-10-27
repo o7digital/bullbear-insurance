@@ -1,0 +1,122 @@
+---
+import ContactForm from "../components/ContactForm.astro";
+import SEO from "../components/SEO.astro";
+import Footer from "../components/Footer.astro";
+const solutions = [
+  {
+    number: '01', category: 'PERSONAS Y PATRIMONIO',
+    title: 'Protege lo que hace tu vida,', emphasis: 'tuya.',
+    description: 'Seguros de vida, gastos médicos, autos y soluciones para cuidar de los tuyos.',
+    list: ['Vida y salud', 'Autos', 'Protección patrimonial'],
+    href: '/service/cuidado-de-personas/', className: 'personal', value: 'Personas y patrimonio',
+  },
+  {
+    number: '02', category: 'EMPRESAS Y NEGOCIOS',
+    title: 'Tu esfuerzo merece,', emphasis: 'continuidad.',
+    description: 'Coberturas para enfrentar riesgos operativos y acompañar las decisiones de tu empresa.',
+    list: ['Daños', 'Responsabilidad civil', 'Autos y flotillas'],
+    href: '/service/danos/', className: 'business', value: 'Empresas y negocios',
+  },
+  {
+    number: '03', category: 'LÍNEAS FINANCIERAS',
+    title: 'Una perspectiva más,', emphasis: 'segura.',
+    description: 'Soluciones para riesgos profesionales, cibernéticos y de responsabilidad directiva.',
+    list: ['D&O', 'Riesgos cibernéticos', 'Responsabilidad profesional'],
+    href: '/service/lineas-financieras/', className: 'financial', value: 'Líneas financieras',
+  },
+];
+const faqs = [
+  { q: '¿Cómo elegir la cobertura adecuada?', a: 'El primer paso es identificar los riesgos más relevantes para tu situación. A partir de ahí, un asesor puede revisar alternativas y explicar sus coberturas, exclusiones y condiciones.' },
+  { q: '¿Puedo solicitar una revisión de mis seguros actuales?', a: 'Sí. Puedes plantear tus necesidades y solicitar una revisión de coberturas, sumas aseguradas y condiciones de las pólizas existentes.' },
+  { q: '¿Qué sucede cuando necesito usar mi seguro?', a: 'Cada producto y aseguradora tiene procesos específicos. Es importante conocerlos de antemano y contar con los canales adecuados para iniciar un reporte o una reclamación.' },
+];
+---
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <SEO title="Bull & Bear Insurance Broker | Seguros en México" description="Asesoría y administración de riesgos: seguros para personas, empresas, automóviles y líneas financieras en Ciudad de México." />
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <div class="concept-bar"><div class="container"><span>VISTA PREVIA · BULL &amp; BEAR</span><span>VERSIÓN EN REVISIÓN</span></div></div>
+  <header class="site-header" id="inicio">
+    <div class="header-content container">
+      <a class="logo" href="#inicio" aria-label="Bull and Bear Insurance Broker — inicio">
+        <span class="logo-symbol"><b>B</b><i>&amp;</i><b>B</b></span>
+        <span class="logo-text"><strong>BULL <em>&amp;</em> BEAR</strong><small>INSURANCE BROKER</small></span>
+      </a>
+      <nav class="nav" id="primary-navigation" aria-label="Navegación principal">
+        <a href="/sobre-nosotros/">Nosotros</a>
+        <a href="#soluciones">Soluciones</a>
+        <a href="#enfoque">Nuestro enfoque</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <a href="#contacto" class="header-cta"><span>Hablemos</span><span class="arrow-diagonal" aria-hidden="true">↗</span></a>
+      <button class="mobile-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menú"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-picture" aria-hidden="true"></div>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-lines" aria-hidden="true"><span></span><span></span></div>
+      <div class="hero-container container">
+        <div class="hero-main">
+          <p class="eyebrow hero-eyebrow"><span class="line"></span> BULL &amp; BEAR / INSURANCE BROKER</p>
+          <h1 id="hero-title">Lo que importa<br/>no se deja<br/><em>al azar.</em></h1>
+          <p class="hero-subtitle">Asesoría en seguros para proteger lo que has construido y todo lo que viene.</p>
+          <div class="hero-ctas">
+            <a href="#contacto" class="button button-cream">Solicitar asesoría <span aria-hidden="true">↗</span></a>
+            <a href="#soluciones" class="inline-link">Conoce nuestras soluciones <span aria-hidden="true">↘</span></a>
+          </div>
+        </div>
+        <div class="hero-vertical">EL FUTURO MERECE UNA MEJOR PERSPECTIVA</div>
+      </div>
+      <div class="hero-bottom container"><span>CIUDAD DE MÉXICO · MÉXICO</span><span>PROTECCIÓN CON PERSPECTIVA</span><a href="#filosofia">DESLIZA PARA DESCUBRIR <span aria-hidden="true">↓</span></a></div>
+    </section>
+
+    <section class="philosophy" id="filosofia">
+      <div class="container philosophy-grid">
+        <div class="philosophy-aside"><span class="section-number">01 / 04</span><span class="eyebrow dark"><span class="dot"></span> NUESTRA FILOSOFÍA</span></div>
+        <div class="philosophy-heading"><h2>El futuro se construye<br/>con <em>buenas decisiones.</em></h2></div>
+        <div class="philosophy-copy"><p>Nuestra oferta de valor radica en la asesoría y asistencia en la administración de riesgos, a través de un equipo especializado y de amplia experiencia en el sector asegurador.</p><a class="line-link" href="#enfoque">Conoce nuestro enfoque <span aria-hidden="true">↗</span></a></div>
+        <div class="philosophy-mark" aria-hidden="true">B<span>&amp;</span>B</div>
+      </div>
+    </section>
+
+    <section class="solutions" id="soluciones" aria-labelledby="solutions-title">
+      <div class="container">
+        <div class="section-head">
+          <div><p class="eyebrow dark"><span class="dot"></span> NUESTRAS ÁREAS DE ESPECIALIDAD</p><h2 id="solutions-title">Protección para<br/><em>cada dimensión</em> de tu mundo.</h2></div>
+          <p class="section-head-note">Tu vida cambia. Tus proyectos crecen. Tu protección también debería evolucionar.</p>
+        </div>
+        <div class="solution-cards">
+          {solutions.map((item) => (
+            <article class={`solution-card ${item.className}`}>
+              <div class="card-image" aria-hidden="true"><span class="card-graphic"></span><span class="card-image-label">B&B / {item.number}</span></div>
+              <div class="card-details"><p class="card-kicker"><span>{item.number}</span>{item.category}</p><h3>{item.title}<br/><em>{item.emphasis}</em></h3><p class="card-description">{item.description}</p><ul class="mini-tags" aria-label="Áreas de protección">{item.list.map((tag) => <li>{tag}</li>)}</ul><a href={item.href} class="card-go" aria-label={`Explorar: ${item.value}`}><span>Explorar solución</span><span class="circle-arrow" aria-hidden="true">↗</span></a></div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="statement" aria-labelledby="statement-title">
+      <div class="container statement-grid"><div class="statement-index"><p class="eyebrow on-dark"><span class="line"></span> UNA FORMA DISTINTA DE ASESORAR</p><div class="statement-orbit" aria-hidden="true"><span class="orbit-ring ring-one"></span><span class="orbit-ring ring-two"></span><span class="orbit-centre">B&amp;B</span></div></div><div><h2 id="statement-title">Menos incertidumbre.<br/><em>Más posibilidades.</em></h2><p>Convertimos escenarios complejos en decisiones más claras, con una visión enfocada en tus prioridades.</p><a class="line-link inverse" href="#contacto">Conversemos sobre tus necesidades <span aria-hidden="true">↗</span></a></div></div>
+    </section>
+
+    <section class="process" id="enfoque" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section-head process-head"><div><p class="eyebrow dark"><span class="dot"></span> NUESTRO ENFOQUE</p><h2 id="process-title">La tranquilidad<br/><em>se diseña.</em></h2></div><p class="section-head-note">Cada decisión comienza por entender qué deseas proteger.</p></div>
+        <div class="process-rows"><div class="process-row"><span class="process-no">01</span><h3>Comparar</h3><p>Presentamos opciones del mercado asegurador y sus diferenciadores. Nosotros te asesoramos, tú eliges.</p><span class="process-icon" aria-hidden="true">↗</span></div><div class="process-row"><span class="process-no">02</span><h3>Analizar</h3><p>Nuestro equipo técnico analiza los riesgos para orientar su colocación.</p><span class="process-icon" aria-hidden="true">↗</span></div><div class="process-row"><span class="process-no">03</span><h3>Acompañar</h3><p>Brindamos asesoría y gestión de siniestros de acuerdo con lo contratado en cada póliza.</p><span class="process-icon" aria-hidden="true">↗</span></div></div>
+      </div>
+    </section>
+
+    <section class="contact" id="contacto" aria-labelledby="contact-title"><div class="container contact-grid"><div class="contact-copy"><p class="eyebrow on-dark"><span class="line"></span> EMPECEMOS UNA CONVERSACIÓN</p><h2 id="contact-title">Tu próxima gran<br/>decisión merece<br/><em>estar protegida.</em></h2><p>Cuéntanos qué necesitas cuidar. Diseñemos el siguiente paso.</p><div class="contact-lines"><a href="mailto:contacto@bullandbear-insurancebroker.com">contacto@bullandbear-insurancebroker.com <span>↗</span></a><a href="tel:+525515100605">+52 55 1510 0605 <span>↗</span></a></div></div><ContactForm /></div></section>
+
+    <section class="faq" aria-labelledby="faq-title"><div class="container faq-grid"><div><p class="eyebrow dark"><span class="dot"></span> PREGUNTAS FRECUENTES</p><h2 id="faq-title">Las preguntas<br/><em>correctas importan.</em></h2></div><div class="faq-items">{faqs.map((item, i) => <details class="faq-item" open={i===0}><summary>{item.q}<span class="faq-plus" aria-hidden="true">+</span></summary><p>{item.a}</p></details>)}</div></div></section>
+  </main>
+  <Footer />
+</body>
+</html>

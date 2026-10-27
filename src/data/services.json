@@ -1,0 +1,215 @@
+[
+  {
+    "slug": "cuidado-de-personas",
+    "title": "Cuidado de personas",
+    "description": "Seguros de gastos médicos mayores, vida y accidentes personales.",
+    "topics": [
+      "Gastos médicos mayores",
+      "Vida",
+      "Accidentes personales"
+    ],
+    "source": "https://bullandbear-insurancebroker.com/service/cuidado-de-personas/"
+  },
+  {
+    "slug": "danos",
+    "title": "Daños",
+    "description": "Protección para los riesgos propios de empresas, infraestructura y proyectos.",
+    "topics": [
+      "Corporativos",
+      "Infraestructura",
+      "Fabricación",
+      "Hotelería",
+      "Construcción",
+      "Aviación",
+      "PyMES",
+      "Marítimo",
+      "Logística"
+    ],
+    "source": "https://bullandbear-insurancebroker.com/service/danos/"
+  },
+  {
+    "slug": "automoviles",
+    "title": "Automóviles",
+    "description": "Soluciones de protección para vehículos particulares, flotillas y distintos usos.",
+    "topics": [
+      "Flotillas",
+      "Particular",
+      "Plataformas de transporte privado",
+      "Transporte público",
+      "Blindados",
+      "Clásicos y antiguos",
+      "Importados, fronterizos y legalizados",
+      "Equipo pesado"
+    ],
+    "source": "https://bullandbear-insurancebroker.com/service/automoviles/"
+  },
+  {
+    "slug": "lineas-financieras",
+    "title": "Líneas financieras",
+    "description": "Soluciones para riesgos cibernéticos, responsabilidad directiva y servicios profesionales.",
+    "topics": [
+      "Cyber Insurance — Protección de datos",
+      "Instituciones de capital privado",
+      "D&O — Consejeros y directivos",
+      "Crime — Fraude corporativo",
+      "Responsabilidad civil profesional"
+    ],
+    "source": "https://bullandbear-insurancebroker.com/service/lineas-financieras/"
+  },
+  {
+    "slug": "protector-de-capital-privado",
+    "title": "Protector de capital privado",
+    "description": "Protección de la responsabilidad de la administración y los servicios profesionales de fondos de capital privado.",
+    "topics": [
+      "Responsabilidad de la administración",
+      "Servicios profesionales",
+      "Prácticas laborales",
+      "Reclamos bursátiles",
+      "Obligaciones fiduciarias",
+      "Gestión de empresas de portafolio y estrategia de salida"
+    ],
+    "source": "https://bullandbear-insurancebroker.com/service/protector-de-capital-privado/"
+  },
+  {
+    "slug": "obra-civil",
+    "title": "Obra civil",
+    "description": "Seguro para obras no concluidas, dirigido a propietarios y constructores.",
+    "topics": [
+      "Bienes y actividades de la obra civil",
+      "Equipo y maquinaria",
+      "Responsabilidad civil por daños a terceros"
+    ],
+    "source": "https://bullandbear-insurancebroker.com/service/obra-civil/"
+  },
+  {
+    "slug": "transporte-de-mercancias",
+    "title": "Transporte de mercancías",
+    "description": "Protección de la carga durante el transporte desde el origen hasta el destino.",
+    "topics": [
+      "Transporte terrestre",
+      "Transporte marítimo",
+      "Transporte aéreo",
+      "Maniobras de carga y descarga"
+    ],
+    "source": "https://bullandbear-insurancebroker.com/service/transporte-de-mercancias/"
+  },
+  {
+    "slug": "flotillas-vehiculares",
+    "title": "Flotillas vehiculares",
+    "description": "Asesoría para proteger los vehículos de tu empresa de acuerdo con su tipo y uso.",
+    "topics": [
+      "Daños materiales",
+      "Robo total",
+      "Responsabilidad civil",
+      "Gastos médicos a ocupantes",
+      "Protección legal"
+    ],
+    "source": "https://bullandbear-insurancebroker.com/service/flotillas-vehiculares/"
+  },
+  {
+    "slug": "paquetes-empresariales-y-pymes",
+    "title": "Paquetes empresariales y PyMES",
+    "description": "Protección de negocios de acuerdo con su tamaño, actividades y riesgos.",
+    "topics": [
+      "Incendio y riesgos naturales",
+      "Responsabilidad civil",
+      "Dinero y valores",
+      "Robo de mercancías",
+      "Maquinaria y equipo electrónico"
+    ],
+    "source": "https://bullandbear-insurancebroker.com/service/paquetes-empresariales-y-pymes/"
+  },
+  {
+    "slug": "beneficios-para-empleados",
+    "title": "Beneficios para empleados",
+    "description": "Planes para empleados, sindicatos, instituciones y colectividades.",
+    "topics": [
+      "Vida",
+      "Gastos médicos menores y mayores",
+      "Accidentes personales",
+      "Membresías de salud y asistencia"
+    ],
+    "source": "https://bullandbear-insurancebroker.com/service/beneficios-para-empleados/"
+  },
+  {
+    "slug": "seguro-de-vida",
+    "title": "Seguro de vida",
+    "description": "Protección para la economía familiar ante eventos imprevistos.",
+    "topics": [
+      "Protección",
+      "Ahorro",
+      "Retiro"
+    ],
+    "source": "https://bullandbear-insurancebroker.com/service/seguro-de-vida/"
+  },
+  {
+    "slug": "seguro-de-hogar",
+    "title": "Seguro de hogar",
+    "description": "Protección para el hogar, su estructura y sus contenidos.",
+    "topics": [
+      "Estructura y contenidos",
+      "Robo",
+      "Incendio",
+      "Catástrofes naturales"
+    ],
+    "source": "https://bullandbear-insurancebroker.com/service/seguro-de-hogar/"
+  },
+  {
+    "slug": "seguro-medico",
+    "title": "Seguro médico",
+    "description": "Soluciones para resguardar la economía familiar ante una emergencia médica.",
+    "topics": [
+      "Gastos médicos y quirúrgicos",
+      "Análisis y medicamentos",
+      "Alternativas de cobertura nacional e internacional"
+    ],
+    "source": "https://bullandbear-insurancebroker.com/service/seguro-medico/"
+  },
+  {
+    "slug": "car-insurance",
+    "title": "Seguro de auto y moto",
+    "description": "Alternativas de cobertura para proteger tu vehículo y a sus ocupantes.",
+    "topics": [
+      "Daños a terceros",
+      "Robo total y parcial",
+      "Gastos médicos a ocupantes",
+      "Asistencia vial y legal"
+    ],
+    "source": "https://bullandbear-insurancebroker.com/service/car-insurance/"
+  },
+  {
+    "slug": "responsabilidad-civil-2",
+    "title": "Responsabilidad civil",
+    "description": "Protección para empresas y personas físicas con actividad empresarial.",
+    "topics": [
+      "Actos fraudulentos",
+      "Consejeros y directivos",
+      "Fondos de capital privado",
+      "Protección de datos"
+    ],
+    "source": "https://bullandbear-insurancebroker.com/service/responsabilidad-civil-2/"
+  },
+  {
+    "slug": "aeronaves-embarcaciones-o-drones-2",
+    "title": "Aeronaves, embarcaciones o drones",
+    "description": "Asesoría para la suscripción de riesgos especiales.",
+    "topics": [
+      "Aeronaves",
+      "Embarcaciones",
+      "Drones"
+    ],
+    "source": "https://bullandbear-insurancebroker.com/service/aeronaves-embarcaciones-o-drones-2/"
+  },
+  {
+    "slug": "equipo-de-contratistas",
+    "title": "Equipo de contratistas",
+    "description": "Protección de maquinaria y equipo propio o arrendado durante proyectos y traslados.",
+    "topics": [
+      "Equipo de contratistas",
+      "Equipo pesado",
+      "Construcción y montaje",
+      "Traslado de equipo"
+    ],
+    "source": "https://bullandbear-insurancebroker.com/service/equipo-de-contratistas/"
+  }
+]

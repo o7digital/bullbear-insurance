@@ -1,0 +1,21 @@
+name: Website quality
+on:
+  push:
+    branches-ignore: [main]
+  pull_request:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npm audit --audit-level=moderate
+      - run: npx playwright install --with-deps chromium
+      - run: npm run preview -- --port 4387
+      - run: curl --retry 20 --retry-connrefused --retry-delay 1 --fail http://127.0.0.1:4387/ > /dev/null
+      - run: npm test

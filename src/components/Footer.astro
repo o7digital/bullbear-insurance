@@ -1,0 +1,4 @@
+---
+import { site } from '../lib/site';
+---
+<footer class="site-footer"><div class="container"><div class="footer-top"><span>BULL &amp; BEAR INSURANCE BROKER</span><a href="#inicio">VOLVER ARRIBA ↑</a></div><div class="footer-wordmark">BULL<span>&amp;</span>BEAR</div><nav class="footer-links" aria-label="Información y servicios"><a href="/sobre-nosotros/">Nosotros</a><a href="/service/cuidado-de-personas/">Cuidado personal</a><a href="/service/danos/">Daños</a><a href="/service/automoviles/">Autos</a><a href="/service/lineas-financieras/">Líneas financieras</a><a href="/blog/">Artículos</a><a href="/reclutamiento/">Reclutamiento</a><a href="/contacto/">Contacto</a><a href="/aviso-de-privacidad/">Aviso de privacidad</a></nav><address>{site.address}</address><div class="footer-bottom"><a href={`mailto:${site.email}`}>{site.email}</a><a href="tel:+525515100605">{site.phone}</a><span>© {new Date().getFullYear()} BULL &amp; BEAR</span></div></div></footer>

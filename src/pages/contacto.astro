@@ -1,0 +1,6 @@
+---
+import Page from '../layouts/Page.astro';
+import ContactForm from '../components/ContactForm.astro';
+import { site } from '../lib/site';
+---
+<Page title="Contacto" description="Conversemos sobre tus necesidades de protección. Contacta con Bull & Bear Insurance Broker en Ciudad de México."><div class="contact-page-grid"><div><h2>Empecemos una conversación</h2><p><a href={`mailto:${site.email}`}>{site.email}</a></p><p><a href="tel:+525515100605">{site.phone}</a></p><address>{site.address}</address><p>El formulario se presenta en modo demostración. No se envía ni guarda la información introducida.</p></div><ContactForm /></div></Page>

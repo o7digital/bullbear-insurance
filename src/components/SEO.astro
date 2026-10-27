@@ -1,0 +1,39 @@
+---
+import { site, indexable } from '../lib/site';
+const { title, description, type = 'website', service } = Astro.props;
+const canonical = new URL(Astro.url.pathname, site.url).href;
+const assetOrigin = import.meta.env.VERCEL_URL ? `https://${import.meta.env.VERCEL_URL}` : site.url;
+const schema = {
+  '@context': 'https://schema.org', '@graph': [
+    { '@type': 'InsuranceAgency', '@id': `${site.url}/#agency`, name: site.name, url: `${site.url}/`, telephone: '+525515100605', email: site.email,
+      address: { '@type': 'PostalAddress', streetAddress: 'Av. Insurgentes Sur 716, Piso 8, Col. Del Valle', addressLocality: 'Benito Juárez, Ciudad de México', postalCode: '03103', addressCountry: 'MX' } },
+    { '@type': 'WebPage', '@id': canonical, url: canonical, name: title, description, inLanguage: 'es-MX', isPartOf: { '@id': `${site.url}/#website` } },
+    { '@type': 'WebSite', '@id': `${site.url}/#website`, name: site.name, url: `${site.url}/` },
+    ...(service ? [{ '@type': 'Service', name: service, url: canonical, provider: { '@id': `${site.url}/#agency` } }] : [])
+  ]
+};
+---
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="light" />
+<meta name="theme-color" content="#15221f" />
+<meta name="robots" content={indexable ? 'index, follow' : 'noindex, nofollow'} />
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+<meta property="og:type" content={type} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:site_name" content={site.name} />
+<meta property="og:locale" content="es_MX" />
+<meta property="og:image" content={`${assetOrigin}/assets/architecture-hero.webp`} />
+<meta property="og:image:alt" content="Arquitectura contemporánea — Bull & Bear" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+<link rel="preload" href="/assets/architecture-hero.webp" as="image" />
+<link rel="preload" href="/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/fonts/eb-garamond-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="/styles.css" />
+<script type="application/ld+json" set:html={JSON.stringify(schema).replace(/</g, '\\u003c')} />
+<script src="/site.js" defer></script>

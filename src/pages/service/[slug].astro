@@ -1,0 +1,12 @@
+---
+import Page from '../../layouts/Page.astro';
+import services from '../../data/services.json';
+export function getStaticPaths() { return services.map(service => ({ params: { slug: service.slug }, props: { service } })); }
+const { service } = Astro.props;
+---
+<Page title={service.title} description={service.description} service={service.title}>
+<h2>Áreas de protección</h2><ul>{service.topics.map(topic => <li>{topic}</li>)}</ul>
+<p>Las coberturas, exclusiones, límites y condiciones dependen del producto y de la póliza contratada. Consulta con un asesor para revisar las alternativas adecuadas a tus necesidades.</p>
+<a class="button" href="/contacto/">Solicitar información <span aria-hidden="true">↗</span></a>
+<h2>Otras soluciones</h2><ul class="service-links">{services.filter(s => s.slug !== service.slug).map(s => <li><a href={`/service/${s.slug}/`}>{s.title}</a><p>{s.description}</p></li>)}</ul>
+</Page>

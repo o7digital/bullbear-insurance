@@ -1,0 +1,5 @@
+---
+import Page from '../layouts/Page.astro';
+import posts from '../data/posts.json';
+---
+<Page title="Artículos" description="Artículos de Bull & Bear Insurance Broker sobre protección y seguros."><ul class="service-links">{posts.map(post => <li><h2><a href={`/${post.slug}/`}>{post.title}</a></h2><p>{post.blocks.find(b => b.tag === 'p')?.text.slice(0,240)}</p></li>)}</ul></Page>
