@@ -13,3 +13,5 @@ Sources consultées : https://bullandbear-insurancebroker.com/ et ses sitemaps `
 - Quatre anciennes URL de formulaire reçoivent une 301 vers le formulaire de contact. La consolidation définitive et le traitement des pages de démonstration WordPress attendent des données Search Console.
 
 Le formulaire reste une démonstration à la demande explicite du client. Formspree est différé. DatoCMS et Olivia ne sont pas activés.
+
+Mise à jour du logo : variante blanche officielle récupérée depuis `https://bullandbear-insurancebroker.com/wp-content/uploads/2023/03/logo-03.png`, intégrée sans modification au header et au footer. Navigation du header affichée en majuscules.
