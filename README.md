@@ -34,6 +34,8 @@ Branche : `feat/atelier-v2-preview`, sans modification de `main`. L'alias `bullb
 
 Le Studio garde les changements en brouillon avec leurs cinq traductions ; publier vérifie leur cohérence, les prépare dans Directus et déclenche un build Vercel. Un lancement du build n'est pas une confirmation de réussite : vérifier Vercel avant d'annoncer la nouvelle version disponible. La prévisualisation garde `noindex, nofollow`, y compris dans les en-têtes HTTP et robots.txt.
 
+Les publications Git et les hooks Vercel exigent un dernier commit signé et vérifié par GitHub. Conserver cette protection ; utiliser un commit vérifié pour chaque nouvelle version de code. Au 10 novembre 2026, GitHub Actions ne peut pas démarrer en raison du blocage de facturation du compte GitHub ; les contrôles ont été exécutés localement, y compris un build avec Node 24 et le fuseau UTC de Vercel.
+
 Déploiement manuel du frontend : `vercel deploy --yes`, puis vérifier l'alias et les routes. Déploiement du Studio : `railway up cms --path-as-root --service studio --detach`, puis vérifier `/health`. Les identifiants d'infrastructure non secrets sont dans `cms/deployment.json`.
 
 Voir [le guide du backend](cms/README.md) pour les accès, le bootstrap et les sauvegardes.
