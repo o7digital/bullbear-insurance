@@ -5,16 +5,18 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev --host 0.0.0.0",
-    "build": "astro build",
+    "build": "astro build && node scripts/localize.mjs",
     "preview": "astro preview --host 0.0.0.0",
-    "test": "playwright test"
+    "test": "playwright test",
+    "test:cms": "node --test cms/*.test.mjs cms/studio/*.test.mjs"
   },
   "dependencies": {
     "astro": "^7.4.2"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.14.0",
-    "@playwright/test": "^1.64.1"
+    "@playwright/test": "^1.64.1",
+    "linkedom": "^0.18.15"
   },
   "engines": {
     "node": "24.x"

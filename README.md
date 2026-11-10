@@ -1,31 +1,39 @@
-# Bull & Bear — Atelier V2
+# Bull & Bear Insurance Broker
 
-Projet fourni par le client, conservant la direction artistique V2. Version de prévisualisation uniquement.
+Site Astro, direction artistique Atelier V2, et Studio de contenu privé adossé à Directus sur Railway.
 
-## Développement
+- Site de travail : https://bullbear-insurance-preview.vercel.app/
+- Studio : https://studio-production-2fc1.up.railway.app/
+- Directus : https://directus-production-1a26.up.railway.app/admin
 
-Node 24, puis `npm ci`, `npm run dev` et `npm run build`.
+## Développement et vérification
 
-Pour les tests : `npm run preview -- --port 4387`, attendre le démarrage, puis `npm test`. Installer Chromium au besoin avec `npx playwright install chromium`. `TEST_BASE_URL` permet de tester une autre URL.
+Node 24, `npm ci`, `npm run build`, puis `npm run preview -- --port 4387`. `npm test` vérifie les routes, les liens, les six langues, le consentement, les erreurs du formulaire, les métadonnées, l'accessibilité et les formats 320–1440 px. Installer le navigateur de test avec `npx playwright install chromium`. `npm run test:cms` vérifie les droits, les brouillons, les traductions et les soumissions. Les liens de consultation doivent être ouverts dans Firefox sur macOS : `open -a Firefox <url>`.
 
-## Contenu et routes
+`npm run dev` sert les composants espagnols ; la construction produit les six versions statiques. Sans environnement Directus, le build utilise les contenus et traductions versionnés. Avec `DIRECTUS_URL`, le jeton de lecture est obligatoire ; une erreur CMS, une image inaccessible ou une traduction manquante/interrompue fait échouer le build et conserve le déploiement précédent.
 
-Les données validées contre le site existant sont dans `src/data/`. Les captures et `Preview-Interactiva.html` sont les références originales ; elles ne sont pas publiées. L'inventaire historique et les décisions de migration se trouvent dans `docs/url-inventory.md`. Les coordonnées viennent des pages Contacto et Aviso de privacidad. Les contenus de thème, faux avis et faux membres d'équipe n'ont pas été importés.
+## Contenus et langues
 
-L'avis de confidentialité est une reproduction du document publié en 2024 : aucune validation juridique nouvelle n'est prétendue. Les services sont des résumés éditoriaux des pages existantes, à approuver avant production.
+L'espagnol conserve les URL historiques. Les versions anglaise, française, italienne, allemande et russe sont sous `/en/`, `/fr/`, `/it/`, `/de/` et `/ru/`. Les pages générales utilisent `about`, `contact`, `privacy`, `careers` et `insights` ; les services et articles conservent leurs identifiants historiques sous chaque préfixe. Le sélecteur conserve la page consultée. 25 pages × 6 langues = 150 routes, avec canonical, hreflang, sitemap et données structurées localisés.
 
-## Déploiement
+Les 17 services, deux articles historiques et coordonnées proviennent du site source. Le nouvel export WordPress est conservé dans `docs/source/wordpress-pages-2026-11-09.json` ; les anciens inventaires restent archivés. Les contenus factices du thème n'ont pas été importés. L'avis espagnol original de 2024 est conservé avec un complément décrivant le formulaire de ce site ; les traductions sont indicatives. Les articles historiques conservent leur date et leur mention d'archive.
 
-Projet Vercel séparé : `bullbear-insurance-v2-preview`, connecté à GitHub. Déployer exclusivement en preview avec `vercel deploy --yes`. Ne pas utiliser `--prod`, ajouter le domaine officiel ou changer son DNS sans autorisation explicite. La branche de travail est `feat/atelier-v2-preview` ; les déploiements Git de `main` sont désactivés dans `vercel.json`.
+Les textes affichés sont indexés par une clé stable calculée sur la source espagnole dans `cms/content-inventory.json`. Le Studio édite les contenus existants par page, les titres, descriptions SEO, services, articles, FAQ, éléments partagés et textes de formulaire. Ajouter une nouvelle structure de page ou une nouvelle route reste un changement de code ; le Studio ne présente pas de bouton de création fictif.
 
-La prévisualisation porte `noindex, nofollow` en HTML et en en-tête HTTP, et robots.txt interdit l'exploration. Le sitemap garde les futures URL canoniques historiques. Avant une production autorisée : revue du contenu et des obligations légales, Formspree, vérification des redirections avec les données Search Console, puis mise à jour des en-têtes Vercel et de `PRODUCTION_INDEXING_APPROVED`. Ce drapeau seul ne retire pas le blocage HTTP.
+## Frontend et backend
 
-## Formulaire et intégrations
+Le frontend Vercel garde le design, le rendu statique, les interactions, le sélecteur de langue et les métadonnées. Aucun jeton Directus n'est envoyé au navigateur public. Les images du CMS sont copiées au build dans les assets statiques de Vercel.
 
-Selon l'instruction du client, le formulaire reste une démo sans envoi, stockage, suivi ni cookie. Il utilise `method="dialog"`, une validation navigateur et une simulation JavaScript avec remise à zéro. Aucun backend n'est activé. Formspree sera raccordé ensuite : identifiant du formulaire, destinataire vérifié, consentement final, filtrage antispam, politique de conservation et test d'envoi seront nécessaires. La CSP `form-action 'none'` bloque actuellement toute soumission réseau.
+Directus conserve les textes/traductions, brouillons, images et demandes privées dans PostgreSQL. Le Studio Railway gère l'authentification Directus, les sessions chiffrées HttpOnly, les traductions automatiques, la relecture, l'enregistrement des demandes et leur suivi. Les demandes ont un statut, des notes et une suppression définitive. Aucun envoi d'email ni connecteur CRM externe n'est annoncé ou activé.
 
-Les contrats DatoCMS et Olivia sont dans `src/lib/integrations.ts`. Aucun SDK, compte, appel réseau ou service payant n'est activé. Les noms de variables réservés sont décrits dans `.env.example` ; ne jamais versionner de secret.
+Le formulaire envoie à `/api/contact` sur le même domaine. La fonction Vercel relaie vers Railway avec un secret serveur ; le service Railway valide le consentement, les champs, la langue, le honeypot et une limite de soumissions. Le jeton utilisé ne peut que créer des demandes, sans lecture. Le consentement et sa version sont enregistrés. Les données ne sont pas stockées dans le navigateur.
 
-## Dépendances
+## Publication
 
-L'archive utilisait Astro 5. L'installation initiale résolvait Astro 5.18.2 avec cinq alertes npm (dont une critique). Mise à niveau vers Astro 7.4.2 pour corriger ces alertes, sans refonte du design. Le rendu est entièrement statique ; aucune optimisation d'image à la demande ni fonction serveur.
+Branche : `feat/atelier-v2-preview`, sans modification de `main`. L'alias `bullbear-insurance-preview.vercel.app` est lié à cette branche. Le hook du Studio cible exclusivement cette branche. Les secrets Vercel sont limités à **Preview / cette branche**. La publication ne change pas le domaine officiel ni son DNS. L'environnement Railway s'appelle `production` car il héberge le Studio actif ; le site reste la prévisualisation Vercel non indexable.
+
+Le Studio garde les changements en brouillon avec leurs cinq traductions ; publier vérifie leur cohérence, les prépare dans Directus et déclenche un build Vercel. Un lancement du build n'est pas une confirmation de réussite : vérifier Vercel avant d'annoncer la nouvelle version disponible. La prévisualisation garde `noindex, nofollow`, y compris dans les en-têtes HTTP et robots.txt.
+
+Déploiement manuel du frontend : `vercel deploy --yes`, puis vérifier l'alias et les routes. Déploiement du Studio : `railway up cms --path-as-root --service studio --detach`, puis vérifier `/health`. Les identifiants d'infrastructure non secrets sont dans `cms/deployment.json`.
+
+Voir [le guide du backend](cms/README.md) pour les accès, le bootstrap et les sauvegardes.

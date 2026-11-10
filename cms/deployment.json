@@ -1,0 +1,11 @@
+{
+  "projectId": "30ecff98-926e-42ce-ad1a-b8304f654d15",
+  "environmentId": "a730abf4-896b-43c1-a971-d57e39cf9810",
+  "directusServiceId": "0599a4ef-84cc-4cd0-a074-3b8e7e27ffe3",
+  "databaseServiceId": "bdbc8cc9-0754-4566-aac5-f3c7e7732dd0",
+  "url": "https://directus-production-1a26.up.railway.app",
+  "website": "https://bullbear-insurance-preview.vercel.app",
+  "branch": "feat/atelier-v2-preview",
+  "studioServiceId": "9326c574-833a-4870-8f98-b289a1e4adb2",
+  "studioUrl": "https://studio-production-2fc1.up.railway.app"
+}

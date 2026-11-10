@@ -47,21 +47,59 @@ for (const width of [1440, 390, 320, 768]) {
     }
   });
 }
-test('demo form validates consent and never sends data', async ({ page }) => {
-  await page.goto('/#contacto');
-  const requests: string[] = [];
-  page.on('request',r=>{if(r.method()!=='GET')requests.push(r.url());});
-  await page.locator('#name').fill('Prueba de demostración');
-  await page.locator('#email').fill('demo@example.com');
-  await page.locator('#service').selectOption({label:'Asesoría general'});
-  await page.getByRole('button',{name:'Probar formulario'}).click();
-  await expect(page.locator('#form-message')).toBeEmpty();
+test('contact validates consent, sends the correct locale and reports failures', async ({ page }) => {
+  for (const locale of ['es', 'en', 'fr', 'it', 'de', 'ru']) {
+    await page.goto(locale === 'es' ? '/contacto/' : `/${locale}/contact/`);
+    let submitted: any;
+    await page.route('**/api/contact', async route => {
+      submitted = route.request().postDataJSON();
+      await route.fulfill({ status: 201, contentType: 'application/json', body: '{"ok":true}' });
+    });
+    await page.locator('#name').fill('Website quality check');
+    await page.locator('#email').fill('qa@example.com');
+    await page.locator('#service').selectOption('general');
+    await page.locator('.form-submit').click();
+    expect(submitted).toBeUndefined();
+    await page.locator('[name="consent"]').check();
+    await page.locator('.form-submit').click();
+    await expect(page.locator('#name')).toHaveValue('');
+    expect(submitted).toEqual({name:'Website quality check',email:'qa@example.com',service:'general',consent:true,website:'',locale});
+    await expect(page.locator('#form-message')).toHaveText(await page.locator('#interest-form').getAttribute('data-success') || '');
+    await page.unroute('**/api/contact');
+  }
+  await page.route('**/api/contact', route => route.fulfill({status:503,body:'{}'}));
+  await page.locator('#name').fill('Retry check');
+  await page.locator('#email').fill('qa@example.com');
+  await page.locator('#service').selectOption('general');
   await page.locator('[name="consent"]').check();
-  await page.getByRole('button',{name:'Probar formulario'}).click();
-  await expect(page.locator('#form-message')).toContainText('No se ha enviado ni guardado');
-  await expect(page.locator('#name')).toHaveValue('');
-  expect(requests).toEqual([]);
-  expect(await page.evaluate(()=>Object.keys(localStorage))).toEqual([]);
-  await page.locator('.faq-item summary').nth(1).click();
-  await expect(page.locator('.faq-item').nth(1)).toHaveAttribute('open', '');
+  await page.locator('.form-submit').click();
+  await expect(page.locator('#form-message')).toHaveText(await page.locator('#interest-form').getAttribute('data-error') || '');
+  await expect(page.locator('#name')).toHaveValue('Retry check');
 });
+
+for (const locale of ['en','fr','it','de','ru']) {
+  test(`all ${locale} routes, language switching and mobile layout`, async ({ page, request }) => {
+    const localized = (path: string) => `/${locale}${path.replace('/sobre-nosotros/', '/about/').replace('/contacto/', '/contact/').replace('/aviso-de-privacidad/', '/privacy/').replace('/reclutamiento/', '/careers/').replace('/blog/', '/insights/')}`;
+    for (const path of routes) {
+      const target = localized(path);
+      expect((await request.get(target)).status(),target).toBe(200);
+    }
+    await page.goto(localized('/service/danos/'));
+    await expect(page.locator('html')).toHaveAttribute('lang',locale);
+    await expect(page.locator('link[rel="alternate"][hreflang]')).toHaveCount(7);
+    await page.locator('.language-switch a[lang="fr"]').click();
+    await expect(page).toHaveURL(/\/fr\/service\/danos\/$/);
+    for (const width of [1440,390,320]) {
+      await page.setViewportSize({width,height:1000});
+      for (const path of ['/','/contacto/','/service/lineas-financieras/','/aviso-de-privacidad/']) {
+        await page.goto(localized(path));
+        await page.evaluate(()=>document.fonts.ready);
+        expect(await page.evaluate(()=>document.documentElement.scrollWidth <= innerWidth),`${locale} ${path} ${width}`).toBe(true);
+      }
+      await page.goto(localized('/'));
+      const result=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();
+      expect(result.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}))).toEqual([]);
+      if (width===390) await page.screenshot({path:`test-results/home-${locale}.png`,fullPage:true});
+    }
+  });
+}

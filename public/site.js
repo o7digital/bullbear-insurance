@@ -6,7 +6,7 @@
     nav.classList.remove('is-open');
     toggle.classList.remove('is-open');
     toggle.setAttribute('aria-expanded', 'false');
-    toggle.setAttribute('aria-label','Abrir menú');
+    toggle.setAttribute('aria-label', toggle.dataset.openLabel || 'Abrir menú');
     document.body.classList.remove('menu-open');
   };
   toggle?.addEventListener('click', () => {
@@ -14,7 +14,7 @@
     nav?.classList.toggle('is-open', open);
     toggle.classList.toggle('is-open', open);
     toggle.setAttribute('aria-expanded', String(open));
-    toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+    toggle.setAttribute('aria-label', open ? (toggle.dataset.closeLabel || 'Cerrar menú') : (toggle.dataset.openLabel || 'Abrir menú'));
     document.body.classList.toggle('menu-open',open);
   });
   window.matchMedia('(min-width: 901px)').addEventListener('change', closeNav);
@@ -24,12 +24,20 @@
     const select=document.querySelector('#service');
     if(select) select.value=a.dataset.service || '';
   }));
-  document.querySelector('#interest-form')?.addEventListener('submit', (event)=>{
+  document.querySelector('#interest-form')?.addEventListener('submit', async (event)=>{
     event.preventDefault();
     const form=event.currentTarget;
     if(!form.reportValidity()) return;
     const out=document.querySelector('#form-message');
-    form.reset();
-    if(out) out.textContent='Demostración completada. No se ha enviado ni guardado ningún dato. La conexión con Formspree se realizará en una fase posterior.';
+    const button = form.querySelector('button[type="submit"]');
+    button.disabled = true;
+    if(out) out.textContent = form.dataset.pending;
+    try {
+      const response = await fetch(form.action, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name: form.elements.name.value, email: form.elements.email.value, service: form.elements.service.value, consent: form.elements.consent.checked, website: form.elements.website.value, locale: form.dataset.locale || 'es' }) });
+      if (!response.ok) throw new Error('Submission failed');
+      form.reset();
+      if(out) out.textContent = form.dataset.success;
+    } catch { if(out) out.textContent = form.dataset.error; }
+    finally { button.disabled = false; }
   });
 })();
