@@ -30,13 +30,13 @@ Le formulaire envoie à `/api/contact` sur le même domaine. La fonction Vercel 
 
 ## Publication
 
-Branche : `feat/atelier-v2-preview`, sans modification de `main`. L'alias `bullbear-insurance-preview.vercel.app` est lié à cette branche. Le hook du Studio cible exclusivement cette branche. Les secrets Vercel sont limités à **Preview / cette branche**. La publication ne change pas le domaine officiel ni son DNS. L'environnement Railway s'appelle `production` car il héberge le Studio actif ; le site reste la prévisualisation Vercel non indexable.
+Branche de publication : `main`, qui reprend la version Atelier V2 validée de `feat/atelier-v2-preview`. La branche par défaut GitHub et la branche Production Vercel sont `main`. Le Studio publie sur cette branche. Les variables serveur Directus et formulaire sont configurées dans l’environnement Production de ce projet Vercel ; les variables Preview de la branche de travail sont conservées. L’alias `bullbear-insurance-preview.vercel.app` sert la version Production du projet `bullbear-insurance-v2-preview`. Le site reste non indexable.
 
 Le Studio garde les changements en brouillon avec leurs cinq traductions ; publier vérifie leur cohérence, les prépare dans Directus et déclenche un build Vercel. Un lancement du build n'est pas une confirmation de réussite : vérifier Vercel avant d'annoncer la nouvelle version disponible. La prévisualisation garde `noindex, nofollow`, y compris dans les en-têtes HTTP et robots.txt.
 
 Les publications Git et les hooks Vercel exigent un dernier commit signé et vérifié par GitHub. Conserver cette protection ; utiliser un commit vérifié pour chaque nouvelle version de code. Au 10 novembre 2026, GitHub Actions ne peut pas démarrer en raison du blocage de facturation du compte GitHub ; les contrôles ont été exécutés localement, y compris un build avec Node 24 et le fuseau UTC de Vercel.
 
-Déploiement manuel du frontend : `vercel deploy --yes`, puis vérifier l'alias et les routes. Déploiement du Studio : `railway up cms --path-as-root --service studio --detach`, puis vérifier `/health`. Les identifiants d'infrastructure non secrets sont dans `cms/deployment.json`.
+Déploiement manuel du frontend depuis `main` : `vercel deploy --prod --yes`, puis vérifier l'alias et les routes. Déploiement du Studio : `railway up cms --path-as-root --service studio --detach`, puis vérifier `/health`. Les identifiants d'infrastructure non secrets sont dans `cms/deployment.json`.
 
 Voir [le guide du backend](cms/README.md) pour les accès, le bootstrap et les sauvegardes.
 

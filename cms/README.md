@@ -16,7 +16,7 @@ Le Studio accepte les administrateurs Directus et le rôle éditorial identifié
 2. Modifier les textes espagnols. Les titres formatés sont présentés visuellement.
 3. « Guardar y traducir » prépare un brouillon et les cinq traductions. Une erreur de traduction n'écrit aucun bundle partiel.
 4. Relire les traductions dans Idiomas. « Descartar borrador » rétablit les valeurs publiées.
-5. « Publicar cambios » contrôle les six langues puis déclenche Vercel sur la branche de travail. Vérifier la réussite du build avant d'annoncer la mise en ligne.
+5. « Publicar cambios » contrôle les six langues puis déclenche Vercel sur `main`. Vérifier la réussite du build avant d'annoncer la mise en ligne.
 
 Les images (logo/portada) enregistrées dans Identidad e imágenes sont incluses au prochain build. Les soumissions du formulaire apparaissent dans Solicitudes : suivi, notes internes et suppression. Aucun envoi de notification email n'est configuré. Le Studio utilise le fournisseur de traduction déjà employé dans Nathalie Studio, avec une copie de sa clé conservée uniquement dans Railway.
 
@@ -44,7 +44,7 @@ Le Studio se déploie via le CLI Railway avec `railway up cms --path-as-root --s
 
 ## Persistance et sauvegardes
 
-Volumes séparés pour `/var/lib/postgresql/data` et `/directus/uploads`. Les sauvegardes Railway quotidiennes et hebdomadaires sont activées pour les deux volumes. La restauration n'a pas été exercée pendant cette livraison. Ne pas supprimer la base ni les uploads lors d'un redéploiement. Les variables Railway contiennent le secret Directus, les comptes techniques, le secret de session, le fournisseur de traduction et le hook Vercel. Les variables Preview de Vercel sont limitées à la branche `feat/atelier-v2-preview`.
+Volumes séparés pour `/var/lib/postgresql/data` et `/directus/uploads`. Les sauvegardes Railway quotidiennes et hebdomadaires sont activées pour les deux volumes. La restauration n'a pas été exercée pendant cette livraison. Ne pas supprimer la base ni les uploads lors d'un redéploiement. Les variables Railway contiennent le secret Directus, les comptes techniques, le secret de session, le fournisseur de traduction et le hook Vercel. Les variables Production de Vercel connectent la publication de `main` à Directus et au proxy de formulaire. Les variables Preview de la branche `feat/atelier-v2-preview` sont conservées.
 
 Les historiques de publication Vercel permettent de retrouver le dernier déploiement réussi. Les versions de contenu et l'activité Directus permettent de retracer les modifications. La durée de conservation des demandes doit être gérée par le propriétaire dans Solicitudes/Directus ; aucune purge automatique n'est configurée.
 
