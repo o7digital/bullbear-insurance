@@ -55,3 +55,5 @@ Le formulaire général conserve Seguro Personal, Seguro empresarial et Protecci
 `npm run test:content` compare les textes retenus de chaque bloc source au HTML généré de la page correspondante. Il contrôle séparément tous les paragraphes des deux articles et de l’avis de confidentialité, les champs/choix des formulaires, chaque fichier importé et les liens PDF dans les six langues. `npm run test:cms` couvre les droits, traductions, brouillons, soumissions et la conservation des nouveaux champs. Les tests Playwright vérifient les routes, les liens internes, l’accessibilité, les formats d’écran et les formulaires spécialisés.
 
 Les nouveaux textes sont importés dans le Directus existant. Les anciens textes retirés du frontend sont archivés après vérification de l’absence de modifications/brouillons à conserver. Les utilisateurs, rôles, demandes et identifiants existants ne sont pas remplacés. Le frontend reste sur Vercel et le Studio/Directus sur Railway.
+
+Validation de cette correction : les 30 tests locaux passent ; le build Node 24 / UTC utilise le catalogue publié Directus (495 chaînes par langue). La publication est limitée à la branche de prévisualisation.
