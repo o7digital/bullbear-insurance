@@ -53,3 +53,4 @@
  .atelier-hero[data-hero-kind=source] #hero-title{font-size:clamp(38px,10.5vw,58px);line-height:1.04;letter-spacing:-1px}
  .atelier-hero[data-hero-kind=source] .hero-main{padding-bottom:145px}
 }
+@media(max-width:360px){.atelier-hero[data-hero-kind=atelier] .hero-main{padding-bottom:155px}}

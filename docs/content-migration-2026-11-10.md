@@ -57,3 +57,5 @@ Le formulaire général conserve Seguro Personal, Seguro empresarial et Protecci
 Les nouveaux textes sont importés dans le Directus existant. Les anciens textes retirés du frontend sont archivés après vérification de l’absence de modifications/brouillons à conserver. Les utilisateurs, rôles, demandes et identifiants existants ne sont pas remplacés. Le frontend reste sur Vercel et le Studio/Directus sur Railway.
 
 Validation du hero restauré : 30 tests locaux réussis, build Node 24 / UTC avec Directus publié, et comparaison visuelle avec les captures du hero architectural. Le contrôle protège son texte formaté et son affichage initial tout en vérifiant les trois diapositives supplémentaires dans les six langues.
+
+Sur les écrans de 320 px, l’espace sous les boutons du hero s’adapte aux traductions plus longues afin que la navigation du carrousel ne les recouvre pas. Le rendu de la capture de référence à 390 px et sur ordinateur conserve ses proportions.

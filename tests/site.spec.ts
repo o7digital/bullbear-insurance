@@ -106,8 +106,9 @@ test('approved architectural hero opens first and source themes remain additiona
     }
     expect(await page.locator('#hero-title').innerHTML()).toBe(approvedTitle);
     await expect(page.locator('#hero-subtitle')).toHaveText(approvedSubtitle);
-    await page.setViewportSize({width:390,height:900});
-    for(const index of [1,2,3,0]){
+    for(const width of [390,320]){
+     await page.setViewportSize({width,height:900});
+     for(const index of [1,2,3,0]){
       await page.locator(`[data-hero-control="${index}"]`).click();
       expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
       const clear=await page.evaluate(()=>{
@@ -116,7 +117,8 @@ test('approved architectural hero opens first and source themes remain additiona
         const ctas=document.querySelector('.hero-ctas')!.getBoundingClientRect();
         return controls.bottom<footer.top&&controls.top>=ctas.bottom;
       });
-      expect(clear,`${locale} slide ${index}: controls do not cover the approved hero text or links`).toBe(true);
+      expect(clear,`${locale} slide ${index} at ${width}px: controls do not cover the approved hero text or links`).toBe(true);
+     }
     }
     await page.setViewportSize({width:1440,height:1000});
     await page.locator('.nav-products summary').click();
