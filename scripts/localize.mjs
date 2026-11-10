@@ -2,6 +2,7 @@ import { readFile, writeFile, mkdir, readdir } from 'node:fs/promises';
 import { join, dirname } from 'node:path';
 import { scan } from './html-content.mjs';
 import { locales, localeNames, readTexts, hash, textKey } from '../cms/lib.mjs';
+import sourceContent from '../src/data/original-content.json' with { type: 'json' };
 
 const root = new URL('../dist/', import.meta.url).pathname;
 const inventory = new Map();
@@ -14,12 +15,13 @@ if (process.env.DIRECTUS_URL) {
   for (const key of ['hero', 'logo']) {
     const item = media.find(row => row.key === key);
     if (!item?.image) throw new Error(`Missing CMS image: ${key}`);
-    const format = key === 'hero' ? 'webp' : 'png';
+    const format = key === 'hero' ? 'jpg' : 'png';
     const response = await fetch(`${process.env.DIRECTUS_URL}/assets/${item.image}?format=${format}`, { headers: { Authorization: `Bearer ${process.env.DIRECTUS_READ_TOKEN}` }, signal: AbortSignal.timeout(60000) });
     if (!response.ok) throw new Error(`CMS image unavailable: ${key} (${response.status})`);
     const bytes = Buffer.from(await response.arrayBuffer());
     if (!bytes.length || !response.headers.get('content-type')?.startsWith('image/')) throw new Error(`Invalid CMS image: ${key}`);
-    await writeFile(join(root, 'assets', key === 'hero' ? 'architecture-hero.webp' : 'client-logo-light.png'), bytes);
+    const target = key === 'hero' ? sourceContent.pages['/'].widgets.find(widget=>widget.id==='96d11b5').images[0].src : '/assets/client-logo-light.png';
+    await writeFile(join(root, target), bytes);
   }
 }
 const cms = new Map(rows.map(row => [`${row.locale}:${row.key}`, row]));

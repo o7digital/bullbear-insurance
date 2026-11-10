@@ -1,0 +1,15 @@
+---
+const { home = false } = Astro.props;
+const start = home ? '#inicio' : '/';
+const contact = home ? '#contacto' : '/contacto/';
+---
+<header class="site-header" id="inicio"><div class="header-content container">
+  <a class="logo" href={start} aria-label="Bull & Bear — inicio"><img class="client-logo" src="/assets/client-logo-light.png" width="590" height="111" alt="Bull & Bear Insurance Broker" fetchpriority="high" /></a>
+  <nav class="nav" id="primary-navigation" aria-label="Navegación principal">
+    <a href={start}>Inicio</a><a href="/sobre-nosotros/">Sobre nosotros</a>
+    <details class="nav-products"><summary>Productos</summary><div class="nav-product-links"><a href="/service/lineas-financieras/">Lineas Financieras</a><a href="/service/cuidado-de-personas/">Cuidado personal</a><a href="/service/danos/">Daños</a><a href="/service/automoviles/">Autos</a></div></details>
+    <a href={contact}>Contacto</a>
+  </nav>
+  <a href={contact} class="header-cta">Contáctanos <span aria-hidden="true">↗</span></a>
+  <button class="mobile-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menú" data-open-label="Abrir menú" data-close-label="Cerrar menú"><span></span><span></span></button>
+</div></header>

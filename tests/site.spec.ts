@@ -43,7 +43,9 @@ for (const width of [1440, 390, 320, 768]) {
       await page.keyboard.press('Escape');
       await expect(page.locator('#primary-navigation')).toBeHidden();
       await page.getByRole('button',{name:'Abrir menú'}).click();
-      await page.locator('#primary-navigation a[href="#soluciones"]').click();
+      await page.locator('.nav-products summary').click();
+      await page.locator('.nav-product-links a').first().click();
+      await expect(page).toHaveURL(/\/service\/lineas-financieras\/$/);
       await expect(page.locator('#primary-navigation')).toBeHidden();
     }
   });
@@ -80,6 +82,27 @@ test('contact validates consent, sends the correct locale and reports failures',
   await page.locator('.form-submit').click();
   await expect(page.locator('#form-message')).toHaveText(await page.locator('#interest-form').getAttribute('data-error') || '');
   await expect(page.locator('#name')).toHaveValue('Retry check');
+});
+
+test('homepage slider uses the translated source messages and original destinations', async ({page})=>{
+  for(const locale of ['', 'en/', 'fr/', 'it/', 'de/', 'ru/']) {
+    await page.goto('/'+locale);
+    const bank=page.locator('[data-hero-slide]');
+    for(const index of [1,2,0]) {
+      const slide=bank.nth(index);
+      await page.locator(`[data-hero-control="${index}"]`).click();
+      await expect(page.locator('#hero-title')).toHaveText(await slide.locator('[data-slide-title]').innerText());
+      await expect(page.locator('#hero-subtitle')).toHaveText(await slide.locator('[data-slide-subtitle]').innerText());
+      await expect(page.locator('#hero-contact')).toHaveAttribute('href',await slide.locator('a').getAttribute('href')||'');
+      await expect(page.locator('[data-hero-image]:visible')).toHaveCount(1);
+      await expect(page.locator(`[data-hero-image="${index}"]`)).toBeVisible();
+      await expect(page.locator(`[data-hero-control="${index}"]`)).toHaveAttribute('aria-pressed','true');
+    }
+    await page.locator('.nav-products summary').click();
+    await expect(page.locator('.nav-product-links')).toBeVisible();
+    await page.keyboard.press('Escape');
+    await expect(page.locator('.nav-product-links')).toBeHidden();
+  }
 });
 
 for (const locale of ['en','fr','it','de','ru']) {

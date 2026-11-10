@@ -7,6 +7,7 @@
     toggle.classList.remove('is-open');
     toggle.setAttribute('aria-expanded', 'false');
     toggle.setAttribute('aria-label', toggle.dataset.openLabel || 'Abrir menú');
+    nav.querySelectorAll('.nav-products[open]').forEach(menu=>menu.removeAttribute('open'));
     document.body.classList.remove('menu-open');
   };
   toggle?.addEventListener('click', () => {
@@ -20,6 +21,20 @@
   window.matchMedia('(min-width: 901px)').addEventListener('change', closeNav);
   nav?.querySelectorAll('a').forEach((a)=>a.addEventListener('click',closeNav));
   document.addEventListener('keydown', e=>{if(e.key==='Escape') closeNav()});
+  document.addEventListener('click', event=>{
+    document.querySelectorAll('.nav-products[open]').forEach(menu=>{if(!menu.contains(event.target))menu.removeAttribute('open');});
+  });
+  const heroSlides=[...document.querySelectorAll('[data-hero-slide]')];
+  const heroControls=[...document.querySelectorAll('[data-hero-control]')];
+  heroControls.forEach(button=>button.addEventListener('click',()=>{
+    const index=Number(button.dataset.heroControl),slide=heroSlides[index];
+    if(!slide)return;
+    document.querySelector('#hero-title').textContent=slide.querySelector('[data-slide-title]').textContent;
+    document.querySelector('#hero-subtitle').textContent=slide.querySelector('[data-slide-subtitle]').textContent;
+    document.querySelector('#hero-contact').setAttribute('href',slide.querySelector('[data-slide-contact]').getAttribute('href'));
+    document.querySelectorAll('[data-hero-image]').forEach(image=>{image.hidden=Number(image.dataset.heroImage)!==index;});
+    heroControls.forEach(control=>control.setAttribute('aria-pressed',String(control===button)));
+  }));
   document.querySelectorAll('a[data-service]').forEach((a) => a.addEventListener('click',()=>{
     const select=document.querySelector('#service');
     if(select) select.value=a.dataset.service || '';

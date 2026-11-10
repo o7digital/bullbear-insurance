@@ -1,6 +1,7 @@
 import { readFile } from 'node:fs/promises';
 import { execFileSync } from 'node:child_process';
 import deployment from './deployment.json' with { type: 'json' };
+import sourceContent from '../src/data/original-content.json' with { type: 'json' };
 import { api, hash, locales, textId } from './lib.mjs';
 const base = process.env.PUBLIC_URL;
 const token = process.env.ADMIN_TOKEN;
@@ -53,7 +54,8 @@ await identity('Website contact','CONTACT_WRITE_TOKEN',[['inquiries',['create'],
 console.log('Private build reader and create-only contact identity are ready.');
 
 const media=await request('/items/site_media?limit=-1');
-for(const [key,title,path,mime]of [['hero','Arquitectura · portada','public/assets/architecture-hero.webp','image/webp'],['logo','Logo oficial blanco','public/assets/client-logo-light.png','image/png']]) {
+const heroPath='public'+sourceContent.pages['/'].widgets.find(widget=>widget.id==='96d11b5').images[0].src;
+for(const [key,title,path,mime]of [['hero','Protección de datos · portada',heroPath,'image/jpeg'],['logo','Logo oficial blanco','public/assets/client-logo-light.png','image/png']]) {
  if(media.some(row=>row.key===key))continue;
  const bytes=await readFile(path),form=new FormData();form.set('title',title);form.set('file',new Blob([bytes],{type:mime}),path.split('/').pop());
  const response=await fetch(base+'/files',{method:'POST',headers:{Authorization:`Bearer ${token}`},body:form});

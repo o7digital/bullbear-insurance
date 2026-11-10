@@ -8,7 +8,15 @@ Les trois sitemaps WordPress de pages, services et articles recensent **45 URL**
 
 Les 29 routes espagnoles sont disponibles dans les six langues, soit **174 routes** : accueil, présentation, contact, recrutement, confidentialité, index des articles, 17 services, deux articles et les quatre formulaires spécialisés. Les anciens résumés ont été remplacés par les paragraphes source ; la vision et l’offre de recrutement sont complètes. Les sources sont conservées dans [l’archive compressée](source/content-2026-11-10/pages.json.gz).
 
-Le [registre de migration](source/content-2026-11-10/migration-audit.json) donne, pour chaque bloc WordPress, sa provenance, son contenu et son traitement : repris, représenté dans le header/footer ou le formulaire, doublon, décoration vide, ou contenu de démonstration exclu. Les blocs métier importés totalisent **605 blocs textuels** avant déduplication des chaînes partagées. Le catalogue éditorial comporte **537 textes uniques**, avec leurs cinq traductions supplémentaires.
+Le [registre de migration](source/content-2026-11-10/migration-audit.json) donne, pour chaque bloc WordPress, sa provenance, son contenu et son traitement : repris, représenté dans le header/footer ou le formulaire, doublon, décoration vide, ou contenu de démonstration exclu. Les blocs métier importés totalisent **605 blocs textuels** avant déduplication des chaînes partagées. Après retrait des textes de maquette de l’accueil, le catalogue éditorial comporte **495 textes uniques**, avec leurs cinq traductions supplémentaires.
+
+## Correction de la structure de l’accueil
+
+La première vérification de migration contrôlait la présence des textes mais pas leur emplacement. Les contenus source étaient regroupés trop bas dans l’accueil, sous des textes de maquette. Le contrôle ne suffisait donc pas à garantir une présentation fidèle.
+
+L’accueil conserve désormais le design vert/beige demandé et suit l’ordre des blocs métier d’origine : carrousel cyber/médical/entreprise, présentation, comparatif d’offre, attention aux sinistres, analyse de risque, trois offres financières/bénéfices, assurances personnelles et devis, assurances d’entreprise et devis, contact, articles et partenaires. Le menu reprend les quatre catégories de produits. Les textes de maquette de ces sections ont été retirés et archivés dans Directus, après contrôle de l’absence de modifications et de brouillons.
+
+Le carrousel reprend les trois diapositives contenant du texte et leurs destinations. La diapositive source composée uniquement de `slider_image1.jpg`, sans titre ni lien, n’est pas reproduite comme écran vide ; l’image reste dans les assets archivés et son empreinte reste vérifiée. Les tests contrôlent le premier titre réellement affiché, l’image initiale, l’ordre des blocs et des produits, ainsi que le changement de diapositive dans les six langues. Le remplacement de l’image principale dans le Studio reste appliqué au build ; l’ancienne illustration architecturale par défaut a été remplacée par l’image cyber d’origine.
 
 ## Documents et médias
 

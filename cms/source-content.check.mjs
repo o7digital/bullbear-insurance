@@ -35,10 +35,36 @@ test('original articles and privacy paragraphs are complete, without shortening'
  }
 });
 
-test('downloaded source assets match their recorded bytes and every retained image is rendered',async()=>{
+test('downloaded source assets match their recorded bytes and meaningful source images are rendered',async()=>{
  for(const asset of data.assets){const bytes=await readFile('public'+asset.path);assert.equal(bytes.length,asset.bytes,asset.path);assert.equal(createHash('sha256').update(bytes).digest('hex'),asset.sha256,asset.path);}
- for(const [path,page]of Object.entries(data.pages)){const document=await output(path);for(const widget of page.widgets)for(const image of widget.images)assert.ok([...document.querySelectorAll('img')].some(img=>img.getAttribute('src')===image.src),`${path}: ${image.src}`);}
+ for(const [path,page]of Object.entries(data.pages)){
+  const document=await output(path),source=parseHTML(snapshot.find(page=>page.path===path)?.html||'').document;
+  const emptySlideImages=[...source.querySelectorAll('sr7-slide')].filter(slide=>!slide.querySelector('sr7-txt,a')).flatMap(slide=>[...slide.querySelectorAll('img[src]')].map(img=>new URL(img.getAttribute('src')).pathname));
+  for(const widget of page.widgets)for(const image of widget.images){
+   const asset=data.assets.find(asset=>asset.path===image.src);
+   if(asset&&emptySlideImages.includes(new URL(asset.source).pathname))continue;
+   assert.ok([...document.querySelectorAll('img')].some(img=>img.getAttribute('src')===image.src),`${path}: ${image.src}`);
+  }
+ }
  assert.equal(data.assets.filter(asset=>asset.kind==='document').length,2);
+});
+
+test('homepage starts with the source cyber message and keeps the source section and product order',async()=>{
+ const source=parseHTML(snapshot.find(page=>page.path==='/').html).document,target=await output('/');
+ const firstSlide=source.querySelector('sr7-slide');
+ assert.equal(compact(target.querySelector('h1').textContent),compact(firstSlide.querySelectorAll('sr7-txt')[1].textContent));
+ const asset=data.assets.find(asset=>new URL(asset.source).pathname===new URL(firstSlide.querySelector('img').getAttribute('src')).pathname);
+ assert.equal(target.querySelector('[data-hero-image="0"]').getAttribute('src'),asset.path);
+ assert.ok(!target.querySelector('[data-hero-image="0"]').hasAttribute('hidden'));
+ assert.deepEqual([...target.querySelectorAll('[data-home-section]')].map(section=>section.dataset.homeSection),['hero','company','approach','featured','personal','business','contact','articles']);
+ const ids=['96d11b5','13bdf0e','74063de','ee60330','386e75f','3dba684','9c88eef','e497bb8','3fd6fb7','2068e2d','7a0d9ad','21e2e7d','999900f','c6a628d','ee9cca3','74977ed','19525c5','9ae026a','ebca75b','8e3c9cf','cb332dc','17c8a4b','ddfd51b','db57cd1','c72a1c4'];
+ const positions=document=>[...document.querySelectorAll('[data-source-widget],[data-id]')].map(node=>node.dataset.sourceWidget||node.dataset.id).filter(id=>ids.includes(id));
+ assert.deepEqual(positions(target),positions(source));
+ for(const id of ['ee9cca3','8e3c9cf','c72a1c4']){
+  const titles=[...source.querySelector(`[data-id="${id}"]`).querySelectorAll('h2,h3')].map(el=>compact(el.textContent));
+  assert.deepEqual([...target.querySelector(`[data-source-widget="${id}"]`).querySelectorAll('h3')].map(el=>compact(el.textContent)),titles);
+ }
+ for(const invented of ['Lo que importa','Protección con perspectiva','El futuro se construye'])assert.ok(!target.querySelector('main').textContent.includes(invented));
 });
 
 test('original form choices and required contact fields are restored for every legacy route',async()=>{

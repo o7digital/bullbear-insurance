@@ -12,8 +12,8 @@
     "page": "/"
   },
   {
-    "key": "c2dfbc0d6b0ced2ee98b2ed2",
-    "value": "Asesoría y administración de riesgos: seguros para personas, empresas, automóviles y líneas financieras en Ciudad de México.",
+    "key": "9eb42d3c1740e0fdd1a053da",
+    "value": "Asesoría y asistencia en la administración de riesgos. Seguros personales, empresariales, protección de datos y líneas financieras.",
     "section": "Inicio",
     "page": "/"
   },
@@ -36,8 +36,8 @@
     "page": "/"
   },
   {
-    "key": "5d20cf52a925fcc68cdb22a0",
-    "value": "VISTA PREVIA · BULL",
+    "key": "799fb4343489825aa45e50c8",
+    "value": "BULL",
     "section": "Inicio",
     "page": "/"
   },
@@ -48,14 +48,14 @@
     "page": "/"
   },
   {
-    "key": "bff8ca96513a2cf0b05661d5",
-    "value": "VERSIÓN EN REVISIÓN",
+    "key": "0cd89d639636fc2703ec55f0",
+    "value": "INSURANCE BROKER",
     "section": "Inicio",
     "page": "/"
   },
   {
-    "key": "22a385fa9b34905b502f0e4a",
-    "value": "Bull and Bear Insurance Broker — inicio",
+    "key": "daca853c437c21b793b85f74",
+    "value": "Bull & Bear — inicio",
     "section": "Inicio",
     "page": "/"
   },
@@ -66,20 +66,44 @@
     "page": "/"
   },
   {
-    "key": "45c1a68cdf315d6cc11c0c81",
-    "value": "Nosotros",
+    "key": "58fcc9468fe1f60716a71cae",
+    "value": "Inicio",
     "section": "Inicio",
     "page": "/"
   },
   {
-    "key": "f75ddb5685a3d0137f6c13e8",
-    "value": "Soluciones",
+    "key": "75e53f49d8f698c34386adc8",
+    "value": "Sobre nosotros",
     "section": "Inicio",
     "page": "/"
   },
   {
-    "key": "f7e206d8001fee99acf770d7",
-    "value": "Nuestro enfoque",
+    "key": "f598138f026c1d91c2a6a23b",
+    "value": "Productos",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "b589db65da85f262f446e929",
+    "value": "Lineas Financieras",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "b3637e447fdcab4d82db097b",
+    "value": "Cuidado personal",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "31fa533dce2a84e93688310a",
+    "value": "Daños",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "b19c4ec30a21275ed745b3e6",
+    "value": "Autos",
     "section": "Inicio",
     "page": "/"
   },
@@ -90,8 +114,8 @@
     "page": "/"
   },
   {
-    "key": "bdd8f61b94c523793dae697f",
-    "value": "Hablemos",
+    "key": "fadda3850a1ebf2b5d232aea",
+    "value": "Contáctanos",
     "section": "Inicio",
     "page": "/"
   },
@@ -108,44 +132,50 @@
     "page": "/"
   },
   {
-    "key": "799fb4343489825aa45e50c8",
-    "value": "BULL",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
     "key": "ff071a13edad3b198a0b6bd7",
     "value": "BEAR / INSURANCE BROKER",
     "section": "Inicio",
     "page": "/"
   },
   {
-    "key": "d6d3ffb7b76474acd98f63f4",
-    "value": "Lo que importa<br>no se deja<br><em>al azar.</em>",
+    "key": "d562a75cfff8e86d5551003e",
+    "value": "SEGURO DE PROTECCIÓN DE DATOS Y SEGURIDAD INFORMÁTICA",
     "section": "Inicio",
     "page": "/"
   },
   {
-    "key": "cc1beb6cd2d40653890ecce2",
-    "value": "Asesoría en seguros para proteger lo que has construido y todo lo que viene.",
+    "key": "1af912ebf19e37e915abf2a3",
+    "value": "Protege tus datos y fortalece tu seguridad",
     "section": "Inicio",
     "page": "/"
   },
   {
-    "key": "ea6c01da542eba41ed911a83",
-    "value": "Solicitar asesoría",
+    "key": "e710970aa45f5ab83d2483b0",
+    "value": "Seguros destacados",
     "section": "Inicio",
     "page": "/"
   },
   {
-    "key": "b055d1a0bde2d74696688420",
-    "value": "Conoce nuestras soluciones",
+    "key": "c660eb004621da0fc5cd668e",
+    "value": "Seguro de gastos médicos",
     "section": "Inicio",
     "page": "/"
   },
   {
-    "key": "9622839329dbce44ca3a2b36",
-    "value": "EL FUTURO MERECE UNA MEJOR PERSPECTIVA",
+    "key": "c5dc60779deda28e46731ec5",
+    "value": "Seguro empresarial",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "10d6c30c9d2749a6a6b06848",
+    "value": "Seguros confiables en cualquier momento",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "bcecd5f7b978bba68cc184e2",
+    "value": "Protegemos tu negocio, aseguramos tu tranquilidad y la de tus empleados.",
     "section": "Inicio",
     "page": "/"
   },
@@ -156,230 +186,20 @@
     "page": "/"
   },
   {
-    "key": "a3f405d351e7b4a5f17a99b7",
-    "value": "PROTECCIÓN CON PERSPECTIVA",
+    "key": "469453c2bdb71e91cc35e817",
+    "value": "BEAR INSURANCE BROKER",
     "section": "Inicio",
     "page": "/"
   },
   {
-    "key": "8775cbcb7cbc4408b339c64e",
-    "value": "DESLIZA PARA DESCUBRIR",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "b526c7d1bce089c64dbb782e",
-    "value": "NUESTRA FILOSOFÍA",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "bf9e626cfadfb84bff17b150",
-    "value": "El futuro se construye<br>con <em>buenas decisiones.</em>",
+    "key": "c8f0069c760b22944c519e55",
+    "value": "Bear Insurance Broker",
     "section": "Inicio",
     "page": "/"
   },
   {
     "key": "f7079d8b6ae55226d88ffb3d",
     "value": "Nuestra oferta de valor radica en la puntual asesoría y asistencia en la administración de riesgos. Dichos servicio se brinda a través de un equipo especializado y de amplia experiencia dentro del sector asegurador.",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "a938497d68dc054661d23a52",
-    "value": "Conoce nuestro enfoque",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "71a4244c6a9938de28c21f8e",
-    "value": "NUESTRAS ÁREAS DE ESPECIALIDAD",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "846e690f3c55b116d255ed95",
-    "value": "Protección para<br><em>cada dimensión</em> de tu mundo.",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "6fcc936b693563a7d2191b2f",
-    "value": "Tu vida cambia. Tus proyectos crecen. Tu protección también debería evolucionar.",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "190ce250439efa0b966ffc5c",
-    "value": "PERSONAS Y PATRIMONIO",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "f33c42a0567f1be467a4809b",
-    "value": "Protege lo que hace tu vida,<br><em>tuya.</em>",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "23cc0731bfa3eaa78cb29246",
-    "value": "Seguros de vida, gastos médicos, autos y soluciones para cuidar de los tuyos.",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "322107db1a0fd7006bc3f0be",
-    "value": "Áreas de protección",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "62818474ac931bfab6b8254a",
-    "value": "Vida y salud",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "b19c4ec30a21275ed745b3e6",
-    "value": "Autos",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "19d7e37c66b1559a3cb41a4d",
-    "value": "Protección patrimonial",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "59219c1a05ddb6e3a99b0748",
-    "value": "Explorar: Personas y patrimonio",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "dc8e90ab7c8266af8aad8917",
-    "value": "Explorar solución",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "0561a1617cd6681f1bda5d31",
-    "value": "EMPRESAS Y NEGOCIOS",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "2e1ac43bb42d0855329aa53c",
-    "value": "Tu esfuerzo merece,<br><em>continuidad.</em>",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "befdc5644a7b11041d678213",
-    "value": "Coberturas para enfrentar riesgos operativos y acompañar las decisiones de tu empresa.",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "31fa533dce2a84e93688310a",
-    "value": "Daños",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "d90641ad008eb86090329ca9",
-    "value": "Responsabilidad civil",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "c375ac58c00fd2c960dcb61b",
-    "value": "Autos y flotillas",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "436804de95136e202c666e8d",
-    "value": "Explorar: Empresas y negocios",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "0ddeb889cfdc3591f6932654",
-    "value": "LÍNEAS FINANCIERAS",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "c92604b0ce5d1adacd6d8757",
-    "value": "Una perspectiva más,<br><em>segura.</em>",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "fc6997b70eb2b29730a1495c",
-    "value": "Soluciones para riesgos profesionales, cibernéticos y de responsabilidad directiva.",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "a20835bee5540f013198a96f",
-    "value": "Riesgos cibernéticos",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "a8528ff0bf466180c2c9003e",
-    "value": "Responsabilidad profesional",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "320482f89504a95df51b1395",
-    "value": "Explorar: Líneas financieras",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "d967767fff252ee2e3952f7f",
-    "value": "UNA FORMA DISTINTA DE ASESORAR",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "0d7bc5daa90d6041974d84a3",
-    "value": "Menos incertidumbre.<br><em>Más posibilidades.</em>",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "53cde44fa1e4796b700e4dde",
-    "value": "Convertimos escenarios complejos en decisiones más claras, con una visión enfocada en tus prioridades.",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "d09d17c3541e21fef4a0c5ff",
-    "value": "Conversemos sobre tus necesidades",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "9e4a59295739086ddecbbaa6",
-    "value": "NUESTRO ENFOQUE",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "b94d8733f0831145e9f2e493",
-    "value": "La tranquilidad<br><em>se diseña.</em>",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "702872d9545d099e5e538f49",
-    "value": "Cada decisión comienza por entender qué deseas proteger.",
     "section": "Inicio",
     "page": "/"
   },
@@ -396,18 +216,6 @@
     "page": "/"
   },
   {
-    "key": "cef8afba597ba75cb852e182",
-    "value": "ANÁLISIS DE RIESGO",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "76125c1ac4a70d3c8ff68902",
-    "value": "Nuestro equipo esta conformado por técnicos Especialistas de amplia experiencia en el sector, encargados de colocar de manera óptima cada riesgo.",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
     "key": "4cbd8896ea5aac0e7d09c7ee",
     "value": "ATENCIÓN EN SINIESTROS",
     "section": "Inicio",
@@ -420,56 +228,20 @@
     "page": "/"
   },
   {
-    "key": "1af912ebf19e37e915abf2a3",
-    "value": "Protege tus datos y fortalece tu seguridad",
+    "key": "cef8afba597ba75cb852e182",
+    "value": "ANÁLISIS DE RIESGO",
     "section": "Inicio",
     "page": "/"
   },
   {
-    "key": "d562a75cfff8e86d5551003e",
-    "value": "SEGURO DE PROTECCIÓN DE DATOS Y SEGURIDAD INFORMÁTICA",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "fadda3850a1ebf2b5d232aea",
-    "value": "Contáctanos",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "c660eb004621da0fc5cd668e",
-    "value": "Seguro de gastos médicos",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "10d6c30c9d2749a6a6b06848",
-    "value": "Seguros confiables en cualquier momento",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "c5dc60779deda28e46731ec5",
-    "value": "Seguro empresarial",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "bcecd5f7b978bba68cc184e2",
-    "value": "Protegemos tu negocio, aseguramos tu tranquilidad y la de tus empleados.",
+    "key": "76125c1ac4a70d3c8ff68902",
+    "value": "Nuestro equipo esta conformado por técnicos Especialistas de amplia experiencia en el sector, encargados de colocar de manera óptima cada riesgo.",
     "section": "Inicio",
     "page": "/"
   },
   {
     "key": "a302f7e09c88927e16bea0b4",
     "value": "SURA",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "c8f0069c760b22944c519e55",
-    "value": "Bear Insurance Broker",
     "section": "Inicio",
     "page": "/"
   },
@@ -666,50 +438,8 @@
     "page": "/"
   },
   {
-    "key": "dd47f27404639b2a711afee9",
-    "value": "Garantiza el bienestar de tus seres queridos",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "fb7a67fc32d713a96797e1e4",
-    "value": "En la vida, siempre buscamos brindar seguridad y protección a nuestros seres queridos. Los seguros de vida son una herramienta esencial para asegurar el futuro…",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "a03ce64b1ec496b3aceb5aec",
-    "value": "Leer más ↗",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "1cdb6c55ae7ec721dc9fc32b",
-    "value": "Protege a tus seres queridos hoy y siempre",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "74e3998b3dd3dece0f3a51af",
-    "value": "Los seguros de vida son una herramienta crucial para garantizar la protección financiera de tus seres queridos en caso de que algo inesperado te suceda.",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "535e32eda3f6ead9d019459b",
-    "value": "EMPECEMOS UNA CONVERSACIÓN",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "3306f5ea806dd28f8f531fc4",
-    "value": "Tu próxima gran<br>decisión merece<br><em>estar protegida.</em>",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "0a3cc22c97806c7f2f302ddc",
-    "value": "Cuéntanos qué necesitas cuidar. Diseñemos el siguiente paso.",
+    "key": "bd1ffbeff7d23d82a7e0dad6",
+    "value": "¿Tiene alguna pregunta? ¡Contactanos, nos encantaría aclarar tus dudas!",
     "section": "Inicio",
     "page": "/"
   },
@@ -834,6 +564,36 @@
     "page": "/"
   },
   {
+    "key": "dd47f27404639b2a711afee9",
+    "value": "Garantiza el bienestar de tus seres queridos",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "fb7a67fc32d713a96797e1e4",
+    "value": "En la vida, siempre buscamos brindar seguridad y protección a nuestros seres queridos. Los seguros de vida son una herramienta esencial para asegurar el futuro…",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "a03ce64b1ec496b3aceb5aec",
+    "value": "Leer más ↗",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "1cdb6c55ae7ec721dc9fc32b",
+    "value": "Protege a tus seres queridos hoy y siempre",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "74e3998b3dd3dece0f3a51af",
+    "value": "Los seguros de vida son una herramienta crucial para garantizar la protección financiera de tus seres queridos en caso de que algo inesperado te suceda.",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
     "key": "e6d9f83d292b02d04fc20560",
     "value": "Trabajamos con",
     "section": "Inicio",
@@ -864,26 +624,8 @@
     "page": "/"
   },
   {
-    "key": "469453c2bdb71e91cc35e817",
-    "value": "BEAR INSURANCE BROKER",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
     "key": "df8f611e3ada0ef651da80a3",
     "value": "VOLVER ARRIBA ↑",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "daca853c437c21b793b85f74",
-    "value": "Bull & Bear — inicio",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "bd1ffbeff7d23d82a7e0dad6",
-    "value": "¿Tiene alguna pregunta? ¡Contactanos, nos encantaría aclarar tus dudas!",
     "section": "Inicio",
     "page": "/"
   },
@@ -894,8 +636,8 @@
     "page": "/"
   },
   {
-    "key": "b3637e447fdcab4d82db097b",
-    "value": "Cuidado personal",
+    "key": "45c1a68cdf315d6cc11c0c81",
+    "value": "Nosotros",
     "section": "Inicio",
     "page": "/"
   },
@@ -962,6 +704,18 @@
   {
     "key": "613ba7d80d5c2fd51cd06caf",
     "value": "Aviso de privacidad | Bull & Bear Insurance Broker",
+    "section": "Privacidad",
+    "page": "/aviso-de-privacidad/"
+  },
+  {
+    "key": "5d20cf52a925fcc68cdb22a0",
+    "value": "VISTA PREVIA · BULL",
+    "section": "Privacidad",
+    "page": "/aviso-de-privacidad/"
+  },
+  {
+    "key": "bff8ca96513a2cf0b05661d5",
+    "value": "VERSIÓN EN REVISIÓN",
     "section": "Privacidad",
     "page": "/aviso-de-privacidad/"
   },
@@ -2106,6 +1860,12 @@
     "page": "/service/aeronaves-embarcaciones-o-drones-2/"
   },
   {
+    "key": "d90641ad008eb86090329ca9",
+    "value": "Responsabilidad civil",
+    "section": "Servicios",
+    "page": "/service/aeronaves-embarcaciones-o-drones-2/"
+  },
+  {
     "key": "120b30efff6cec18927afb2d",
     "value": "Protección para empresas y personas físicas con actividad empresarial.",
     "section": "Servicios",
@@ -2550,12 +2310,6 @@
     "page": "/service/flotillas-vehiculares/"
   },
   {
-    "key": "b589db65da85f262f446e929",
-    "value": "Lineas Financieras",
-    "section": "Servicios",
-    "page": "/service/lineas-financieras/"
-  },
-  {
     "key": "7f7ca766f01f9f8b4161cf57",
     "value": "Contamos con los mejores convenios y productos del mercado así como equipo técnico para la suscripción, emisión y resolución de siniestros.",
     "section": "Servicios",
@@ -2930,12 +2684,6 @@
   {
     "key": "7f46c746398fb079ed8e1d68",
     "value": "Sobre nosotros | Bull & Bear Insurance Broker",
-    "section": "Páginas",
-    "page": "/sobre-nosotros/"
-  },
-  {
-    "key": "75e53f49d8f698c34386adc8",
-    "value": "Sobre nosotros",
     "section": "Páginas",
     "page": "/sobre-nosotros/"
   },
