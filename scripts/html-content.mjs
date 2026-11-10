@@ -5,7 +5,7 @@ import { textKey } from '../cms/lib.mjs';
 const richTags = new Set(['H1', 'H2', 'H3', 'P', 'LABEL', 'BUTTON', 'SUMMARY', 'OPTION', 'A']);
 const inlineTags = new Set(['BR', 'EM', 'STRONG', 'B', 'I']);
 export const attributes = ['aria-label', 'placeholder', 'alt', 'data-open-label', 'data-close-label', 'data-success', 'data-error', 'data-pending'];
-const meaningful = value => /[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]{2}/.test(value) && !/^(?:https?:|mailto:|tel:|[\w.+-]+@)/.test(value) && !/^BULL\s*(?:&amp;|&)\s*BEAR(?:\s*\/\s*INSURANCE BROKER| INSURANCE BROKER)?$/i.test(value.trim());
+const meaningful = value => /[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]{2}/.test(value) && !/^(?:https?:|mailto:|tel:|[\w.+-]+@)/.test(value) && !/^(?:©\s*\d{4}\s+)?BULL\s*(?:&amp;|&)\s*BEAR(?:\s*\/\s*INSURANCE BROKER| INSURANCE BROKER)?$/i.test(value.trim());
 const clean = value => value.trim();
 export function scan(html, transform = value => value) {
   const { document } = parseHTML(html);
@@ -14,7 +14,7 @@ export function scan(html, transform = value => value) {
     if (['SCRIPT', 'STYLE', 'NOSCRIPT'].includes(node.nodeName)) return;
     if (node.nodeType === 3) {
       const value = clean(node.textContent);
-      if (meaningful(value)) { seen.push(value); node.textContent = node.textContent.replace(value, transform(value)); }
+      if (meaningful(value) && !/^©\s*\d{4}/.test(value)) { seen.push(value); node.textContent = node.textContent.replace(value, transform(value)); }
       return;
     }
     if (node.nodeType !== 1 && node.nodeType !== 9) return;

@@ -4,5 +4,7 @@ import posts from '../data/posts.json';
 export function getStaticPaths() { return posts.map(post => ({ params: { slug: post.slug }, props: { post } })); }
 const { post } = Astro.props;
 const description = post.blocks.find(block => block.tag === 'p')?.text.slice(0, 160) || post.title;
+// Source timestamps have no offset. Keep their published calendar date independent of the build host.
+const archiveDate = post.date.slice(0, 10).split('-').reverse().map(Number).join('/');
 ---
-<Page title={post.title} description={description} type="article"><p class="source-note">Artículo del sitio actual · {new Date(post.date).toLocaleDateString('es-MX', { timeZone: 'UTC' })}. Información general sujeta a revisión y a las condiciones de cada póliza.</p>{post.blocks.map(block => ['h1','h2','h3','h4'].includes(block.tag) ? <h2>{block.text}</h2> : block.tag === 'li' ? <p>• {block.text}</p> : <p>{block.text}</p>)}<a class="button" href="/contacto/">Consultar con un asesor <span aria-hidden="true">↗</span></a></Page>
+<Page title={post.title} description={description} type="article"><p class="source-note">Artículo del sitio actual · {archiveDate}. Información general sujeta a revisión y a las condiciones de cada póliza.</p>{post.blocks.map(block => ['h1','h2','h3','h4'].includes(block.tag) ? <h2>{block.text}</h2> : block.tag === 'li' ? <p>• {block.text}</p> : <p>{block.text}</p>)}<a class="button" href="/contacto/">Consultar con un asesor <span aria-hidden="true">↗</span></a></Page>

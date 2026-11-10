@@ -20,7 +20,7 @@ Les images (logo/portada) enregistrées dans Identidad e imágenes sont incluses
 
 ## Collections
 
-- `site_texts` : 407 textes × 6 langues ; source stable, valeur publiée, brouillon et empreinte de la source traduite.
+- `site_texts` : 406 textes × 6 langues ; source stable, valeur publiée, brouillon et empreinte de la source traduite.
 - `site_media` : logo officiel et illustration architecturale.
 - `inquiries` : nom, email, domaine d'intérêt, langue, consentement, version de l'avis, date, statut et notes.
 
