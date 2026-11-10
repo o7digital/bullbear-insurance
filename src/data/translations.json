@@ -636,7 +636,11 @@
     "0cd89d639636fc2703ec55f0": "INSURANCE BROKER",
     "58fcc9468fe1f60716a71cae": "Home",
     "f598138f026c1d91c2a6a23b": "Products",
-    "e710970aa45f5ab83d2483b0": "Featured insurance"
+    "e710970aa45f5ab83d2483b0": "Featured insurance",
+    "403992c1adc470e598ffbac4": "What matters is not left to chance.",
+    "a67674b17b50627bd5a0f7b1": "DATA PROTECTION AND <em>CYBERSECURITY</em> INSURANCE",
+    "766d83e41e699347ba140174": "Reliable insurance <em>at any time</em>",
+    "7ca09b407a7ed19f2e08834a": "We protect your business, secure your peace of mind and <em>that of your employees.</em>"
   },
   "fr": {
     "1c82ad55bcc086e276b82cd5": "Avis de confidentialité | Bull",
@@ -1275,7 +1279,11 @@
     "0cd89d639636fc2703ec55f0": "COURTIER EN ASSURANCE",
     "58fcc9468fe1f60716a71cae": "Accueil",
     "f598138f026c1d91c2a6a23b": "Produits",
-    "e710970aa45f5ab83d2483b0": "Assurances mises en avant"
+    "e710970aa45f5ab83d2483b0": "Assurances mises en avant",
+    "403992c1adc470e598ffbac4": "Ce qui compte n’est pas laissé au hasard.",
+    "a67674b17b50627bd5a0f7b1": "ASSURANCE DE PROTECTION DES DONNÉES ET <em>DE LA CYBERSÉCURITÉ</em>",
+    "766d83e41e699347ba140174": "Une assurance fiable <em>à tout moment</em>",
+    "7ca09b407a7ed19f2e08834a": "Nous protégeons votre entreprise, assurons votre tranquillité d’esprit et <em>celle de vos employés.</em>"
   },
   "it": {
     "1c82ad55bcc086e276b82cd5": "Informativa sulla privacy | Bull",
@@ -1914,7 +1922,11 @@
     "0cd89d639636fc2703ec55f0": "BROKER ASSICURATIVO",
     "58fcc9468fe1f60716a71cae": "Home",
     "f598138f026c1d91c2a6a23b": "Prodotti",
-    "e710970aa45f5ab83d2483b0": "Assicurazioni in evidenza"
+    "e710970aa45f5ab83d2483b0": "Assicurazioni in evidenza",
+    "403992c1adc470e598ffbac4": "Ciò che conta non si lascia al caso.",
+    "a67674b17b50627bd5a0f7b1": "ASSICURAZIONE PER LA PROTEZIONE DEI DATI E <em>DELLA SICUREZZA INFORMATICA</em>",
+    "766d83e41e699347ba140174": "Assicurazioni affidabili <em>in qualsiasi momento</em>",
+    "7ca09b407a7ed19f2e08834a": "Proteggiamo la tua attività, garantiamo la tua tranquillità e <em>quella dei tuoi dipendenti.</em>"
   },
   "de": {
     "1c82ad55bcc086e276b82cd5": "Datenschutzhinweis | Bull",
@@ -2553,7 +2565,11 @@
     "0cd89d639636fc2703ec55f0": "VERSICHERUNGSMAKLER",
     "58fcc9468fe1f60716a71cae": "Startseite",
     "f598138f026c1d91c2a6a23b": "Produkte",
-    "e710970aa45f5ab83d2483b0": "Hervorgehobene Versicherungen"
+    "e710970aa45f5ab83d2483b0": "Hervorgehobene Versicherungen",
+    "403992c1adc470e598ffbac4": "Was zählt, wird nicht dem Zufall überlassen.",
+    "a67674b17b50627bd5a0f7b1": "DATENSCHUTZ- UND <em>INFORMATIONSSICHERHEITS</em>VERSICHERUNG",
+    "766d83e41e699347ba140174": "Zuverlässige Versicherungen <em>jederzeit</em>",
+    "7ca09b407a7ed19f2e08834a": "Wir schützen Ihr Unternehmen, sichern Ihre Ruhe und <em>die Ihrer Mitarbeitenden.</em>"
   },
   "ru": {
     "1c82ad55bcc086e276b82cd5": "Уведомление о конфиденциальности | Bull",
@@ -3192,6 +3208,10 @@
     "0cd89d639636fc2703ec55f0": "СТРАХОВОЙ БРОКЕР",
     "58fcc9468fe1f60716a71cae": "Главная",
     "f598138f026c1d91c2a6a23b": "Продукты",
-    "e710970aa45f5ab83d2483b0": "Рекомендуемые виды страхования"
+    "e710970aa45f5ab83d2483b0": "Рекомендуемые виды страхования",
+    "403992c1adc470e598ffbac4": "То, что важно, не оставляют на волю случая.",
+    "a67674b17b50627bd5a0f7b1": "СТРАХОВАНИЕ ЗАЩИТЫ ДАННЫХ И <em>ИНФОРМАЦИОННОЙ БЕЗОПАСНОСТИ</em>",
+    "766d83e41e699347ba140174": "Надёжное страхование <em>в любое время</em>",
+    "7ca09b407a7ed19f2e08834a": "Мы защищаем ваш бизнес, обеспечиваем ваше спокойствие и <em>спокойствие ваших сотрудников.</em>"
   }
 }

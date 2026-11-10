@@ -29,9 +29,12 @@
   heroControls.forEach(button=>button.addEventListener('click',()=>{
     const index=Number(button.dataset.heroControl),slide=heroSlides[index];
     if(!slide)return;
-    document.querySelector('#hero-title').textContent=slide.querySelector('[data-slide-title]').textContent;
+    document.querySelector('.atelier-hero').dataset.heroKind=slide.dataset.slideKind;
+    document.querySelector('#hero-title').innerHTML=slide.querySelector('[data-slide-title]').innerHTML;
     document.querySelector('#hero-subtitle').textContent=slide.querySelector('[data-slide-subtitle]').textContent;
-    document.querySelector('#hero-contact').setAttribute('href',slide.querySelector('[data-slide-contact]').getAttribute('href'));
+    const contact=document.querySelector('#hero-contact'),link=slide.querySelector('[data-slide-contact]');
+    contact.setAttribute('href',link.getAttribute('href'));
+    contact.firstChild.textContent=link.textContent+' ';
     document.querySelectorAll('[data-hero-image]').forEach(image=>{image.hidden=Number(image.dataset.heroImage)!==index;});
     heroControls.forEach(control=>control.setAttribute('aria-pressed',String(control===button)));
   }));

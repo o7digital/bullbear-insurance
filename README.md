@@ -40,4 +40,4 @@ Déploiement manuel du frontend : `vercel deploy --yes`, puis vérifier l'alias 
 
 Voir [le guide du backend](cms/README.md) pour les accès, le bootstrap et les sauvegardes.
 
-La reprise du 10 novembre 2026 et la correction de la structure de l’accueil sont couvertes par 30 tests locaux (11 backend, 6 contrôles du contenu et de son ordre, 13 tests navigateur). L’accueil conserve le design vert/beige et reprend les textes et l’ordre des sections métier du site source. Les documents et les blocs métier disposent de leur registre de provenance dans le rapport de migration.
+La reprise du 10 novembre 2026 et la correction de la structure de l’accueil sont couvertes par 30 tests locaux (11 backend, 6 contrôles du contenu et de son ordre, 13 tests navigateur). L’accueil conserve en ouverture le hero architectural approuvé, avec son texte et sa typographie. Les trois thèmes du site source sont des diapositives supplémentaires ; les sections métier suivent avec leurs textes et leur ordre d’origine. Les documents et les blocs métier disposent de leur registre de provenance dans le rapport de migration.

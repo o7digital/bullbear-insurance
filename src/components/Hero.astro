@@ -1,0 +1,56 @@
+---
+import original from '../data/original-content.json';
+const source = original.pages['/'].widgets.find(widget => widget.id === '96d11b5');
+const approvedTitle = 'Lo que importa<br/>no se deja<br/><em>al azar.</em>';
+const emphasis = ['SEGURIDAD INFORMÁTICA', 'cualquier momento', 'la de tus empleados.'];
+const slides = [
+  {
+    title: approvedTitle,
+    subtitle: 'Asesoría en seguros para proteger lo que has construido y todo lo que viene.',
+    image: '/assets/architecture-hero.webp',
+    href: '#contacto',
+    contact: 'Solicitar asesoría',
+    label: 'Lo que importa no se deja al azar.',
+    kind: 'atelier',
+  },
+  ...[0, 3, 6].map((index, order) => ({
+    title: source.blocks[index + 1].text.replace(emphasis[order], `<em>${emphasis[order]}</em>`),
+    subtitle: source.blocks[index].text,
+    image: source.images[[0, 2, 3][order]].src,
+    href: source.blocks[index + 2].href,
+    contact: source.blocks[index + 2].text,
+    label: source.blocks[index].text,
+    kind: 'source',
+  })),
+];
+---
+<section class="hero atelier-hero" data-home-section="hero" data-hero-kind="atelier" aria-labelledby="hero-title">
+  <div class="hero-picture" aria-hidden="true">
+    {slides.map((slide, index) => <img data-hero-image={index} src={slide.image} alt="" hidden={index !== 0} fetchpriority={index === 0 ? 'high' : 'auto'} decoding="async" />)}
+  </div>
+  <div class="hero-shade" aria-hidden="true"></div>
+  <div class="hero-lines" aria-hidden="true"><span></span><span></span></div>
+  <div class="hero-container container">
+    <div class="hero-main">
+      <p class="eyebrow hero-eyebrow"><span class="line"></span> BULL &amp; BEAR / INSURANCE BROKER</p>
+      <h1 id="hero-title" set:html={approvedTitle} />
+      <p class="hero-subtitle" id="hero-subtitle">{slides[0].subtitle}</p>
+      <div class="hero-ctas">
+        <a id="hero-contact" href="#contacto" class="button button-cream">Solicitar asesoría <span aria-hidden="true">↗</span></a>
+        <a href="#soluciones" class="inline-link">Conoce nuestras soluciones <span aria-hidden="true">↘</span></a>
+      </div>
+    </div>
+    <div class="hero-vertical">EL FUTURO MERECE UNA MEJOR PERSPECTIVA</div>
+  </div>
+  <div class="hero-switcher" aria-label="Seguros destacados">
+    {slides.map((slide, index) => <button type="button" data-hero-control={index} aria-label={slide.label} aria-pressed={index === 0 ? 'true' : 'false'} aria-controls="hero-title hero-subtitle">{String(index + 1).padStart(2, '0')}</button>)}
+  </div>
+  <div class="hero-slide-content" data-source-widget="96d11b5" hidden>
+    {slides.map((slide, index) => <div data-hero-slide={index} data-slide-kind={slide.kind}>
+      <p data-slide-title set:html={slide.title} />
+      <p data-slide-subtitle>{slide.subtitle}</p>
+      <a data-slide-contact href={slide.href}>{slide.contact}</a>
+    </div>)}
+  </div>
+  <div class="hero-bottom container"><span>CIUDAD DE MÉXICO · MÉXICO</span><span>PROTECCIÓN CON PERSPECTIVA</span><a href="#filosofia">DESLIZA PARA DESCUBRIR <span aria-hidden="true">↓</span></a></div>
+</section>

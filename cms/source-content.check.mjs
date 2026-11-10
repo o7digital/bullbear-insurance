@@ -49,13 +49,19 @@ test('downloaded source assets match their recorded bytes and meaningful source 
  assert.equal(data.assets.filter(asset=>asset.kind==='document').length,2);
 });
 
-test('homepage starts with the source cyber message and keeps the source section and product order',async()=>{
+test('homepage preserves the approved Atelier hero and adds the source themes without dropping their content',async()=>{
  const source=parseHTML(snapshot.find(page=>page.path==='/').html).document,target=await output('/');
- const firstSlide=source.querySelector('sr7-slide');
- assert.equal(compact(target.querySelector('h1').textContent),compact(firstSlide.querySelectorAll('sr7-txt')[1].textContent));
- const asset=data.assets.find(asset=>new URL(asset.source).pathname===new URL(firstSlide.querySelector('img').getAttribute('src')).pathname);
- assert.equal(target.querySelector('[data-hero-image="0"]').getAttribute('src'),asset.path);
+ assert.equal(target.querySelector('h1').innerHTML,'Lo que importa<br>no se deja<br><em>al azar.</em>');
+ assert.equal(target.querySelector('#hero-subtitle').textContent,'Asesoría en seguros para proteger lo que has construido y todo lo que viene.');
+ assert.equal(target.querySelector('[data-hero-image="0"]').getAttribute('src'),'/assets/architecture-hero.webp');
  assert.ok(!target.querySelector('[data-hero-image="0"]').hasAttribute('hidden'));
+ assert.equal(target.querySelectorAll('[data-hero-control]').length,4);
+ const meaningfulSlides=[...source.querySelectorAll('sr7-slide')].filter(slide=>slide.querySelector('sr7-txt'));
+ for(const [index,slide]of meaningfulSlides.entries()){
+  const bank=target.querySelector(`[data-hero-slide="${index+1}"]`),text=slide.querySelectorAll('sr7-txt');
+  assert.equal(compact(bank.querySelector('[data-slide-title]').textContent),compact(text[1].textContent));
+  assert.equal(compact(bank.querySelector('[data-slide-subtitle]').textContent),compact(text[0].textContent));
+ }
  assert.deepEqual([...target.querySelectorAll('[data-home-section]')].map(section=>section.dataset.homeSection),['hero','company','approach','featured','personal','business','contact','articles']);
  const ids=['96d11b5','13bdf0e','74063de','ee60330','386e75f','3dba684','9c88eef','e497bb8','3fd6fb7','2068e2d','7a0d9ad','21e2e7d','999900f','c6a628d','ee9cca3','74977ed','19525c5','9ae026a','ebca75b','8e3c9cf','cb332dc','17c8a4b','ddfd51b','db57cd1','c72a1c4'];
  const positions=document=>[...document.querySelectorAll('[data-source-widget],[data-id]')].map(node=>node.dataset.sourceWidget||node.dataset.id).filter(id=>ids.includes(id));
@@ -64,7 +70,6 @@ test('homepage starts with the source cyber message and keeps the source section
   const titles=[...source.querySelector(`[data-id="${id}"]`).querySelectorAll('h2,h3')].map(el=>compact(el.textContent));
   assert.deepEqual([...target.querySelector(`[data-source-widget="${id}"]`).querySelectorAll('h3')].map(el=>compact(el.textContent)),titles);
  }
- for(const invented of ['Lo que importa','Protección con perspectiva','El futuro se construye'])assert.ok(!target.querySelector('main').textContent.includes(invented));
 });
 
 test('original form choices and required contact fields are restored for every legacy route',async()=>{

@@ -22,8 +22,8 @@ Les images (logo/portada) enregistrées dans Identidad e imágenes sont incluses
 
 ## Collections
 
-- `site_texts` : 495 textes × 6 langues ; source stable, valeur publiée, brouillon et empreinte de la source traduite.
-- `site_media` : logo officiel et image principale du carrousel cyber.
+- `site_texts` : 504 textes × 6 langues ; source stable, valeur publiée, brouillon et empreinte de la source traduite.
+- `site_media` : logo officiel et image architecturale du hero approuvé.
 - `inquiries` : nom complet, prénom, nom de famille, téléphone, email, formulaire d’origine, type précis d’assurance, commentaire/message, domaine d’intérêt, langue, consentement, version de l’avis, date, statut et notes.
 
 Le frontend ne reçoit que le HTML, les images publiques du build et les messages de validation. Les secrets et les demandes restent côté serveur. Le compte Website build lit les collections de contenu et fichiers ; le compte Website contact a seulement le droit de création sur inquiries. Les autorisations anonymes Directus ne sont pas ouvertes. La licence Core permet ici les permissions par collection ; le choix des fiches publiées et des champs lus est appliqué dans le loader serveur.
@@ -54,4 +54,4 @@ Les contenus métier complets et les quatre formulaires spécialisés sont décr
 
 Après l’import du nouveau catalogue, `railway run --no-local --service directus -- node cms/sync-content-manifest.mjs` archive les anciennes chaînes qui ne sont plus utilisées. Ce script refuse d’archiver une ancienne chaîne modifiée ou un brouillon sans réconciliation explicite. Il ne supprime ni utilisateur, ni rôle, ni demande reçue. Les champs supplémentaires de `inquiries` sont ajoutés sans toucher aux données existantes par le bootstrap.
 
-`cms/sync-homepage-media.mjs`, avec le même environnement Railway, remplace uniquement l’ancienne image architecturale par défaut par la photo cyber d’origine. Il vérifie l’empreinte du fichier existant avant de modifier la référence : une image choisie par un éditeur est conservée. La première image du carrousel et le logo sont copiés depuis Directus au build ; les autres images d’origine restent statiques.
+`cms/sync-homepage-media.mjs`, avec le même environnement Railway, restaure l’image architecturale approuvée uniquement si le nom et l’empreinte du fichier correspondent au remplacement cyber effectué par la dernière migration. Une image sélectionnée par un éditeur est conservée. L’image du hero approuvé et le logo sont copiés depuis Directus au build ; les trois diapositives source supplémentaires restent statiques.

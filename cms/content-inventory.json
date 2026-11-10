@@ -138,20 +138,50 @@
     "page": "/"
   },
   {
-    "key": "d562a75cfff8e86d5551003e",
-    "value": "SEGURO DE PROTECCIÓN DE DATOS Y SEGURIDAD INFORMÁTICA",
+    "key": "d6d3ffb7b76474acd98f63f4",
+    "value": "Lo que importa<br>no se deja<br><em>al azar.</em>",
     "section": "Inicio",
     "page": "/"
   },
   {
-    "key": "1af912ebf19e37e915abf2a3",
-    "value": "Protege tus datos y fortalece tu seguridad",
+    "key": "cc1beb6cd2d40653890ecce2",
+    "value": "Asesoría en seguros para proteger lo que has construido y todo lo que viene.",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "ea6c01da542eba41ed911a83",
+    "value": "Solicitar asesoría",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "b055d1a0bde2d74696688420",
+    "value": "Conoce nuestras soluciones",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "9622839329dbce44ca3a2b36",
+    "value": "EL FUTURO MERECE UNA MEJOR PERSPECTIVA",
     "section": "Inicio",
     "page": "/"
   },
   {
     "key": "e710970aa45f5ab83d2483b0",
     "value": "Seguros destacados",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "403992c1adc470e598ffbac4",
+    "value": "Lo que importa no se deja al azar.",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "1af912ebf19e37e915abf2a3",
+    "value": "Protege tus datos y fortalece tu seguridad",
     "section": "Inicio",
     "page": "/"
   },
@@ -168,14 +198,20 @@
     "page": "/"
   },
   {
-    "key": "10d6c30c9d2749a6a6b06848",
-    "value": "Seguros confiables en cualquier momento",
+    "key": "a67674b17b50627bd5a0f7b1",
+    "value": "SEGURO DE PROTECCIÓN DE DATOS Y <em>SEGURIDAD INFORMÁTICA</em>",
     "section": "Inicio",
     "page": "/"
   },
   {
-    "key": "bcecd5f7b978bba68cc184e2",
-    "value": "Protegemos tu negocio, aseguramos tu tranquilidad y la de tus empleados.",
+    "key": "766d83e41e699347ba140174",
+    "value": "Seguros confiables en <em>cualquier momento</em>",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "7ca09b407a7ed19f2e08834a",
+    "value": "Protegemos tu negocio, aseguramos tu tranquilidad y <em>la de tus empleados.</em>",
     "section": "Inicio",
     "page": "/"
   },
@@ -186,8 +222,14 @@
     "page": "/"
   },
   {
-    "key": "469453c2bdb71e91cc35e817",
-    "value": "BEAR INSURANCE BROKER",
+    "key": "a3f405d351e7b4a5f17a99b7",
+    "value": "PROTECCIÓN CON PERSPECTIVA",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "8775cbcb7cbc4408b339c64e",
+    "value": "DESLIZA PARA DESCUBRIR",
     "section": "Inicio",
     "page": "/"
   },
@@ -368,6 +410,12 @@
   {
     "key": "9f1ba9a374ea316f1df6bc5a",
     "value": "Mejor seguro empresarial",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "bcecd5f7b978bba68cc184e2",
+    "value": "Protegemos tu negocio, aseguramos tu tranquilidad y la de tus empleados.",
     "section": "Inicio",
     "page": "/"
   },
@@ -620,6 +668,12 @@
   {
     "key": "fd7d129365f9fe13c1710486",
     "value": "ANA Seguros",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "469453c2bdb71e91cc35e817",
+    "value": "BEAR INSURANCE BROKER",
     "section": "Inicio",
     "page": "/"
   },

@@ -84,20 +84,41 @@ test('contact validates consent, sends the correct locale and reports failures',
   await expect(page.locator('#name')).toHaveValue('Retry check');
 });
 
-test('homepage slider uses the translated source messages and original destinations', async ({page})=>{
+test('approved architectural hero opens first and source themes remain additional translated slides', async ({page})=>{
   for(const locale of ['', 'en/', 'fr/', 'it/', 'de/', 'ru/']) {
+    await page.setViewportSize({width:1440,height:1000});
     await page.goto('/'+locale);
+    await expect(page.locator('[data-hero-image="0"]')).toHaveAttribute('src','/assets/architecture-hero.webp');
+    await expect(page.locator('[data-hero-image="0"]')).toBeVisible();
+    await expect(page.locator('#hero-title em')).toHaveCount(1);
+    const approvedTitle=await page.locator('#hero-title').innerHTML();
+    const approvedSubtitle=await page.locator('#hero-subtitle').innerText();
     const bank=page.locator('[data-hero-slide]');
-    for(const index of [1,2,0]) {
+    for(const index of [1,2,3,0]) {
       const slide=bank.nth(index);
       await page.locator(`[data-hero-control="${index}"]`).click();
-      await expect(page.locator('#hero-title')).toHaveText(await slide.locator('[data-slide-title]').innerText());
+      await expect(page.locator('#hero-title')).toHaveText(await slide.locator('[data-slide-title]').textContent()||'');
       await expect(page.locator('#hero-subtitle')).toHaveText(await slide.locator('[data-slide-subtitle]').innerText());
       await expect(page.locator('#hero-contact')).toHaveAttribute('href',await slide.locator('a').getAttribute('href')||'');
       await expect(page.locator('[data-hero-image]:visible')).toHaveCount(1);
       await expect(page.locator(`[data-hero-image="${index}"]`)).toBeVisible();
       await expect(page.locator(`[data-hero-control="${index}"]`)).toHaveAttribute('aria-pressed','true');
     }
+    expect(await page.locator('#hero-title').innerHTML()).toBe(approvedTitle);
+    await expect(page.locator('#hero-subtitle')).toHaveText(approvedSubtitle);
+    await page.setViewportSize({width:390,height:900});
+    for(const index of [1,2,3,0]){
+      await page.locator(`[data-hero-control="${index}"]`).click();
+      expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+      const clear=await page.evaluate(()=>{
+        const controls=document.querySelector('.hero-switcher')!.getBoundingClientRect();
+        const footer=document.querySelector('.hero-bottom')!.getBoundingClientRect();
+        const ctas=document.querySelector('.hero-ctas')!.getBoundingClientRect();
+        return controls.bottom<footer.top&&controls.top>=ctas.bottom;
+      });
+      expect(clear,`${locale} slide ${index}: controls do not cover the approved hero text or links`).toBe(true);
+    }
+    await page.setViewportSize({width:1440,height:1000});
     await page.locator('.nav-products summary').click();
     await expect(page.locator('.nav-product-links')).toBeVisible();
     await page.keyboard.press('Escape');

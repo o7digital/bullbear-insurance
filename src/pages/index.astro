@@ -2,14 +2,13 @@
 import ContactForm from '../components/ContactForm.astro';
 import SEO from '../components/SEO.astro';
 import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
 import Footer from '../components/Footer.astro';
 import OriginalContent from '../components/OriginalContent.astro';
 import original from '../data/original-content.json';
 const widgets = original.pages['/'].widgets;
 const widget = id => widgets.find(item => item.id === id);
 const text = id => widget(id).blocks.find(block => block.tag !== 'a')?.text || '';
-const hero = widget('96d11b5');
-const slides = [0, 3, 6].map((index, order) => ({subtitle: hero.blocks[index].text, title: hero.blocks[index + 1].text, link: hero.blocks[index + 2], image: hero.images[[0, 2, 3][order]]}));
 const process = ['ee60330','386e75f','3dba684'].map(id => original.shared.process.find(item => item.id === id));
 const features = [['9c88eef','e497bb8'],['3fd6fb7','2068e2d'],['7a0d9ad','21e2e7d']];
 ---
@@ -19,18 +18,7 @@ const features = [['9c88eef','e497bb8'],['3fd6fb7','2068e2d'],['7a0d9ad','21e2e7
   <div class="concept-bar"><div class="container"><span>BULL &amp; BEAR</span><span>INSURANCE BROKER</span></div></div>
   <Header home />
   <main id="contenido" data-source-page="/">
-    <section class="hero source-hero" data-home-section="hero" data-source-widget="96d11b5" aria-labelledby="hero-title">
-      <div class="hero-picture" aria-hidden="true">{slides.map((slide,i)=><img data-hero-image={i} src={slide.image.src} alt="" hidden={i!==0} fetchpriority={i===0?'high':'auto'} decoding="async" />)}</div>
-      <div class="hero-shade" aria-hidden="true"></div><div class="hero-lines" aria-hidden="true"><span></span><span></span></div>
-      <div class="hero-container container"><div class="hero-main">
-        <p class="eyebrow hero-eyebrow"><span class="line"></span>BULL &amp; BEAR / INSURANCE BROKER</p>
-        <h1 id="hero-title">{slides[0].title}</h1><p class="hero-subtitle" id="hero-subtitle">{slides[0].subtitle}</p>
-        <div class="hero-ctas"><a id="hero-contact" href={slides[0].link.href} class="button button-cream">{slides[0].link.text} <span aria-hidden="true">↗</span></a><a href="#soluciones" class="inline-link">Productos <span aria-hidden="true">↘</span></a></div>
-        <div class="hero-switcher" aria-label="Seguros destacados">{slides.map((slide,i)=><button type="button" data-hero-control={i} aria-label={slide.subtitle} aria-pressed={i===0?'true':'false'} aria-controls="hero-title hero-subtitle">{String(i+1).padStart(2,'0')}</button>)}</div>
-        <div class="hero-slide-content" hidden>{slides.map((slide,i)=><div data-hero-slide={i}><span data-slide-title>{slide.title}</span><span data-slide-subtitle>{slide.subtitle}</span><a data-slide-contact href={slide.link.href}>{slide.link.text}</a></div>)}</div>
-      </div><div class="hero-vertical">BULL &amp; BEAR / INSURANCE BROKER</div></div>
-      <div class="hero-bottom container"><span>CIUDAD DE MÉXICO · MÉXICO</span><span>BULL &amp; BEAR INSURANCE BROKER</span><a href="#filosofia">Sobre nosotros <span aria-hidden="true">↓</span></a></div>
-    </section>
+    <Hero />
 
     <section class="philosophy" id="filosofia" data-home-section="company"><div class="container philosophy-grid">
       <div class="philosophy-aside"><span class="section-number">01</span></div>
