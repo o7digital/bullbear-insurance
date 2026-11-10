@@ -93,6 +93,11 @@ test('approved architectural hero opens first and source themes remain additiona
     await expect(page.locator('#hero-title em')).toHaveCount(1);
     const approvedTitle=await page.locator('#hero-title').innerHTML();
     const approvedSubtitle=await page.locator('#hero-subtitle').innerText();
+    const titleTypography=()=>page.locator('#hero-title').evaluate(title=>{
+      const style=getComputedStyle(title),accent=getComputedStyle(title.querySelector('em')!);
+      return {size:style.fontSize,lineHeight:style.lineHeight,spacing:style.letterSpacing,family:style.fontFamily,accentSize:accent.fontSize,accentSpacing:accent.letterSpacing};
+    });
+    const approvedTypography=await titleTypography();
     const bank=page.locator('[data-hero-slide]');
     for(const index of [1,2,3,0]) {
       const slide=bank.nth(index);
@@ -103,14 +108,17 @@ test('approved architectural hero opens first and source themes remain additiona
       await expect(page.locator('[data-hero-image]:visible')).toHaveCount(1);
       await expect(page.locator(`[data-hero-image="${index}"]`)).toBeVisible();
       await expect(page.locator(`[data-hero-control="${index}"]`)).toHaveAttribute('aria-pressed','true');
+      expect(await titleTypography(),`${locale} slide ${index}: same typography as the approved first slide`).toEqual(approvedTypography);
     }
     expect(await page.locator('#hero-title').innerHTML()).toBe(approvedTitle);
     await expect(page.locator('#hero-subtitle')).toHaveText(approvedSubtitle);
     for(const width of [390,320]){
      await page.setViewportSize({width,height:900});
+     const mobileTypography=await titleTypography();
      for(const index of [1,2,3,0]){
       await page.locator(`[data-hero-control="${index}"]`).click();
       expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+      expect(await titleTypography(),`${locale} slide ${index} at ${width}px: same typography as the first slide`).toEqual(mobileTypography);
       const clear=await page.evaluate(()=>{
         const controls=document.querySelector('.hero-switcher')!.getBoundingClientRect();
         const footer=document.querySelector('.hero-bottom')!.getBoundingClientRect();
@@ -121,6 +129,7 @@ test('approved architectural hero opens first and source themes remain additiona
      }
     }
     await page.setViewportSize({width:1440,height:1000});
+    await page.locator('.site-header').scrollIntoViewIfNeeded();
     await page.locator('.nav-products summary').click();
     await expect(page.locator('.nav-product-links')).toBeVisible();
     await page.keyboard.press('Escape');
