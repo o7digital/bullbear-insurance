@@ -39,3 +39,5 @@ Les publications Git et les hooks Vercel exigent un dernier commit signé et vé
 Déploiement manuel du frontend : `vercel deploy --yes`, puis vérifier l'alias et les routes. Déploiement du Studio : `railway up cms --path-as-root --service studio --detach`, puis vérifier `/health`. Les identifiants d'infrastructure non secrets sont dans `cms/deployment.json`.
 
 Voir [le guide du backend](cms/README.md) pour les accès, le bootstrap et les sauvegardes.
+
+La reprise complète du 10 novembre 2026 est couverte par 28 tests locaux (11 backend, 5 contrôles de fidélité au contenu source, 12 tests navigateur). Les documents et les blocs métier disposent de leur registre de provenance dans le rapport de migration.
