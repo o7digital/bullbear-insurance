@@ -12,7 +12,7 @@ async function fixture(t,overrides={}) {
   const api=async(path,token,method='GET',body)=>{
     calls.push([path,method]);
     if(path==='/auth/login')return {access_token:'access',refresh_token:'refresh',expires:900000};
-    if(path.startsWith('/users/me'))return {id:'owner',email:'owner@example.com',role:{policies:[{policy:{admin_access:true}}]}};
+    if(path.startsWith('/users/me'))return overrides.user || {id:'owner',email:'owner@example.com',role:{policies:[{policy:{admin_access:true}}]}};
     if(path==='/items/site_texts'&&method==='PATCH'){writes++;for(const change of body){Object.assign(rows.find(row=>row.id===change.id),change);}return structuredClone(body);}
     if(path.startsWith('/items/site_texts/'))return structuredClone(rows.find(row=>row.id===path.split('/').pop()));
     if(path.startsWith('/items/site_texts?'))return structuredClone(rows);
@@ -40,6 +40,22 @@ test('private content, CSRF and forged cookies are denied',async t=>{
   assert.equal((await f.request('/api/content','PATCH',{key:source.key,value:'New',version:hash('Hola')},{Origin:'https://evil.test'})).status,403);
   assert.equal((await f.request('/api/content','GET',undefined,{cookie:'bb_studio=forged'})).status,401);
   assert.equal((await fetch(f.base+'/api/contact',{method:'POST',body:'{}'})).status,403);
+});
+test('configured editors access content without reading administrator policies',async t=>{
+  const f=await fixture(t,{editorRole:'editor-role',user:{id:'editor',email:'editor@example.com',role:'editor-role'}});
+  assert.equal((await f.request('/api/session')).status,200);
+  assert.equal((await f.request('/api/content')).status,200);
+  assert.ok(!f.calls.some(call=>Array.isArray(call)&&call[0].includes('policies.policy.admin_access')));
+});
+test('unconfigured roles and revoked editor access are denied',async t=>{
+  const user={id:'editor',email:'editor@example.com',role:'editor-role'};
+  const f=await fixture(t,{editorRole:'editor-role',user});
+  assert.equal((await f.request('/api/session')).status,200);
+  user.role='another-role';
+  assert.equal((await f.request('/api/content')).status,403);
+  assert.equal((await f.request('/api/publish','POST',{})).status,403);
+  const unconfigured=await fixture(t,{user:{id:'editor',email:'editor@example.com',role:'editor-role'},editorRole:undefined});
+  assert.equal((await unconfigured.request('/api/session')).status,403);
 });
 test('drafts translate together, stay unpublished and publish only complete bundles',async t=>{
   const f=await fixture(t);

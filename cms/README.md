@@ -6,7 +6,9 @@ Le projet Railway `bullbear-insurance-cms` contient PostgreSQL 18, Directus 12.6
 
 Studio : https://studio-production-2fc1.up.railway.app/ ; administration technique : https://directus-production-1a26.up.railway.app/admin.
 
-Le compte initial est `olivier.steineur@icloud.com`. Son mot de passe initial est la variable **ADMIN_PASSWORD du service directus** dans Railway. Il n'est enregistré dans aucun fichier du dépôt. Modifier ce mot de passe dans le profil Directus après récupération ; une modification de la variable de bootstrap ne change pas un compte déjà créé. Le Studio accepte actuellement les administrateurs Directus. Les tokens techniques de lecture/création n'ont aucun accès au Studio. Un rôle éditorial pourra être configuré avec l'adresse du client et des permissions explicites.
+Le compte initial est `olivier.steineur@icloud.com`. Son mot de passe initial est la variable **ADMIN_PASSWORD du service directus** dans Railway. Il n'est enregistré dans aucun fichier du dépôt. Modifier ce mot de passe dans le profil Directus après récupération ; une modification de la variable de bootstrap ne change pas un compte déjà créé.
+
+Le Studio accepte les administrateurs Directus et le rôle éditorial identifié par `STUDIO_EDITOR_ROLE_ID` dans Railway. Le rôle **Bull & Bear Studio Editor** permet de lire et modifier les contenus et images, de publier les changements, de suivre/supprimer les demandes et d'ajouter des fichiers. Il ne permet pas de gérer les utilisateurs, les rôles ou les paramètres techniques. Les contrôles relisent le rôle à chaque requête ; une révocation prend effet sur les sessions déjà ouvertes. Les tokens techniques de lecture/création n'ont aucun accès au Studio. Les mots de passe temporaires sont remis au propriétaire hors du dépôt, à changer dans le profil Directus après connexion ; aucune expiration automatique n'est annoncée.
 
 ## Usage
 

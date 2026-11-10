@@ -16,7 +16,7 @@ export function validateContact(input) {
   return {id:randomBytes(16).toString('hex'),name,email,service:input.service,locale:input.locale,consent:true,consent_version:'2026-11-09',received_at:new Date().toISOString(),status:'new'};
 }
 export function createStudio(config={}) {
-  const options={cms:process.env.DIRECTUS_URL,secret:process.env.STUDIO_SECRET,origin:process.env.STUDIO_ORIGIN,contactSecret:process.env.CONTACT_PROXY_SECRET,contactToken:process.env.CONTACT_WRITE_TOKEN,hook:process.env.VERCEL_PREVIEW_DEPLOY_HOOK,preview:'https://bullbear-insurance-preview.vercel.app',secure:process.env.NODE_ENV==='production',...config};
+  const options={cms:process.env.DIRECTUS_URL,secret:process.env.STUDIO_SECRET,origin:process.env.STUDIO_ORIGIN,editorRole:process.env.STUDIO_EDITOR_ROLE_ID,contactSecret:process.env.CONTACT_PROXY_SECRET,contactToken:process.env.CONTACT_WRITE_TOKEN,hook:process.env.VERCEL_PREVIEW_DEPLOY_HOOK,preview:'https://bullbear-insurance-preview.vercel.app',secure:process.env.NODE_ENV==='production',...config};
   if(!options.secret)throw new Error('STUDIO_SECRET is required.');
   const encryptionKey=createHash('sha256').update(options.secret).digest();
   const request=options.api || ((path,token,method,body)=>api(options.cms,token,path,method,body));
@@ -52,9 +52,13 @@ export function createStudio(config={}) {
       catch {cookie(res,null);throw new HttpError(401,'La sesión ha caducado. Vuelve a iniciar sesión.');}
     }
     // Recheck access on every request, so revocations apply to existing sessions.
-    const user=await request('/users/me?fields=id,email,first_name,role.id,role.policies.policy.admin_access,policies.policy.admin_access',current.access);
-    const admin=[...(user.role?.policies||[]),...(user.policies||[])].some(row=>row.policy?.admin_access);
-    if(!admin && (!options.editorRole || user.role?.id!==options.editorRole))throw new HttpError(403,'Esta cuenta no tiene acceso al Studio.');
+    const user=await request('/users/me?fields=id,email,first_name,role',current.access);
+    const roleId=typeof user.role==='string'?user.role:user.role?.id;
+    if(!options.editorRole || roleId!==options.editorRole) {
+      const access=await request('/users/me?fields=role.policies.policy.admin_access,policies.policy.admin_access',current.access);
+      const admin=[...(access.role?.policies||[]),...(access.policies||[])].some(row=>row.policy?.admin_access);
+      if(!admin)throw new HttpError(403,'Esta cuenta no tiene acceso al Studio.');
+    }
     return {...current,user};
   }
   return createServer(async(req,res)=>{
