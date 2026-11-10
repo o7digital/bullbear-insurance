@@ -3,7 +3,8 @@ import AxeBuilder from '@axe-core/playwright';
 import { readFileSync } from 'node:fs';
 const services = JSON.parse(readFileSync(new URL('../src/data/services.json', import.meta.url), 'utf8'));
 const posts = JSON.parse(readFileSync(new URL('../src/data/posts.json', import.meta.url), 'utf8'));
-const routes = ['/', '/sobre-nosotros/', '/contacto/', '/aviso-de-privacidad/', '/reclutamiento/', '/blog/', ...services.map(s=>`/service/${s.slug}/`), ...posts.map(p=>`/${p.slug}/`)];
+const forms = ['/formulario-danos/','/formulario-cuidado-de-personas/','/formulario-automoviles/','/contacto-lineas-financieras/'];
+const routes = [...forms, '/', '/sobre-nosotros/', '/contacto/', '/aviso-de-privacidad/', '/reclutamiento/', '/blog/', ...services.map(s=>`/service/${s.slug}/`), ...posts.map(p=>`/${p.slug}/`)];
 test('all pages, SEO, structured data and internal links', async ({ page, request }) => {
   const links = new Set<string>();
   for (const path of routes) {
@@ -55,22 +56,26 @@ test('contact validates consent, sends the correct locale and reports failures',
       submitted = route.request().postDataJSON();
       await route.fulfill({ status: 201, contentType: 'application/json', body: '{"ok":true}' });
     });
-    await page.locator('#name').fill('Website quality check');
+    await page.locator('#name').fill('Website');
+    await page.locator('#last-name').fill('quality check');
+    await page.locator('#phone').fill('+52 55 1510 0605');
+    await page.locator('#message').fill('Consulta de prueba');
     await page.locator('#email').fill('qa@example.com');
-    await page.locator('#service').selectOption('general');
+    await page.locator('#service').selectOption('personal');
     await page.locator('.form-submit').click();
     expect(submitted).toBeUndefined();
     await page.locator('[name="consent"]').check();
     await page.locator('.form-submit').click();
     await expect(page.locator('#name')).toHaveValue('');
-    expect(submitted).toEqual({name:'Website quality check',email:'qa@example.com',service:'general',consent:true,website:'',locale});
+    expect(submitted).toEqual({name:'Website quality check',first_name:'Website',last_name:'quality check',phone:'+52 55 1510 0605',message:'Consulta de prueba',form:'general',insurance_type:'personal',email:'qa@example.com',service:'personal',consent:true,website:'',locale});
     await expect(page.locator('#form-message')).toHaveText(await page.locator('#interest-form').getAttribute('data-success') || '');
     await page.unroute('**/api/contact');
   }
   await page.route('**/api/contact', route => route.fulfill({status:503,body:'{}'}));
   await page.locator('#name').fill('Retry check');
+  await page.locator('#last-name').fill('User');
   await page.locator('#email').fill('qa@example.com');
-  await page.locator('#service').selectOption('general');
+  await page.locator('#service').selectOption('personal');
   await page.locator('[name="consent"]').check();
   await page.locator('.form-submit').click();
   await expect(page.locator('#form-message')).toHaveText(await page.locator('#interest-form').getAttribute('data-error') || '');
@@ -103,3 +108,17 @@ for (const locale of ['en','fr','it','de','ru']) {
     }
   });
 }
+
+test('specialized original forms retain their fields and submit their selected insurance type', async ({page})=>{
+ for(const prefix of ['', '/fr'])for(const path of forms){
+  await page.goto(prefix+path);
+  let payload:any;
+  await page.route('**/api/contact',async route=>{payload=route.request().postDataJSON();await route.fulfill({status:201,contentType:'application/json',body:'{"ok":true}'});});
+  await page.locator('#name').fill('Cliente');await page.locator('#last-name').fill('Prueba');await page.locator('#email').fill('qa@example.com');await page.locator('#phone').fill('+52 55 1510 0605');
+  if(await page.locator('#service').count())await page.locator('#service').selectOption({index:1});
+  if(await page.locator('#message').count())await page.locator('#message').fill('Información completa de la solicitud.');
+  await page.locator('[name="consent"]').check();await page.locator('.form-submit').click();await expect(page.locator('#name')).toHaveValue('');
+  expect(payload.last_name).toBe('Prueba');expect(payload.phone).toBe('+52 55 1510 0605');expect(payload.locale).toBe(prefix?'fr':'es');expect(payload.form).not.toBe('general');expect(payload.insurance_type).toBeTruthy();
+  await page.unroute('**/api/contact');
+ }
+});

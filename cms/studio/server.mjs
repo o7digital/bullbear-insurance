@@ -5,6 +5,7 @@ import { createCipheriv, createDecipheriv, randomBytes, timingSafeEqual, createH
 import { pathToFileURL } from 'node:url';
 import { api, hash, textId, locales } from '../lib.mjs';
 import { translate, safeText } from '../translations.mjs';
+import { forms } from '../forms.mjs';
 
 export class HttpError extends Error { constructor(status,message){super(message);this.status=status;} }
 export function validateContact(input) {
@@ -12,8 +13,19 @@ export function validateContact(input) {
   if(input.website)return null;
   const name=typeof input.name==='string'?input.name.trim():'';
   const email=typeof input.email==='string'?input.email.trim():'';
-  if(name.length<2||name.length>100||/[<>\r\n]/.test(name)||email.length>254||!/^\S+@[^\s@]+\.[^\s@]+$/.test(email)||input.consent!==true||!['personal','business','financial','general'].includes(input.service)||!locales.includes(input.locale))throw new HttpError(400,'Invalid contact details');
-  return {id:randomBytes(16).toString('hex'),name,email,service:input.service,locale:input.locale,consent:true,consent_version:'2026-11-09',received_at:new Date().toISOString(),status:'new'};
+  if(name.length<2||name.length>200||/[<>\r\n]/.test(name)||email.length>254||!/^\S+@[^\s@]+\.[^\s@]+$/.test(email)||input.consent!==true||!['personal','business','financial','general'].includes(input.service)||!locales.includes(input.locale))throw new HttpError(400,'Invalid contact details');
+  const details={};
+  if(input.form!==undefined) {
+    if(typeof input.form!=='string'||!Object.hasOwn(forms,input.form))throw new HttpError(400,'Invalid form');
+    const form=forms[input.form];
+    if(!form)throw new HttpError(400,'Invalid form');
+    const first=typeof input.first_name==='string'?input.first_name.trim():'',last=typeof input.last_name==='string'?input.last_name.trim():'';
+    const phone=typeof input.phone==='string'?input.phone.trim():'',message=typeof input.message==='string'?input.message.trim():'';
+    const choice=form.choices.find(choice=>choice.value===input.insurance_type);
+    if(!first||!last||first.length>80||last.length>80||/[<>\r\n]/.test(first+last)||name!==`${first} ${last}`||phone.length>40||!/^[\d+().\s-]*$/.test(phone)||message.length>4000||(!form.message&&message)||form.choices.length&&!choice||input.service!==(choice?.service||form.service))throw new HttpError(400,'Invalid form details');
+    Object.assign(details,{first_name:first,last_name:last,phone,message,form_kind:input.form,insurance_type:choice?.label||form.title});
+  }
+  return {id:randomBytes(16).toString('hex'),name,email,service:input.service,locale:input.locale,...details,consent:true,consent_version:'2026-11-10',received_at:new Date().toISOString(),status:'new'};
 }
 export function createStudio(config={}) {
   const options={cms:process.env.DIRECTUS_URL,secret:process.env.STUDIO_SECRET,origin:process.env.STUDIO_ORIGIN,editorRole:process.env.STUDIO_EDITOR_ROLE_ID,contactSecret:process.env.CONTACT_PROXY_SECRET,contactToken:process.env.CONTACT_WRITE_TOKEN,hook:process.env.VERCEL_PREVIEW_DEPLOY_HOOK,preview:'https://bullbear-insurance-preview.vercel.app',secure:process.env.NODE_ENV==='production',...config};
@@ -71,7 +83,7 @@ export function createStudio(config={}) {
         const expected=Buffer.from(`Bearer ${options.contactSecret||''}`),actual=Buffer.from(req.headers.authorization||'');
         if(!options.contactSecret||expected.length!==actual.length||!timingSafeEqual(expected,actual))throw new HttpError(403,'Forbidden');
         limited('contact:'+hash(req.headers['x-contact-client']||req.socket.remoteAddress||''),5);
-        const inquiry=validateContact(await body(req,4096));
+        const inquiry=validateContact(await body(req,24000));
         if(inquiry)await request('/items/inquiries',options.contactToken,'POST',inquiry);
         return send(res,201,{ok:true});
       }
@@ -89,7 +101,7 @@ export function createStudio(config={}) {
         if(path==='/api/logout'&&req.method==='POST') {const current=session(req);if(current?.refresh)await request('/auth/logout',null,'POST',{refresh_token:current.refresh}).catch(()=>{});cookie(res,null);return send(res,200,{ok:true});}
         const current=await authorize(req,res), token=current.access;
         if(path==='/api/session'&&req.method==='GET')return send(res,200,{email:current.user.email,preview:options.preview,cms:options.cms,translationReady:Boolean(process.env.OPENAI_API_KEY||options.translate),publishReady:Boolean(options.hook)});
-        if(path==='/api/content'&&req.method==='GET')return send(res,200,{data:await request('/items/site_texts?limit=-1&sort=page,key,locale',token)});
+        if(path==='/api/content'&&req.method==='GET')return send(res,200,{data:await request('/items/site_texts?limit=-1&filter[status][_eq]=published&sort=page,key,locale',token)});
         if(path==='/api/content'&&req.method==='PATCH') {
           if(writing)throw new HttpError(409,'Ya se está guardando otro cambio. Espera un momento.');
           writing=true;
@@ -147,7 +159,7 @@ export function createStudio(config={}) {
           if(!options.hook)throw new HttpError(503,'La publicación no está configurada.');
           writing=true;
           try {
-            const rows=await request('/items/site_texts?limit=-1',token),writes=[];
+            const rows=await request('/items/site_texts?limit=-1&filter[status][_eq]=published',token),writes=[];
             for(const source of rows.filter(row=>row.locale==='es')) {
               const group=rows.filter(row=>row.key===source.key),draft=source.draft_value??source.value;
               for(const locale of locales) {

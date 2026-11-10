@@ -9,7 +9,7 @@ const request = (path, method, body) => api(base, token, path, method, body);
 const field = (name, type = 'string', meta = {}, schema = {}) => ({ field: name, type, meta: { interface: type === 'text' ? 'input-multiline' : 'input', ...meta }, schema: { is_nullable: true, ...(type === 'string' ? { max_length: 2000 } : {}), ...schema } });
 const definitions = {
   site_texts: { icon: 'translate', label: 'Contenidos y traducciones', fields: [field('key'),field('source','text'),field('value','text'),field('draft_value','text'),field('locale'),field('section'),field('page'),field('source_hash'),field('draft_source_hash'),field('status','string', { interface:'select-dropdown', options:{choices:[{text:'Publicado',value:'published'},{text:'Archivado',value:'archived'}]} },{default_value:'published'})] },
-  inquiries: { icon: 'inbox', label: 'Solicitudes de asesoría', fields: [field('name'),field('email'),field('service'),field('locale'),field('consent','boolean'),field('consent_version'),field('received_at','timestamp',{interface:'datetime'}),field('status','string',{interface:'select-dropdown',options:{choices:[{text:'Nueva',value:'new'},{text:'En seguimiento',value:'in_progress'},{text:'Resuelta',value:'resolved'}]}},{default_value:'new'}),field('notes','text')] },
+  inquiries: { icon: 'inbox', label: 'Solicitudes de asesoría', fields: [field('name'),field('first_name'),field('last_name'),field('email'),field('phone'),field('message','text'),field('form_kind'),field('insurance_type'),field('service'),field('locale'),field('consent','boolean'),field('consent_version'),field('received_at','timestamp',{interface:'datetime'}),field('status','string',{interface:'select-dropdown',options:{choices:[{text:'Nueva',value:'new'},{text:'En seguimiento',value:'in_progress'},{text:'Resuelta',value:'resolved'}]}},{default_value:'new'}),field('notes','text')] },
   site_media: { icon: 'photo_library', label:'Identidad e imágenes', fields:[field('title'),field('key'),field('image','uuid',{interface:'file-image',special:['file']})] }
 };
 const collections = await request('/collections');
@@ -18,6 +18,9 @@ for (const [name, definition] of Object.entries(definitions)) {
     await request('/collections', 'POST', { collection:name, schema:{}, meta:{icon:definition.icon,display_template:name==='site_texts'?'{{locale}} · {{section}} · {{value}}':'{{name}}{{title}}',translations:[{language:'es-ES',translation:definition.label}]}, fields:[field('id','string',{hidden:true},{is_primary_key:true,is_nullable:false,max_length:100}),...definition.fields] });
     if(name==='site_media')await request('/relations','POST',{collection:name,field:'image',related_collection:'directus_files',schema:{on_delete:'SET NULL'}});
     console.log('Created',name);
+  } else {
+    const existing=await request('/fields/'+name);
+    for(const definitionField of definition.fields)if(!existing.some(row=>row.field===definitionField.field))await request('/fields/'+name,'POST',definitionField);
   }
 }
 const inventory = JSON.parse(await readFile('cms/content-inventory.json','utf8'));

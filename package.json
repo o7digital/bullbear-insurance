@@ -8,7 +8,8 @@
     "build": "astro build && node scripts/localize.mjs",
     "preview": "astro preview --host 0.0.0.0",
     "test": "playwright test",
-    "test:cms": "node --test cms/*.test.mjs cms/studio/*.test.mjs"
+    "test:cms": "node --test cms/*.test.mjs cms/studio/*.test.mjs",
+    "test:content": "node --test cms/source-content.check.mjs"
   },
   "dependencies": {
     "astro": "^7.4.2"

@@ -60,7 +60,7 @@ for (const file of htmlFiles) {
     document.documentElement.lang = locale === 'es' ? 'es-MX' : locale;
     for (const link of document.querySelectorAll('a[href]')) {
       const href = link.getAttribute('href');
-      if (href.startsWith('/') && !href.startsWith('//')) link.setAttribute('href', localPath(href, locale));
+      if (href.startsWith('/') && !href.startsWith('//') && !/^\/(?:assets|documents|fonts|_cms)\//.test(href)) link.setAttribute('href', localPath(href, locale));
     }
     const canonical = `https://bullandbear-insurancebroker.com${localizedPath}`;
     document.querySelector('link[rel="canonical"]')?.setAttribute('href', canonical);

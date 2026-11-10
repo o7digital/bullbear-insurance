@@ -10,28 +10,7 @@
       "main": false
     }
   },
-  "redirects": [
-    {
-      "source": "/formulario-danos/",
-      "destination": "/contacto/#interest-form",
-      "statusCode": 301
-    },
-    {
-      "source": "/formulario-cuidado-de-personas/",
-      "destination": "/contacto/#interest-form",
-      "statusCode": 301
-    },
-    {
-      "source": "/formulario-automoviles/",
-      "destination": "/contacto/#interest-form",
-      "statusCode": 301
-    },
-    {
-      "source": "/contacto-lineas-financieras/",
-      "destination": "/contacto/#interest-form",
-      "statusCode": 301
-    }
-  ],
+  "redirects": [],
   "headers": [
     {
       "source": "/(.*)",

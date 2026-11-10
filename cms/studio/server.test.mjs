@@ -3,11 +3,12 @@ import assert from 'node:assert/strict';
 import { createServer } from 'node:http';
 import { createStudio, validateContact } from './server.mjs';
 import { hash, locales, textId } from '../lib.mjs';
+import { forms } from '../forms.mjs';
 const source={key:'a'.repeat(24),source:'Hola',value:'Hola',section:'Inicio',page:'/',status:'published'};
 const seed=()=>locales.map(locale=>({...source,id:textId(source.key,locale),locale,value:locale==='es'?'Hola':'Hello',source_hash:hash('Hola'),draft_value:null,draft_source_hash:null}));
 async function fixture(t,overrides={}) {
   let rows=seed(),writes=0;
-  const calls=[];
+  const calls=[],inquiries=[];
   const hook=createServer((req,res)=>{calls.push('hook');res.writeHead(200,{'Content-Type':'application/json'});res.end('{"job":{"id":"job"}}');});await new Promise(resolve=>hook.listen(0,'127.0.0.1',resolve));t.after(()=>hook.close());
   const api=async(path,token,method='GET',body)=>{
     calls.push([path,method]);
@@ -16,7 +17,7 @@ async function fixture(t,overrides={}) {
     if(path==='/items/site_texts'&&method==='PATCH'){writes++;for(const change of body){Object.assign(rows.find(row=>row.id===change.id),change);}return structuredClone(body);}
     if(path.startsWith('/items/site_texts/'))return structuredClone(rows.find(row=>row.id===path.split('/').pop()));
     if(path.startsWith('/items/site_texts?'))return structuredClone(rows);
-    if(path==='/items/inquiries'&&method==='POST'){writes++;return body;}
+    if(path==='/items/inquiries'&&method==='POST'){writes++;inquiries.push(structuredClone(body));return body;}
     throw Error('Unexpected API call '+path+' '+method);
   };
   const server=createStudio({secret:'test-secret',origin:'https://studio.test',api,secure:false,contactSecret:'contact-secret',contactToken:'write-only',hook:`http://127.0.0.1:${hook.address().port}`,translate:async()=>Object.fromEntries(locales.filter(l=>l!=='es').map(locale=>[locale,{[source.key]:'New translation'}])),...overrides});
@@ -25,7 +26,7 @@ async function fixture(t,overrides={}) {
   const login=await fetch(base+'/api/login',{method:'POST',headers:{Origin:'https://studio.test','Content-Type':'application/json'},body:'{"email":"owner@example.com","password":"secret"}'});
   const cookie=login.headers.get('set-cookie').split(';')[0];
   const request=(path,method='GET',body,headers={})=>fetch(base+path,{method,headers:{cookie,Origin:'https://studio.test',...(body?{'Content-Type':'application/json'}:{}),...headers},body:body?JSON.stringify(body):undefined});
-  return {base,request,rows:()=>rows,writes:()=>writes,calls};
+  return {base,request,rows:()=>rows,writes:()=>writes,calls,inquiries};
 }
 test('contact validates consent and rejects unsupported fields',()=>{
   const contact={name:'QA User',email:'qa@example.com',service:'general',locale:'fr',consent:true};
@@ -33,6 +34,7 @@ test('contact validates consent and rejects unsupported fields',()=>{
   for(const patch of [{consent:false},{locale:'xx'},{service:'injected'},{email:'invalid'},{name:'<script>'}])assert.throws(()=>validateContact({...contact,...patch}));
   assert.equal(validateContact({...contact,website:'bot'}),null);
   assert.equal(validateContact({...contact,status:'resolved'}).status,'new');
+  for(const form of ['__proto__','constructor',{},'missing'])assert.throws(()=>validateContact({...contact,form}),error=>error.status===400);
 });
 test('private content, CSRF and forged cookies are denied',async t=>{
   const f=await fixture(t);
@@ -84,4 +86,16 @@ test('contact proxy stores a validated private inquiry and rate limits abuse',as
   const submit=()=>fetch(f.base+'/api/contact',{method:'POST',headers:{Authorization:'Bearer contact-secret','Content-Type':'application/json','X-Contact-Client':'test-client'},body:JSON.stringify(body)});
   assert.equal((await submit()).status,201);assert.equal(f.writes(),1);
   for(let i=0;i<4;i++)await submit();assert.equal((await submit()).status,429);
+});
+
+test('restored forms validate their own insurance choices and preserve complete contact details',async t=>{
+ const f=await fixture(t);
+ for(const [variant,form]of Object.entries(forms)){
+  const choice=form.choices[0];
+  const input={name:'María García',first_name:'María',last_name:'García',email:'qa@example.com',phone:'+52 55 1510 0605',form:variant,insurance_type:choice?.value||'auto',service:choice?.service||form.service,message:form.message?'Solicitud '+ 'é'.repeat(3500):'',locale:'fr',consent:true,website:''};
+  const response=await fetch(f.base+'/api/contact',{method:'POST',headers:{Authorization:'Bearer contact-secret','Content-Type':'application/json','X-Contact-Client':variant},body:JSON.stringify(input)});
+  assert.equal(response.status,201,variant+' '+await response.text());
+  const saved=f.inquiries.at(-1);assert.equal(saved.phone,input.phone);assert.equal(saved.message,input.message);assert.equal(saved.first_name,'María');assert.equal(saved.last_name,'García');assert.equal(saved.form_kind,variant);assert.equal(saved.insurance_type,choice?.label||form.title);
+  for(const patch of [{last_name:''},{phone:'<script>'},{insurance_type:'unknown',service:'business'},{message:'a'.repeat(4001)}])assert.throws(()=>validateContact({...input,...patch}));
+ }
 });

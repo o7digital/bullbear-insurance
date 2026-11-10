@@ -1,3 +1,5 @@
+> Mise à jour du 10 novembre 2026 : ce document est une archive de la version initiale. La migration complète, les formulaires actifs et leurs vérifications sont décrits dans [le rapport actuel](content-migration-2026-11-10.md).
+
 # Vérifications éditoriales — 26 octobre 2026
 
 Sources consultées : https://bullandbear-insurancebroker.com/ et ses sitemaps `page-sitemap.xml`, `instive-insurance-sitemap.xml`, `post-sitemap.xml` ; API publique WordPress pour les pages et articles. Les extractions sont conservées dans `docs/source/`.

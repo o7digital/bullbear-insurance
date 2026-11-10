@@ -4,7 +4,7 @@ export default async function handler(req, res) {
   const expected = `https://${req.headers.host}`;
   if (req.headers.origin !== expected || !req.headers['content-type']?.startsWith('application/json')) return res.status(403).json({error:'Invalid origin'});
   if (!process.env.STUDIO_URL || !process.env.CONTACT_PROXY_SECRET) return res.status(503).json({error:'Contact is unavailable'});
-  if (Number(req.headers['content-length'] || 0)>4096) return res.status(413).json({error:'Request too large'});
+  if (Number(req.headers['content-length'] || 0)>24000) return res.status(413).json({error:'Request too large'});
   let body;
   try { body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body; }
   catch { return res.status(400).json({ error:'Invalid JSON' }); }

@@ -180,8 +180,8 @@
     "page": "/"
   },
   {
-    "key": "4b592b9fecd152aecd9e79c4",
-    "value": "Nuestra oferta de valor radica en la asesoría y asistencia en la administración de riesgos, a través de un equipo especializado y de amplia experiencia en el sector asegurador.",
+    "key": "f7079d8b6ae55226d88ffb3d",
+    "value": "Nuestra oferta de valor radica en la puntual asesoría y asistencia en la administración de riesgos. Dichos servicio se brinda a través de un equipo especializado y de amplia experiencia dentro del sector asegurador.",
     "section": "Inicio",
     "page": "/"
   },
@@ -384,38 +384,314 @@
     "page": "/"
   },
   {
-    "key": "58d55554ece4bf3bf2909ede",
-    "value": "Comparar",
+    "key": "4f468be4189714766c3055d1",
+    "value": "COMPARATIVO DE OFERTA",
     "section": "Inicio",
     "page": "/"
   },
   {
-    "key": "6f03d4a7bc1be25a034307ab",
-    "value": "Presentamos opciones del mercado asegurador y sus diferenciadores. Nosotros te asesoramos, tú eliges.",
+    "key": "d6cebfb6d99b983fc6bf5d36",
+    "value": "El área comercial se encargará de presentarte las mejores opciones del mercado asegurador y sus diferenciadores. Nosotros te asesoramos ¡Tú eliges!",
     "section": "Inicio",
     "page": "/"
   },
   {
-    "key": "67ffbe0d5b47153ee88681ec",
-    "value": "Analizar",
+    "key": "cef8afba597ba75cb852e182",
+    "value": "ANÁLISIS DE RIESGO",
     "section": "Inicio",
     "page": "/"
   },
   {
-    "key": "f107fa0f589a53c176629d05",
-    "value": "Nuestro equipo técnico analiza los riesgos para orientar su colocación.",
+    "key": "76125c1ac4a70d3c8ff68902",
+    "value": "Nuestro equipo esta conformado por técnicos Especialistas de amplia experiencia en el sector, encargados de colocar de manera óptima cada riesgo.",
     "section": "Inicio",
     "page": "/"
   },
   {
-    "key": "5be84c6c228504145d0db441",
-    "value": "Acompañar",
+    "key": "4cbd8896ea5aac0e7d09c7ee",
+    "value": "ATENCIÓN EN SINIESTROS",
     "section": "Inicio",
     "page": "/"
   },
   {
-    "key": "3a50d26a954d4579cae408e4",
-    "value": "Brindamos asesoría y gestión de siniestros de acuerdo con lo contratado en cada póliza.",
+    "key": "cc612c8915fa4cb4bac4b659",
+    "value": "Brindamos asesoría y gestión a los siniestros de nuestros asegurados, encargandonos de que se cumpla lo contratado en cada póliza.",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "1af912ebf19e37e915abf2a3",
+    "value": "Protege tus datos y fortalece tu seguridad",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "d562a75cfff8e86d5551003e",
+    "value": "SEGURO DE PROTECCIÓN DE DATOS Y SEGURIDAD INFORMÁTICA",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "fadda3850a1ebf2b5d232aea",
+    "value": "Contáctanos",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "c660eb004621da0fc5cd668e",
+    "value": "Seguro de gastos médicos",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "10d6c30c9d2749a6a6b06848",
+    "value": "Seguros confiables en cualquier momento",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "c5dc60779deda28e46731ec5",
+    "value": "Seguro empresarial",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "bcecd5f7b978bba68cc184e2",
+    "value": "Protegemos tu negocio, aseguramos tu tranquilidad y la de tus empleados.",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "a302f7e09c88927e16bea0b4",
+    "value": "SURA",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "c8f0069c760b22944c519e55",
+    "value": "Bear Insurance Broker",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "511b2e940b93a2f88bcfc765",
+    "value": "Protector de capital privado",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "332cff9a210dc24a09d18c0c",
+    "value": "Esta póliza de seguro de protección de datos y seguridad informática ofrece una amplia cobertura frente a riesgos relacionados con la vulneración de datos personales y corporativos, sanciones legales y pérdida de ingresos por incidentes de seguridad informática. Aquí se destacan los puntos clave de cobertura:.",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "b808bffe6e242d45b970c0ab",
+    "value": "Leer más",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "fdd3a48facb65f2c9492d36a",
+    "value": "Derivado del aumento de las demandas contra los Fondos de Capital Privado en los últimos 5 años, hemos creado un seguro cuyo propósito es cubrir la responsabilidad de la administración, servicios profesionales, prácticas laborales, reclamos bursátiles, obligaciones fiduciarias y gestión de las empresas de portafolio y estrategia de salida.",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "4a87aff663bbda70e0a0f915",
+    "value": "COLECTIVIDADES DE BENEFICIOS PARA EMPLEADOS",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "efcf28fe58b1a01e4d3bad24",
+    "value": "Son planes diseñados a la medida de las necesidades y expectativas de nuestros asegurados. El objetivo es proteger a los empleados de empresas, miembros de sindicatos, instituciones o uniones de trabajadores, estos seguros se pueden adaptar a las necesidades particulares de cada grupo o colectividad.",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "61f2566ad382fc6da02b070a",
+    "value": "Este tipo de planes incluyen seguros de vida, de gastos médicos menores y/o mayores, de accidentes personales, así como membresias de salud, asistencia o entretenimiento.",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "19991c64ddacdaf8c08a3670",
+    "value": "Al contratar este tipo de seguros de grupo para todos los colaboradores, se obtienen mejores costos e incluso beneficios fiscales para la empresa.",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "13462ecf65f036d20b6f7206",
+    "value": "Cuida del capital humano, nosotros te ayudamos.",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "a2c3f1acbbbcb60ef445e738",
+    "value": "Mejor seguro personal",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "b751f92102c26209f67f141a",
+    "value": "Aseguramos lo que mas amas, Seguros para ti, tu familia y patrimonio.",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "8e3215e3dafaed65440563ca",
+    "value": "Seguro de auto y moto",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "99d9d5b0d629887596ac8021",
+    "value": "Con la extensa oferta que Bull&amp;Bear Insurance tiene para tí, podrás elegir desde el páquete más básico de daños a",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "52f2175fd862c18df17e37a9",
+    "value": "Seguro Médico",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "73f9e2e029fe3b6c1b4ae1fc",
+    "value": "Tienen como finalidad resguardar la economía familiar ante una emergencia médica. Contando con un seguro quedarán cubiertos todos los gastos",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "d74b2937b193da538ec129d8",
+    "value": "Seguro de hogar",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "546f8b2b792fdcdde6fa2768",
+    "value": "Protege tu hogar de manera íntegra, desde su estructura hasta sus contenidos ante cualquier circunstancia: robo, accidente, catástrofe natural, incendio,",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "2be2e994a7ea5a0db8d19d3f",
+    "value": "Seguro de vida",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "4807ef264e7080494304171d",
+    "value": "Los seguros de vida, están diseñados para proteger a las familias ante algún evento imprevisto que pueda impactar significativamente la",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "917b59b078472e8b86420b70",
+    "value": "¡Solicita tu seguro hoy mismo!",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "9f1ba9a374ea316f1df6bc5a",
+    "value": "Mejor seguro empresarial",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "ae4af52591b1506e4a8da545",
+    "value": "Beneficios para empleados",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "7b8c6d220947ee175ffa623d",
+    "value": "Son planes diseñados a la medida de las necesidades y expectativas de nuestros asegurados.",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "edbef7a7da27516b87a4dc44",
+    "value": "Paquetes empresariales y PyMES",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "7c7fcff48a051bbe43f94c19",
+    "value": "Sabemos que las necesidades de protección de cada negocio dependen de su tamaño, actividades y riesgos a los que se",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "58f82ec7045c493520501a2d",
+    "value": "Flotillas vehiculares",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "69306eec51688ca9c9698001",
+    "value": "Te ayudaremos a conformar el mejor paquete en materia de seguros para Flotillas, que te permitirán proteger los vehículos de",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "3e32846b14f28de260735870",
+    "value": "Transporte de mercancias",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "a23e30954ac1b3044d4febd1",
+    "value": "Sabemos que, un seguro de mercancía que cubra estos riesgos y permita a la empresa continuar desarrollando su actividad económica",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "0cabfa27d05c23c9650906a2",
+    "value": "Obra civil",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "d81ac3d6fda3107c169c71bb",
+    "value": "Es un seguro completo para obras que no han sido concluidas, disponible para propietarios y/o constructores, que protege los bienes",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "3e096df2e8cd744fbea7bac3",
+    "value": "¿Deseas contratar un seguro? solicita información ahora mismo.",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "dd47f27404639b2a711afee9",
+    "value": "Garantiza el bienestar de tus seres queridos",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "fb7a67fc32d713a96797e1e4",
+    "value": "En la vida, siempre buscamos brindar seguridad y protección a nuestros seres queridos. Los seguros de vida son una herramienta esencial para asegurar el futuro…",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "a03ce64b1ec496b3aceb5aec",
+    "value": "Leer más ↗",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "1cdb6c55ae7ec721dc9fc32b",
+    "value": "Protege a tus seres queridos hoy y siempre",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "74e3998b3dd3dece0f3a51af",
+    "value": "Los seguros de vida son una herramienta crucial para garantizar la protección financiera de tus seres queridos en caso de que algo inesperado te suceda.",
     "section": "Inicio",
     "page": "/"
   },
@@ -462,14 +738,8 @@
     "page": "/"
   },
   {
-    "key": "df3df3fdddc7ede2e16f2546",
-    "value": "ASESORÍA PERSONALIZADA",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "76ffb7d85e11ba0016983ab6",
-    "value": "Hablemos de<br><em>tu futuro.</em>",
+    "key": "90f248c795a7edff43feb0d0",
+    "value": "Enviar<br><em>solicitud.</em>",
     "section": "Inicio",
     "page": "/"
   },
@@ -480,8 +750,14 @@
     "page": "/"
   },
   {
-    "key": "d36ae2c1bf451e93fce1b4d6",
-    "value": "Tu nombre",
+    "key": "180be95ad7dd43d197a64e2f",
+    "value": "Apellidos",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "f1186abd0b8bec580263d92f",
+    "value": "Teléfono",
     "section": "Inicio",
     "page": "/"
   },
@@ -492,8 +768,8 @@
     "page": "/"
   },
   {
-    "key": "0c8eff3c4cb7251e35d1abfe",
-    "value": "¿Qué te gustaría proteger?",
+    "key": "600e2fcd85c45b52b068189e",
+    "value": "Selecciona tipo de seguro",
     "section": "Inicio",
     "page": "/"
   },
@@ -504,26 +780,20 @@
     "page": "/"
   },
   {
-    "key": "d84f921127f66cff6c2bfb82",
-    "value": "Personas y patrimonio",
+    "key": "8e5dc33bebbd907ae8b907e1",
+    "value": "Seguro Personal",
     "section": "Inicio",
     "page": "/"
   },
   {
-    "key": "155203ac7eda6e19c39e1fb5",
-    "value": "Empresas y negocios",
+    "key": "2e03ea7675bdde07f69dd35c",
+    "value": "Protección de Capital privado",
     "section": "Inicio",
     "page": "/"
   },
   {
-    "key": "ec0853a2c7e755ac310c7636",
-    "value": "Líneas financieras",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "82780c97e35f468a3cd42a4f",
-    "value": "Asesoría general",
+    "key": "b0b392cae8000662833e9d0b",
+    "value": "Comentario o mensaje",
     "section": "Inicio",
     "page": "/"
   },
@@ -552,56 +822,44 @@
     "page": "/"
   },
   {
-    "key": "fc823ec01b76c150c7855e03",
-    "value": "Usaremos tu nombre, correo y área de interés para responder a tu solicitud. No incluyas información médica ni documentos.",
+    "key": "c9bb5c644aeb6e4badfffd76",
+    "value": "Enviar solicitud",
     "section": "Inicio",
     "page": "/"
   },
   {
-    "key": "b0f6d769350de18fe1cc1458",
-    "value": "PREGUNTAS FRECUENTES",
+    "key": "8f000c0239d43c7a8a043ddc",
+    "value": "Usaremos tus datos de contacto y el tipo de seguro seleccionado para responder a tu solicitud. No incluyas información médica, bancaria ni documentos.",
     "section": "Inicio",
     "page": "/"
   },
   {
-    "key": "d6a83cf15fc8324cc080eaac",
-    "value": "Las preguntas<br><em>correctas importan.</em>",
+    "key": "e6d9f83d292b02d04fc20560",
+    "value": "Trabajamos con",
     "section": "Inicio",
     "page": "/"
   },
   {
-    "key": "53a745aff826f5f504b87c6e",
-    "value": "¿Cómo elegir la cobertura adecuada?",
+    "key": "ecabbf257d8ccbc3abcc3c35",
+    "value": "Seguros Atlas",
     "section": "Inicio",
     "page": "/"
   },
   {
-    "key": "f40a182b3515ca7a33610d3e",
-    "value": "El primer paso es identificar los riesgos más relevantes para tu situación. A partir de ahí, un asesor puede revisar alternativas y explicar sus coberturas, exclusiones y condiciones.",
+    "key": "b02810696ebf09a50797c18b",
+    "value": "AXA",
     "section": "Inicio",
     "page": "/"
   },
   {
-    "key": "39b06dea56c4d6a31aa16a61",
-    "value": "¿Puedo solicitar una revisión de mis seguros actuales?",
+    "key": "0b97e72c1c02f4bd7f120500",
+    "value": "Quálitas",
     "section": "Inicio",
     "page": "/"
   },
   {
-    "key": "5fca3065f76f471a0aa3b57e",
-    "value": "Sí. Puedes plantear tus necesidades y solicitar una revisión de coberturas, sumas aseguradas y condiciones de las pólizas existentes.",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "775de29fdb7ac91d8dc9b943",
-    "value": "¿Qué sucede cuando necesito usar mi seguro?",
-    "section": "Inicio",
-    "page": "/"
-  },
-  {
-    "key": "d77945032fcb5371350a81a2",
-    "value": "Cada producto y aseguradora tiene procesos específicos. Es importante conocerlos de antemano y contar con los canales adecuados para iniciar un reporte o una reclamación.",
+    "key": "fd7d129365f9fe13c1710486",
+    "value": "ANA Seguros",
     "section": "Inicio",
     "page": "/"
   },
@@ -624,6 +882,12 @@
     "page": "/"
   },
   {
+    "key": "bd1ffbeff7d23d82a7e0dad6",
+    "value": "¿Tiene alguna pregunta? ¡Contactanos, nos encantaría aclarar tus dudas!",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
     "key": "ca3a1ca2a3f1c6e9a65e4d1d",
     "value": "Información y servicios",
     "section": "Inicio",
@@ -632,6 +896,12 @@
   {
     "key": "b3637e447fdcab4d82db097b",
     "value": "Cuidado personal",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "ec0853a2c7e755ac310c7636",
+    "value": "Líneas financieras",
     "section": "Inicio",
     "page": "/"
   },
@@ -654,20 +924,32 @@
     "page": "/"
   },
   {
+    "key": "c13d99d78b3c6a91e0b8c71d",
+    "value": "Oficinas",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
     "key": "f30c493101b4747a4ea70b30",
     "value": "Av. Insurgentes Sur 716, Piso 8, Col. Del Valle, Benito Juárez, 03103 Ciudad de México, CDMX",
     "section": "Inicio",
     "page": "/"
   },
   {
-    "key": "1c82ad55bcc086e276b82cd5",
-    "value": "Aviso de privacidad | Bull",
-    "section": "Privacidad",
-    "page": "/aviso-de-privacidad/"
+    "key": "96784ec848ceaaeb462f0474",
+    "value": "Facebook ↗",
+    "section": "Inicio",
+    "page": "/"
   },
   {
-    "key": "c8f0069c760b22944c519e55",
-    "value": "Bear Insurance Broker",
+    "key": "a1609666a012a0c5b250a443",
+    "value": "Bear Insurance. Todos los derechos reservados. desarrollado por Bull and Bear Technology",
+    "section": "Inicio",
+    "page": "/"
+  },
+  {
+    "key": "1c82ad55bcc086e276b82cd5",
+    "value": "Aviso de privacidad | Bull",
     "section": "Privacidad",
     "page": "/aviso-de-privacidad/"
   },
@@ -708,8 +990,8 @@
     "page": "/aviso-de-privacidad/"
   },
   {
-    "key": "b7fe761770e493da5bd69ee7",
-    "value": "El formulario recoge tu nombre, correo electrónico, área de interés e idioma únicamente para atender tu solicitud. Se registra tu consentimiento y la fecha de recepción. El sitio está alojado en Vercel y las solicitudes se almacenan en Directus y PostgreSQL, alojados en Railway. No se solicitan datos médicos, bancarios ni documentos en este formulario. Para ejercer tus derechos o solicitar la eliminación de tu solicitud, escribe a contacto@bullandbear-insurancebroker.com.",
+    "key": "afe8450d6abd23517ebe857f",
+    "value": "El formulario recoge tu nombre, apellidos, teléfono opcional, correo electrónico, tipo de seguro, idioma y, cuando corresponda, tu comentario o mensaje, únicamente para atender tu solicitud. Se registra tu consentimiento y la fecha de recepción. El sitio está alojado en Vercel y las solicitudes se almacenan en Directus y PostgreSQL, alojados en Railway. No se solicitan datos médicos, bancarios ni documentos en este formulario. Para ejercer tus derechos o solicitar la eliminación de tu solicitud, escribe a contacto@bullandbear-insurancebroker.com.",
     "section": "Privacidad",
     "page": "/aviso-de-privacidad/"
   },
@@ -1092,20 +1374,8 @@
     "page": "/blog/"
   },
   {
-    "key": "dd47f27404639b2a711afee9",
-    "value": "Garantiza el bienestar de tus seres queridos",
-    "section": "Artículos",
-    "page": "/blog/"
-  },
-  {
     "key": "9d06815ef130b7431e81dcb9",
     "value": "En la vida, siempre buscamos brindar seguridad y protección a nuestros seres queridos. Los seguros de vida son una herramienta esencial para asegurar el futuro financiero de quienes más amamos, incluso en situaciones imprevistas. En este ar",
-    "section": "Artículos",
-    "page": "/blog/"
-  },
-  {
-    "key": "1cdb6c55ae7ec721dc9fc32b",
-    "value": "Protege a tus seres queridos hoy y siempre",
     "section": "Artículos",
     "page": "/blog/"
   },
@@ -1114,6 +1384,66 @@
     "value": "Los seguros de vida son una herramienta crucial para garantizar la protección financiera de tus seres queridos en caso de que algo inesperado te suceda. Aunque hablar de temas como la muerte puede resultar incómodo, es esencial comprender l",
     "section": "Artículos",
     "page": "/blog/"
+  },
+  {
+    "key": "f88b0adf57406b9a2ba78ff7",
+    "value": "Líneas financieras | Bull",
+    "section": "Páginas",
+    "page": "/contacto-lineas-financieras/"
+  },
+  {
+    "key": "4ba4d60e6e1fb29137cca22c",
+    "value": "Solicita información sobre Cyber Insurance, capital privado, D&O, Crime y responsabilidad civil.",
+    "section": "Páginas",
+    "page": "/contacto-lineas-financieras/"
+  },
+  {
+    "key": "75f35158fe3da046cc12efd0",
+    "value": "Líneas financieras | Bull & Bear Insurance Broker",
+    "section": "Páginas",
+    "page": "/contacto-lineas-financieras/"
+  },
+  {
+    "key": "faa2f7bae52fff1b4e1ff951",
+    "value": "Solicita información sobre Cyber Insurance, capital privado, D&amp;O, Crime y responsabilidad civil.",
+    "section": "Páginas",
+    "page": "/contacto-lineas-financieras/"
+  },
+  {
+    "key": "0897eac87f5623aba20d99a7",
+    "value": "Solicita información",
+    "section": "Páginas",
+    "page": "/contacto-lineas-financieras/"
+  },
+  {
+    "key": "1dfedab6037f1003ebcd1834",
+    "value": "Cyber insurance",
+    "section": "Páginas",
+    "page": "/contacto-lineas-financieras/"
+  },
+  {
+    "key": "6bd6bc98e597e44124026d1b",
+    "value": "Institución de CP",
+    "section": "Páginas",
+    "page": "/contacto-lineas-financieras/"
+  },
+  {
+    "key": "cedaf5601a956937693eb518",
+    "value": "D&amp;O - Consejeros &amp; Directivos",
+    "section": "Páginas",
+    "page": "/contacto-lineas-financieras/"
+  },
+  {
+    "key": "22611ceccd0b4d14703ccd4e",
+    "value": "Crime",
+    "section": "Páginas",
+    "page": "/contacto-lineas-financieras/"
+  },
+  {
+    "key": "c84d469b9ef5913d186629d5",
+    "value": "Responsabilidad Civil",
+    "section": "Páginas",
+    "page": "/contacto-lineas-financieras/"
   },
   {
     "key": "1ca402b50a3dfa87976a4b98",
@@ -1146,10 +1476,154 @@
     "page": "/contacto/"
   },
   {
+    "key": "9ce302b1f5719354c753aeac",
+    "value": "Buscanos ↗",
+    "section": "Páginas",
+    "page": "/contacto/"
+  },
+  {
     "key": "a7a03da6c9c492896b54f593",
     "value": "Cuéntanos qué necesitas proteger. Nuestro equipo atenderá tu solicitud de forma personalizada.",
     "section": "Páginas",
     "page": "/contacto/"
+  },
+  {
+    "key": "f57c3d53213e60a3985f22e1",
+    "value": "Automóviles | Bull",
+    "section": "Páginas",
+    "page": "/formulario-automoviles/"
+  },
+  {
+    "key": "e151e08a0fdacfa118454f9c",
+    "value": "Envía tus datos para solicitar información sobre seguros de automóviles.",
+    "section": "Páginas",
+    "page": "/formulario-automoviles/"
+  },
+  {
+    "key": "9742365a0c95bdb0aa7980cb",
+    "value": "Automóviles | Bull & Bear Insurance Broker",
+    "section": "Páginas",
+    "page": "/formulario-automoviles/"
+  },
+  {
+    "key": "fc84e4dba8b584a10a55d30a",
+    "value": "Automóviles",
+    "section": "Páginas",
+    "page": "/formulario-automoviles/"
+  },
+  {
+    "key": "9b4936b5a75598c956195cf6",
+    "value": "Cuidado de personas | Bull",
+    "section": "Páginas",
+    "page": "/formulario-cuidado-de-personas/"
+  },
+  {
+    "key": "ff528ddf55879c51c9cb686f",
+    "value": "Solicita información sobre gastos médicos mayores, vida y accidentes personales.",
+    "section": "Páginas",
+    "page": "/formulario-cuidado-de-personas/"
+  },
+  {
+    "key": "2c7ba43f43ebe0d0ea0a4d23",
+    "value": "Cuidado de personas | Bull & Bear Insurance Broker",
+    "section": "Páginas",
+    "page": "/formulario-cuidado-de-personas/"
+  },
+  {
+    "key": "2152b188832870654489aedc",
+    "value": "Cuidado de personas",
+    "section": "Páginas",
+    "page": "/formulario-cuidado-de-personas/"
+  },
+  {
+    "key": "1bb82e512dd03a3f3ec916f0",
+    "value": "Gastos Médicos Mayores",
+    "section": "Páginas",
+    "page": "/formulario-cuidado-de-personas/"
+  },
+  {
+    "key": "97c8fb74c4e1e8e6ac3b79aa",
+    "value": "Vida",
+    "section": "Páginas",
+    "page": "/formulario-cuidado-de-personas/"
+  },
+  {
+    "key": "0dffd522328de8aaffb3bdd0",
+    "value": "Accidentes personales",
+    "section": "Páginas",
+    "page": "/formulario-cuidado-de-personas/"
+  },
+  {
+    "key": "1db312b25f526a57d40c94ca",
+    "value": "Daños | Bull",
+    "section": "Páginas",
+    "page": "/formulario-danos/"
+  },
+  {
+    "key": "6c845f31fd2f1718088edbec",
+    "value": "Solicita información sobre seguros para empresas, infraestructura, fabricación y otras actividades.",
+    "section": "Páginas",
+    "page": "/formulario-danos/"
+  },
+  {
+    "key": "3cc4d0944b3ad24a7f0b6955",
+    "value": "Daños | Bull & Bear Insurance Broker",
+    "section": "Páginas",
+    "page": "/formulario-danos/"
+  },
+  {
+    "key": "a63d38cbd282862f4d848691",
+    "value": "Corporativo",
+    "section": "Páginas",
+    "page": "/formulario-danos/"
+  },
+  {
+    "key": "88e8b1f3d55a86ce0a642019",
+    "value": "Infraestructura",
+    "section": "Páginas",
+    "page": "/formulario-danos/"
+  },
+  {
+    "key": "1b37365fe7a6bb7ec2b9580d",
+    "value": "Fabricación",
+    "section": "Páginas",
+    "page": "/formulario-danos/"
+  },
+  {
+    "key": "0bf6f34726b4f7308b841235",
+    "value": "Hotelería",
+    "section": "Páginas",
+    "page": "/formulario-danos/"
+  },
+  {
+    "key": "467a7064a46d727f395258c6",
+    "value": "Construcción",
+    "section": "Páginas",
+    "page": "/formulario-danos/"
+  },
+  {
+    "key": "a9d5eb647c89a95d457f22f9",
+    "value": "Aviación",
+    "section": "Páginas",
+    "page": "/formulario-danos/"
+  },
+  {
+    "key": "1c07413fa4c38ed7aa3d5e1e",
+    "value": "PyMes",
+    "section": "Páginas",
+    "page": "/formulario-danos/"
+  },
+  {
+    "key": "0b9bead8d7d9eb59c85fa182",
+    "value": "Marítimo",
+    "section": "Páginas",
+    "page": "/formulario-danos/"
+  },
+  {
+    "key": "d769037ca5b725ed8e5ad64f",
+    "value": "Logística",
+    "section": "Páginas",
+    "page": "/formulario-danos/"
   },
   {
     "key": "1edd49328f855d96eb7bf1d7",
@@ -1320,8 +1794,8 @@
     "page": "/reclutamiento/"
   },
   {
-    "key": "61dc644296ff488a7f8a3829",
-    "value": "Promotoría de seguros y desarrollo de agentes asociados.",
+    "key": "1708fba7a611120f1f54b25b",
+    "value": "Promotoría de seguros, equipo técnico de suscripción, apoyo administrativo, asesoría y capacitación para agentes asociados.",
     "section": "Páginas",
     "page": "/reclutamiento/"
   },
@@ -1338,20 +1812,110 @@
     "page": "/reclutamiento/"
   },
   {
-    "key": "926a8c09ba062373e6a4da28",
-    "value": "Somos un grupo de profesionales con amplia experiencia en la intermediación y el desarrollo de agentes dentro del sector asegurador, comprometidos con brindar atención personalizada a cada uno de nuestros agentes asociados.",
+    "key": "dc8409b6d320a1425f78a4f2",
+    "value": "Somos un grupo de profesionales con amplia experiencia en la intermediación y el desarrollo de agentes éxitosos dentro del sector asegurador. Comprometidos con brindar atención personalizada a cada uno de nuestros agentes asociados para así garantizar una satisfacción total.",
     "section": "Páginas",
     "page": "/reclutamiento/"
   },
   {
-    "key": "1af30617b0b8f820cb502c02",
-    "value": "Nuestro equipo se encargará de brindarte apoyo y herramientas para que aproveches tu potencial y sigas creciendo como profesional.",
+    "key": "479660f9a407c9d2ea5baea0",
+    "value": "Nuestro equipo se encargará de brindarte todo el apoyo y herramientas necesarias para que aproveches todo tu potencial y sigas creciendo como profesional.",
     "section": "Páginas",
     "page": "/reclutamiento/"
   },
   {
-    "key": "261e02fb61b0b066c6038aad",
-    "value": "Solicitar información",
+    "key": "a2bbb08fdb86e0022cbdb154",
+    "value": "Oferta de Valor",
+    "section": "Páginas",
+    "page": "/reclutamiento/"
+  },
+  {
+    "key": "394b1be979aa7d29e861b925",
+    "value": "Equipo Técnico de Suscripción",
+    "section": "Páginas",
+    "page": "/reclutamiento/"
+  },
+  {
+    "key": "2bdbf3748a1b09ba116344cd",
+    "value": "Nuestro equipo técnico se encargará de analizar, cotizar, mercadear y suscribir cada riesgo de manera óptima, con el fin de poder brindar a tus asegurados la mejor opción para sus necesidades particulares.",
+    "section": "Páginas",
+    "page": "/reclutamiento/"
+  },
+  {
+    "key": "1471201941df77d96c149240",
+    "value": "Apoyo Administrativo",
+    "section": "Páginas",
+    "page": "/reclutamiento/"
+  },
+  {
+    "key": "4b7062aca341a480a63615c2",
+    "value": "Podrás disfrutar de nuestro servicio de asistencia para todo tipo de trámites, Emisiones, endosos, rehabilitaciones, cobranza, siniestros y más. Esto te permitirá tener una mejor administración de tu tiempo y así disfrutar más de tu familia y de tu trabajo.",
+    "section": "Páginas",
+    "page": "/reclutamiento/"
+  },
+  {
+    "key": "f8a154540b2d958b1a9c07c0",
+    "value": "Asesoria y Capacitación Remotas",
+    "section": "Páginas",
+    "page": "/reclutamiento/"
+  },
+  {
+    "key": "6d210c2257554357e0ba096e",
+    "value": "Basados en tus intereses y habilidades, desarrollaremos un plan de capacitación a la medida, que te permita seguir aprendiendo sin interferir con tus actividades comerciles y personales. Además podrás solicitar asesorias personales con los expertos en cada área, ya sea comercial, técnica u operativa.",
+    "section": "Páginas",
+    "page": "/reclutamiento/"
+  },
+  {
+    "key": "468e13f4f5a4bc3b99643bbd",
+    "value": "Nuestra promotorias",
+    "section": "Páginas",
+    "page": "/reclutamiento/"
+  },
+  {
+    "key": "70de7dd90d59a82f17f30560",
+    "value": "Comisiones al 100%",
+    "section": "Páginas",
+    "page": "/reclutamiento/"
+  },
+  {
+    "key": "4064698f8a045006ef3b1845",
+    "value": "Pagadas directamente por la aseguradora a tu cuenta bancaria, sin intermediarios.",
+    "section": "Páginas",
+    "page": "/reclutamiento/"
+  },
+  {
+    "key": "46dfbda6b76b5a4492d3de93",
+    "value": "Cuaderno de Bonos",
+    "section": "Páginas",
+    "page": "/reclutamiento/"
+  },
+  {
+    "key": "cce81472f6aefc5be5bd119f",
+    "value": "Tendrás acceso a los programas de incentivos, convenciones y campañas de cada aseguradora, recompenzando tu esfuerzo y compromiso.",
+    "section": "Páginas",
+    "page": "/reclutamiento/"
+  },
+  {
+    "key": "5ddad6102c1a49ea3268208e",
+    "value": "Herramientas Dígitales",
+    "section": "Páginas",
+    "page": "/reclutamiento/"
+  },
+  {
+    "key": "b4703834a999fa2f89c5c61d",
+    "value": "Al tener tu clave de gente, podrás ingresar a las plataformas dígitales para relizar cotizaciones, emisiones y mucho más a cualquier hora del dia.",
+    "section": "Páginas",
+    "page": "/reclutamiento/"
+  },
+  {
+    "key": "ac82edb86fa5ac0f141f428c",
+    "value": "Alcanza tus metas... déjanos ser parte de tu éxito",
+    "section": "Páginas",
+    "page": "/reclutamiento/"
+  },
+  {
+    "key": "eeb0d2dfe16bf9bc2b6151e6",
+    "value": "Solicita información ↗",
     "section": "Páginas",
     "page": "/reclutamiento/"
   },
@@ -1380,38 +1944,68 @@
     "page": "/service/aeronaves-embarcaciones-o-drones-2/"
   },
   {
-    "key": "607444c3b92d9b4ad104ccdf",
-    "value": "Aeronaves",
+    "key": "67b0d1c8ae2e5f614afecd98",
+    "value": "Ahorre en su póliza de seguro",
     "section": "Servicios",
     "page": "/service/aeronaves-embarcaciones-o-drones-2/"
   },
   {
-    "key": "e1f3b25c794d203d6ab53c69",
-    "value": "Embarcaciones",
+    "key": "d9fc09bd3700baf92e9f5a0e",
+    "value": "Tenemos la facultad y experiencia para suscribir riesgos especiales, ponte en contacto con nuestros asesores y protege tu patrimonio.",
     "section": "Servicios",
     "page": "/service/aeronaves-embarcaciones-o-drones-2/"
   },
   {
-    "key": "b3d30444cb710342df192acf",
-    "value": "Drones",
+    "key": "78e1f0e18e91c4e1bec02368",
+    "value": "Cotiza ahora",
     "section": "Servicios",
     "page": "/service/aeronaves-embarcaciones-o-drones-2/"
   },
   {
-    "key": "6458ef33faad0b9d1526494a",
-    "value": "Las coberturas, exclusiones, límites y condiciones dependen del producto y de la póliza contratada. Consulta con un asesor para revisar las alternativas adecuadas a tus necesidades.",
+    "key": "1cd66bf34a700b85a161c31e",
+    "value": "Seguro de protección de datos y seguridad informática",
     "section": "Servicios",
     "page": "/service/aeronaves-embarcaciones-o-drones-2/"
   },
   {
-    "key": "d6a43f474309bd53f56f0f18",
-    "value": "Otras soluciones",
+    "key": "96d81e4a2705c7b613c613f5",
+    "value": "Con la extensa oferta que Bull&amp;Bear Insurance tiene",
     "section": "Servicios",
     "page": "/service/aeronaves-embarcaciones-o-drones-2/"
   },
   {
-    "key": "2152b188832870654489aedc",
-    "value": "Cuidado de personas",
+    "key": "ff5c5dad7cd6ebe00e368e3a",
+    "value": "Cotizar ↗",
+    "section": "Servicios",
+    "page": "/service/aeronaves-embarcaciones-o-drones-2/"
+  },
+  {
+    "key": "2fa69dc6d3be7148c621822f",
+    "value": "Te ayudaremos a conformar el mejor paquete en",
+    "section": "Servicios",
+    "page": "/service/aeronaves-embarcaciones-o-drones-2/"
+  },
+  {
+    "key": "c8a4ade2e49bdedeb3a3a9fd",
+    "value": "Son planes diseñados a la medida de las",
+    "section": "Servicios",
+    "page": "/service/aeronaves-embarcaciones-o-drones-2/"
+  },
+  {
+    "key": "9f6e2a8dfa906dbaccb02436",
+    "value": "¡Necesita ayuda!",
+    "section": "Servicios",
+    "page": "/service/aeronaves-embarcaciones-o-drones-2/"
+  },
+  {
+    "key": "9021c3cdb964b417589d1a38",
+    "value": "Respaldados por:",
+    "section": "Servicios",
+    "page": "/service/aeronaves-embarcaciones-o-drones-2/"
+  },
+  {
+    "key": "656c67325b48f9dcf7bbf560",
+    "value": "¿Qué seguro es el adecuado para ti?",
     "section": "Servicios",
     "page": "/service/aeronaves-embarcaciones-o-drones-2/"
   },
@@ -1428,12 +2022,6 @@
     "page": "/service/aeronaves-embarcaciones-o-drones-2/"
   },
   {
-    "key": "fc84e4dba8b584a10a55d30a",
-    "value": "Automóviles",
-    "section": "Servicios",
-    "page": "/service/aeronaves-embarcaciones-o-drones-2/"
-  },
-  {
     "key": "6a7cc525a8dc94f6eb064cf2",
     "value": "Soluciones de protección para vehículos particulares, flotillas y distintos usos.",
     "section": "Servicios",
@@ -1446,20 +2034,8 @@
     "page": "/service/aeronaves-embarcaciones-o-drones-2/"
   },
   {
-    "key": "511b2e940b93a2f88bcfc765",
-    "value": "Protector de capital privado",
-    "section": "Servicios",
-    "page": "/service/aeronaves-embarcaciones-o-drones-2/"
-  },
-  {
     "key": "32fff5443d1511d06091d058",
     "value": "Protección de la responsabilidad de la administración y los servicios profesionales de fondos de capital privado.",
-    "section": "Servicios",
-    "page": "/service/aeronaves-embarcaciones-o-drones-2/"
-  },
-  {
-    "key": "0cabfa27d05c23c9650906a2",
-    "value": "Obra civil",
     "section": "Servicios",
     "page": "/service/aeronaves-embarcaciones-o-drones-2/"
   },
@@ -1482,20 +2058,8 @@
     "page": "/service/aeronaves-embarcaciones-o-drones-2/"
   },
   {
-    "key": "58f82ec7045c493520501a2d",
-    "value": "Flotillas vehiculares",
-    "section": "Servicios",
-    "page": "/service/aeronaves-embarcaciones-o-drones-2/"
-  },
-  {
     "key": "b45144ff679f7368dea9f684",
     "value": "Asesoría para proteger los vehículos de tu empresa de acuerdo con su tipo y uso.",
-    "section": "Servicios",
-    "page": "/service/aeronaves-embarcaciones-o-drones-2/"
-  },
-  {
-    "key": "edbef7a7da27516b87a4dc44",
-    "value": "Paquetes empresariales y PyMES",
     "section": "Servicios",
     "page": "/service/aeronaves-embarcaciones-o-drones-2/"
   },
@@ -1506,32 +2070,14 @@
     "page": "/service/aeronaves-embarcaciones-o-drones-2/"
   },
   {
-    "key": "ae4af52591b1506e4a8da545",
-    "value": "Beneficios para empleados",
-    "section": "Servicios",
-    "page": "/service/aeronaves-embarcaciones-o-drones-2/"
-  },
-  {
     "key": "113a71d8bbd4a808d8c29a4c",
     "value": "Planes para empleados, sindicatos, instituciones y colectividades.",
     "section": "Servicios",
     "page": "/service/aeronaves-embarcaciones-o-drones-2/"
   },
   {
-    "key": "2be2e994a7ea5a0db8d19d3f",
-    "value": "Seguro de vida",
-    "section": "Servicios",
-    "page": "/service/aeronaves-embarcaciones-o-drones-2/"
-  },
-  {
     "key": "1452c1010d431c62614e5990",
     "value": "Protección para la economía familiar ante eventos imprevistos.",
-    "section": "Servicios",
-    "page": "/service/aeronaves-embarcaciones-o-drones-2/"
-  },
-  {
-    "key": "d74b2937b193da538ec129d8",
-    "value": "Seguro de hogar",
     "section": "Servicios",
     "page": "/service/aeronaves-embarcaciones-o-drones-2/"
   },
@@ -1550,12 +2096,6 @@
   {
     "key": "ebc0b048cd0acc8d4bc8be0d",
     "value": "Soluciones para resguardar la economía familiar ante una emergencia médica.",
-    "section": "Servicios",
-    "page": "/service/aeronaves-embarcaciones-o-drones-2/"
-  },
-  {
-    "key": "8e3215e3dafaed65440563ca",
-    "value": "Seguro de auto y moto",
     "section": "Servicios",
     "page": "/service/aeronaves-embarcaciones-o-drones-2/"
   },
@@ -1584,20 +2124,14 @@
     "page": "/service/aeronaves-embarcaciones-o-drones-2/"
   },
   {
-    "key": "f57c3d53213e60a3985f22e1",
-    "value": "Automóviles | Bull",
-    "section": "Servicios",
-    "page": "/service/automoviles/"
-  },
-  {
-    "key": "9742365a0c95bdb0aa7980cb",
-    "value": "Automóviles | Bull & Bear Insurance Broker",
-    "section": "Servicios",
-    "page": "/service/automoviles/"
-  },
-  {
     "key": "55bd25f77ecbe2f938d3314d",
     "value": "Flotillas",
+    "section": "Servicios",
+    "page": "/service/automoviles/"
+  },
+  {
+    "key": "da92af68b9563c5ffd1635d5",
+    "value": "Negocio enfocado a generar un parque vehicular de utilitarios de la empresa o un grupo de vehículos particulares de empleados.",
     "section": "Servicios",
     "page": "/service/automoviles/"
   },
@@ -1608,14 +2142,32 @@
     "page": "/service/automoviles/"
   },
   {
-    "key": "bbf4819afd221246a2ee7be9",
-    "value": "Plataformas de transporte privado",
+    "key": "4ef611ef06f81ed269f2fc9d",
+    "value": "Protección de vehículo personal.",
     "section": "Servicios",
     "page": "/service/automoviles/"
   },
   {
-    "key": "81492037f97880c794c1d133",
-    "value": "Transporte público",
+    "key": "f7cb38b143627020f5782b1a",
+    "value": "plataforma",
+    "section": "Servicios",
+    "page": "/service/automoviles/"
+  },
+  {
+    "key": "751f911c79dcae64b801f542",
+    "value": "Seguro para automóviles en servicio de la aplicaciones o plataformas de transporte privado.",
+    "section": "Servicios",
+    "page": "/service/automoviles/"
+  },
+  {
+    "key": "f87daaeb42302966acb55c69",
+    "value": "Transporte publico",
+    "section": "Servicios",
+    "page": "/service/automoviles/"
+  },
+  {
+    "key": "0ad772ea1654abe7f8a4f8dc",
+    "value": "Protección para vehículos de transporte publico.",
     "section": "Servicios",
     "page": "/service/automoviles/"
   },
@@ -1626,20 +2178,86 @@
     "page": "/service/automoviles/"
   },
   {
-    "key": "85c86c6fb696d8b7ddc8ad06",
-    "value": "Clásicos y antiguos",
+    "key": "0f4d445a987c2d0ce7af824d",
+    "value": "Protección para el vehículo con adaptaciones de blindaje y adaptaciones de protección.",
     "section": "Servicios",
     "page": "/service/automoviles/"
   },
   {
-    "key": "9880299652055fe7df3b83f5",
-    "value": "Importados, fronterizos y legalizados",
+    "key": "18e2ebdf21bc591bdb9b1d2d",
+    "value": "Clásicos",
+    "section": "Servicios",
+    "page": "/service/automoviles/"
+  },
+  {
+    "key": "ad5db1bc102e7e4a6528c890",
+    "value": "El vehículos que debe tener más de 30 años de antigüedad, estar equipado con su motor original, contar con más del 80% de sus piezas de origen y si ha de tener piezas reemplazadas, estas deben ser sustituidas por partes originales correspondientes al modelo y año del vehículo.",
+    "section": "Servicios",
+    "page": "/service/automoviles/"
+  },
+  {
+    "key": "99cd6cded054a92e31cc8adb",
+    "value": "Antiguos",
+    "section": "Servicios",
+    "page": "/service/automoviles/"
+  },
+  {
+    "key": "25983ad0d8b4dc833737bafc",
+    "value": "El vehículo debe tener al menos 30 años de antigüedad, al menos el 85% de sus componentes deberán ser originales y estar en perfectas condiciones.",
+    "section": "Servicios",
+    "page": "/service/automoviles/"
+  },
+  {
+    "key": "7e6fd350d01578ee937d3bca",
+    "value": "Importados",
+    "section": "Servicios",
+    "page": "/service/automoviles/"
+  },
+  {
+    "key": "8a6cbd38b1979e471ee859c4",
+    "value": "Son los vehículos fabricados fuera del país, los cuales pueden operar como vehículos nacionales.",
+    "section": "Servicios",
+    "page": "/service/automoviles/"
+  },
+  {
+    "key": "c116ef5e98cb7a8807d411b9",
+    "value": "Fronterizo",
+    "section": "Servicios",
+    "page": "/service/automoviles/"
+  },
+  {
+    "key": "401337863e4dbcde94f4f00c",
+    "value": "Son aquellos que cuentan con placas extranjeras, pero que circulan con frecuencia dentro del territorio nacional. Este tipo de vehículos suelen estar activos dentro del país y en países vecinos.",
+    "section": "Servicios",
+    "page": "/service/automoviles/"
+  },
+  {
+    "key": "29577b5387593fed8d504464",
+    "value": "Legalizados",
+    "section": "Servicios",
+    "page": "/service/automoviles/"
+  },
+  {
+    "key": "8e970a0115caf162682675c0",
+    "value": "Automóviles que no deben ser vehículos de lujo, deportivos ni blindados. Deben cumplir con las condiciones físico-mecánicas y de protección al medio ambiente.",
     "section": "Servicios",
     "page": "/service/automoviles/"
   },
   {
     "key": "419d1aea177019bd50592697",
     "value": "Equipo pesado",
+    "section": "Servicios",
+    "page": "/service/automoviles/"
+  },
+  {
+    "key": "1de01a89f148763b91450494",
+    "value": "Vehículos de 3.5 toneladas hasta 7 toneladas.",
+    "section": "Servicios",
+    "page": "/service/automoviles/"
+  },
+  {
+    "key": "fe136671c69bf4f212cfeb34",
+    "value": "Sabemos que las necesidades de protección de cada",
     "section": "Servicios",
     "page": "/service/automoviles/"
   },
@@ -1656,26 +2274,26 @@
     "page": "/service/beneficios-para-empleados/"
   },
   {
-    "key": "97c8fb74c4e1e8e6ac3b79aa",
-    "value": "Vida",
+    "key": "d71be7672a45ab21942fd791",
+    "value": "Colectividades de beneficios para empleados",
     "section": "Servicios",
     "page": "/service/beneficios-para-empleados/"
   },
   {
-    "key": "0b3806fc4bb67996fc5b6274",
-    "value": "Gastos médicos menores y mayores",
+    "key": "1d55e77961d376ea77ea4406",
+    "value": "planes diseñados a la medida de las necesidades y expectativas de nuestros asegurados",
     "section": "Servicios",
     "page": "/service/beneficios-para-empleados/"
   },
   {
-    "key": "0dffd522328de8aaffb3bdd0",
-    "value": "Accidentes personales",
+    "key": "e9d569552ca1d02775d66c19",
+    "value": "Solicita tu póliza de seguro",
     "section": "Servicios",
     "page": "/service/beneficios-para-empleados/"
   },
   {
-    "key": "5f510cfd1e4a0dfa9d096687",
-    "value": "Membresías de salud y asistencia",
+    "key": "38b32073e8544fe72d2fefe4",
+    "value": "Son planes diseñados a la medida de las necesidades y expectativas de nuestros asegurados. El objetivo es proteger a los empleados de empresas, miembros de sindicatos, nstituciones o uniones de trabajadores, estos seguros se pueden adaptar a las necesidades particulares de cada grupo o colectividad. Este tipo de planes incluyen seguros de vida, de gastos médicos menores y/o mayores, de accidentes personales, así como membresías de salud, asistencia o entretenimiento.",
     "section": "Servicios",
     "page": "/service/beneficios-para-empleados/"
   },
@@ -1692,58 +2310,94 @@
     "page": "/service/car-insurance/"
   },
   {
-    "key": "ded4ce1f8cf91f6f9b8a0560",
-    "value": "Daños a terceros",
+    "key": "39464ebd5a521f9cd26aec88",
+    "value": "Seguro para auto &amp; moto",
     "section": "Servicios",
     "page": "/service/car-insurance/"
   },
   {
-    "key": "9a362d9dbfa7d46bb90b21e8",
-    "value": "Robo total y parcial",
+    "key": "849f8536761629429745cab5",
+    "value": "Con la extensa oferta que Bull&amp;Bear Insurance tiene para ti, podrás elegir desde el páquete más básico",
     "section": "Servicios",
     "page": "/service/car-insurance/"
   },
   {
-    "key": "d151b3e379618026200bf2b3",
-    "value": "Gastos médicos a ocupantes",
+    "key": "31538af1fae02a51bc7b68b1",
+    "value": "Solicita tu póliza para auto",
     "section": "Servicios",
     "page": "/service/car-insurance/"
   },
   {
-    "key": "74754245f2784a0d8eeeb6e0",
-    "value": "Asistencia vial y legal",
+    "key": "f4b18ea1a0713cb85da7b804",
+    "value": "Podrás elegir desde el pAquete más básico de daños a terceros hasta el más completo, donde tú y tu vehículo quedarán protegidos ante cualquier accidente.",
     "section": "Servicios",
     "page": "/service/car-insurance/"
   },
   {
-    "key": "9b4936b5a75598c956195cf6",
-    "value": "Cuidado de personas | Bull",
+    "key": "1fa2f71e15401bd179a3ebb1",
+    "value": "Con coberturas como robo total, robo parcial, gastos médicos ocupantes, entre otras. Hasta asistencias como gruas, envío de combustible, asistencia legal y más. Conduce seguro, conduce tranquilo.",
+    "section": "Servicios",
+    "page": "/service/car-insurance/"
+  },
+  {
+    "key": "1d030d042d256645b5f9383a",
+    "value": "Los seguros de vida, están diseñados para proteger",
+    "section": "Servicios",
+    "page": "/service/car-insurance/"
+  },
+  {
+    "key": "e45db264da777ba088355be9",
+    "value": "Tienen como finalidad resguardar la economía familiar ante",
+    "section": "Servicios",
+    "page": "/service/car-insurance/"
+  },
+  {
+    "key": "67948e54651eff8a19583c62",
+    "value": "Protege tu hogar de manera íntegra, desde su",
+    "section": "Servicios",
+    "page": "/service/car-insurance/"
+  },
+  {
+    "key": "902ef9ba0379954c4d159a64",
+    "value": "Seguro mascotas",
+    "section": "Servicios",
+    "page": "/service/car-insurance/"
+  },
+  {
+    "key": "55272054c00035ffafc0f679",
+    "value": "Las mascotas son parte importante de los nuevos",
+    "section": "Servicios",
+    "page": "/service/car-insurance/"
+  },
+  {
+    "key": "ba0bbf94926e691ed088950b",
+    "value": "Gástos Médicos Mayores",
     "section": "Servicios",
     "page": "/service/cuidado-de-personas/"
   },
   {
-    "key": "2c7ba43f43ebe0d0ea0a4d23",
-    "value": "Cuidado de personas | Bull & Bear Insurance Broker",
+    "key": "c28e3b2e24e98fba88553d44",
+    "value": "Producto enfocado a cubrir enfermedades y accidentes de los trabajadores de acuerdo a las necesidades y especificaciones propias del giro de la empresa.",
     "section": "Servicios",
     "page": "/service/cuidado-de-personas/"
   },
   {
-    "key": "8c1feaec834f7c34679c1f39",
-    "value": "Gastos médicos mayores",
+    "key": "c25627ca09cad11cac1e04ec",
+    "value": "Producto enfocado a generar un respaldo económico en caso de la perdida de un pilar impresendible en la familiar.",
     "section": "Servicios",
     "page": "/service/cuidado-de-personas/"
   },
   {
-    "key": "1db312b25f526a57d40c94ca",
-    "value": "Daños | Bull",
+    "key": "ab3327ddf909aff3637f9edb",
+    "value": "aCCIDENTES PERSONALES",
     "section": "Servicios",
-    "page": "/service/danos/"
+    "page": "/service/cuidado-de-personas/"
   },
   {
-    "key": "3cc4d0944b3ad24a7f0b6955",
-    "value": "Daños | Bull & Bear Insurance Broker",
+    "key": "bc81920291c4ece016d90c38",
+    "value": "Seguro para afrontar percances comunes a la exposición de riesgos de la vida cotidiana para un grupo de empleados como: fracturas, lesiones, etc.",
     "section": "Servicios",
-    "page": "/service/danos/"
+    "page": "/service/cuidado-de-personas/"
   },
   {
     "key": "90608cae298c005659a58dd8",
@@ -1752,50 +2406,62 @@
     "page": "/service/danos/"
   },
   {
-    "key": "88e8b1f3d55a86ce0a642019",
-    "value": "Infraestructura",
+    "key": "a17b16402725fb4e2ab07fe3",
+    "value": "Seguro diseñado para cubrir la exposición especifica y contante de cada compañía derivada de la propia naturaleza de su giro.",
     "section": "Servicios",
     "page": "/service/danos/"
   },
   {
-    "key": "1b37365fe7a6bb7ec2b9580d",
-    "value": "Fabricación",
+    "key": "a4ca70c6465087ac0ca64248",
+    "value": "Reducción de riesgos en el aparo de todo activo necesario para el buen funcionamiento y mantenimiento de la infraestructura.",
     "section": "Servicios",
     "page": "/service/danos/"
   },
   {
-    "key": "0bf6f34726b4f7308b841235",
-    "value": "Hotelería",
+    "key": "c001f57fea62fbe39f6f77ea",
+    "value": "Amparo diseñado para el aseguramiento de maquinaria especializada en la elaboración de cualquier producto de la industria, por averías accidentales robo e incluso reponiéndolas por completo entre otros.",
     "section": "Servicios",
     "page": "/service/danos/"
   },
   {
-    "key": "467a7064a46d727f395258c6",
-    "value": "Construcción",
+    "key": "2eb85a9f5fc4202e1b97c87e",
+    "value": "Producto especializado para riesgos propios de si giro, contamos con convenios exclusivos de suscripción.",
     "section": "Servicios",
     "page": "/service/danos/"
   },
   {
-    "key": "a9d5eb647c89a95d457f22f9",
-    "value": "Aviación",
+    "key": "7d4b1880b0c2e1d3809da041",
+    "value": "Cobertura especializada para asegurar el desarrollo de cada proyecto de contrición desde el día 1 hasta terminada la obra.",
     "section": "Servicios",
     "page": "/service/danos/"
   },
   {
-    "key": "33e5135bad14ea3c5e9746b5",
-    "value": "PyMES",
+    "key": "09d23acadfc9943c36928ce6",
+    "value": "Seguro especializado en cubrir los componentes principales, caso, pasajeros y RC, entre otros, para cualquier aeronave.",
     "section": "Servicios",
     "page": "/service/danos/"
   },
   {
-    "key": "0b9bead8d7d9eb59c85fa182",
-    "value": "Marítimo",
+    "key": "dad448397b683bcd1cf43a65",
+    "value": "Pymes",
     "section": "Servicios",
     "page": "/service/danos/"
   },
   {
-    "key": "d769037ca5b725ed8e5ad64f",
-    "value": "Logística",
+    "key": "c69dffdbebd718817c34b847",
+    "value": "Protección integral para pequeñas y medianas empresas para todos sus activos.",
+    "section": "Servicios",
+    "page": "/service/danos/"
+  },
+  {
+    "key": "d8218821c73eb1e2d50b059d",
+    "value": "Seguro especializado en embarcaciones de esparcimiento o de placer que incluye pero sin limitarse los tripulantes, cubierta, RC, etc.",
+    "section": "Servicios",
+    "page": "/service/danos/"
+  },
+  {
+    "key": "3e170b783c8e9ac582e01623",
+    "value": "Protección que genera un respaldo económico en cualquier tipo de trasporte terrestre, marítimo o aéreo por robo, carga y de carga, RC, entre otros.",
     "section": "Servicios",
     "page": "/service/danos/"
   },
@@ -1812,14 +2478,32 @@
     "page": "/service/equipo-de-contratistas/"
   },
   {
-    "key": "f2c0bd60d9be26ababedd244",
-    "value": "Construcción y montaje",
+    "key": "bc3c306786b6ecd69dba9af7",
+    "value": "entendemos los riesgos a los que estas expuesto",
     "section": "Servicios",
     "page": "/service/equipo-de-contratistas/"
   },
   {
-    "key": "e03ac546073ac157b83113ad",
-    "value": "Traslado de equipo",
+    "key": "1e6e21b6554a264662eb27bd",
+    "value": "Nuestro seguro está especialmente diseñado para protegerte y darte soporte en situaciones de riesgo en las que tus maquinarias y equipos, por su uso y movilidad frecuente, están expuestos a diversos peligros en el entorno laboral.",
+    "section": "Servicios",
+    "page": "/service/equipo-de-contratistas/"
+  },
+  {
+    "key": "5782562868f2ee7069ed87d9",
+    "value": "Es muy importante asegurar el equipo de contratistas y equipo pesado, no importa si es propio o arrendado. Contamos con las coberturas para protegerlos de los riesgos a los que estan expuestos durante un proyecto de construcción, montaje de maquinaria, incluso durante su traslado.",
+    "section": "Servicios",
+    "page": "/service/equipo-de-contratistas/"
+  },
+  {
+    "key": "0e0718736304da91b01b4586",
+    "value": "Nuestro equipo de profesionales te asesorará para conocer mejor todas las coberturas disponibles.",
+    "section": "Servicios",
+    "page": "/service/equipo-de-contratistas/"
+  },
+  {
+    "key": "6d91872f3bc1d46d00201c8a",
+    "value": "Es muy importante asegurar el equipo de contratistas",
     "section": "Servicios",
     "page": "/service/equipo-de-contratistas/"
   },
@@ -1836,62 +2520,98 @@
     "page": "/service/flotillas-vehiculares/"
   },
   {
-    "key": "78b758f7858138aee956f8dd",
-    "value": "Daños materiales",
+    "key": "d5b5258b594918dff4e35587",
+    "value": "Aseguramos la movilidad de empresa",
     "section": "Servicios",
     "page": "/service/flotillas-vehiculares/"
   },
   {
-    "key": "8a1ffb41cfc0b34028b5a383",
-    "value": "Robo total",
+    "key": "9981d5b56415260d5a5cfacd",
+    "value": "Te ayudaremos a conformar el mejor paquete en materia de seguros.",
     "section": "Servicios",
     "page": "/service/flotillas-vehiculares/"
   },
   {
-    "key": "4d821d91fbc79015777c9588",
-    "value": "Protección legal",
+    "key": "bf8133858dbea6b33f52a36c",
+    "value": "Solicita tuu póliza de seguro",
     "section": "Servicios",
     "page": "/service/flotillas-vehiculares/"
   },
   {
-    "key": "f88b0adf57406b9a2ba78ff7",
-    "value": "Líneas financieras | Bull",
+    "key": "61532fffa870d61a1216581b",
+    "value": "Te ayudaremos a conformar el mejor paquete en materia de seguros para Flotillas, que te permitirán proteger los vehículos de tu empresa contra daños materiales, robo total, responsabilidad civil de la unidad o de la carga, gastos médicos a ocupantes así como protección legal",
+    "section": "Servicios",
+    "page": "/service/flotillas-vehiculares/"
+  },
+  {
+    "key": "9f1b805e2e7fa77310be3fac",
+    "value": "Podrás asegurar todos tus vehículos de diferentes tipos y usos, podemos constituir una flotilla a partir de 5 vehículos y así gozar de una tarifa y beneficios preferenciales.",
+    "section": "Servicios",
+    "page": "/service/flotillas-vehiculares/"
+  },
+  {
+    "key": "b589db65da85f262f446e929",
+    "value": "Lineas Financieras",
     "section": "Servicios",
     "page": "/service/lineas-financieras/"
   },
   {
-    "key": "75f35158fe3da046cc12efd0",
-    "value": "Líneas financieras | Bull & Bear Insurance Broker",
+    "key": "7f7ca766f01f9f8b4161cf57",
+    "value": "Contamos con los mejores convenios y productos del mercado así como equipo técnico para la suscripción, emisión y resolución de siniestros.",
     "section": "Servicios",
     "page": "/service/lineas-financieras/"
   },
   {
-    "key": "06751a7b2c246129db1ba7da",
-    "value": "Cyber Insurance — Protección de datos",
+    "key": "b6973590d7ce0ace199f7a8a",
+    "value": "Cyber Insurance (Protección de datos)",
     "section": "Servicios",
     "page": "/service/lineas-financieras/"
   },
   {
-    "key": "4cf0d8e02b35803c305c27d3",
-    "value": "Instituciones de capital privado",
+    "key": "1ca3555c85f8a51194df1dcc",
+    "value": "Producto especializado en la prevención y reparación de afecciones que incluye pero sin limitarse la seguridad de datos (Virus, robo de código de acceso, violación, modificación de datos, etc.), Interrupción de negocio, gastos de defensa, extorción en la web e interrupción de negocio.",
     "section": "Servicios",
     "page": "/service/lineas-financieras/"
   },
   {
-    "key": "03367808187dcb1f0af5a7c6",
-    "value": "O — Consejeros y directivos",
+    "key": "2a2895320266f300996640ac",
+    "value": "instituciones de capital privado",
     "section": "Servicios",
     "page": "/service/lineas-financieras/"
   },
   {
-    "key": "27a81cc94ebc999b44c740ce",
-    "value": "Crime — Fraude corporativo",
+    "key": "5c1988da91aad5cbd91bf3cb",
+    "value": "D&amp;O (Consejeros y Directivos)",
     "section": "Servicios",
     "page": "/service/lineas-financieras/"
   },
   {
-    "key": "7c9a34608575383fbcaa1c6a",
-    "value": "Responsabilidad civil profesional",
+    "key": "2ae9f92fbbb3c9acc1ac5db8",
+    "value": "La protección tiene como objetivo garantizar la tranquilidad de los consejeros y directivos de una empresa, protegiendo su patrimonio de riesgos inherentes en la toma de decisiones.",
+    "section": "Servicios",
+    "page": "/service/lineas-financieras/"
+  },
+  {
+    "key": "51a9b8d2473f1dbdce6361b3",
+    "value": "Crime (Fraude Corporativo)",
+    "section": "Servicios",
+    "page": "/service/lineas-financieras/"
+  },
+  {
+    "key": "3d900560df6f371f49af3904",
+    "value": "Seguro enfocado a cubrir cualquier acto deshonesto, con la intensión manifiesta de causar una pérdida u obtener lucro financiero en beneficio del quien lo comete.",
+    "section": "Servicios",
+    "page": "/service/lineas-financieras/"
+  },
+  {
+    "key": "dc46c84f7c215520efe56f99",
+    "value": "responsabilidad Civil Profesional",
+    "section": "Servicios",
+    "page": "/service/lineas-financieras/"
+  },
+  {
+    "key": "0da6abbd7f8ddfe393059560",
+    "value": "El seguro te protege contra reclamos de terceros, derivado de algún error u omisión cometido en la prestación de tus servicios profesionales. Entre estas coberturas se incluyen pero sin limitarse: gastos de defensa, pérdida de documentos, infidelidad de empleados, propiedad intelectual, difamación, etc.",
     "section": "Servicios",
     "page": "/service/lineas-financieras/"
   },
@@ -1908,20 +2628,32 @@
     "page": "/service/obra-civil/"
   },
   {
-    "key": "1b7b3c39fe080440604d4ba8",
-    "value": "Bienes y actividades de la obra civil",
+    "key": "4f1caf84e10adb5fee7bbfb1",
+    "value": "Encuentra el seguro adecuado",
     "section": "Servicios",
     "page": "/service/obra-civil/"
   },
   {
-    "key": "a31c02a9ece9497a561b3fd4",
-    "value": "Equipo y maquinaria",
+    "key": "1c4bb42845598dc0497f040b",
+    "value": "Es un seguro completo para obras que no han sido concluidas, disponible para propietarios y/o constructores",
     "section": "Servicios",
     "page": "/service/obra-civil/"
   },
   {
-    "key": "771e1bf7629c98a1d6e43d90",
-    "value": "Responsabilidad civil por daños a terceros",
+    "key": "d76ff0ae37bf2e45ae8ed33a",
+    "value": "Es un seguro completo para obras que no han sido concluidas, disponible para propietarios y/o constructores, que protege los bienes y actividades necesarias para llevar a cabo una obra civil en cada una de sus etapas, ante daños causados por fundición, uso de materiales defectuosos y defectos de mano de obra ocurridos en el taller del fabricante, incluido el traslado de recursos del lugar de resguardo hasta el lugar de la obra, siendo está realizada por contratistas generales que realicen el trabajo en su totalidad para el dueño, por cuenta propia o por subcontratación, además cuenta con una amplia variedad de coberturas con las cuales brindar respaldo al equipo y maquinaria, responsabilidad civil por daños a terceros, gastos adicionales por concepto de horas extra de trabajo, riesgos de diseño y mantenimiento entre otros.",
+    "section": "Servicios",
+    "page": "/service/obra-civil/"
+  },
+  {
+    "key": "50d8067680d70d81c6fb9c10",
+    "value": "Nuestros expertos en riesgos te podrán brindar una asesoría completa, evaluando tu riesgo y ayudándote a asegurarlo con la mejor oferta del mercado, garantizando una justa relación costo/protección.",
+    "section": "Servicios",
+    "page": "/service/obra-civil/"
+  },
+  {
+    "key": "3688780474cb58b3d934c9a9",
+    "value": "Es un seguro completo para obras que no",
     "section": "Servicios",
     "page": "/service/obra-civil/"
   },
@@ -1938,26 +2670,32 @@
     "page": "/service/paquetes-empresariales-y-pymes/"
   },
   {
-    "key": "3112466fdca0c3d649905597",
-    "value": "Incendio y riesgos naturales",
+    "key": "e12786ac46904121833a7656",
+    "value": "Protegemos tu negocio",
     "section": "Servicios",
     "page": "/service/paquetes-empresariales-y-pymes/"
   },
   {
-    "key": "a4d2ebf1f58ac0d697f12774",
-    "value": "Dinero y valores",
+    "key": "fc0603457ac515f3d269c22b",
+    "value": "Sabemos que las necesidades de protección de cada negocio.",
     "section": "Servicios",
     "page": "/service/paquetes-empresariales-y-pymes/"
   },
   {
-    "key": "5dde1c8d132b88ee8de105f4",
-    "value": "Robo de mercancías",
+    "key": "3218f196ce658c7ed263d674",
+    "value": "Sabemos que las necesidades de protección de cada negocio dependen de su tamaño, actividades y riesgos a los que se encuentra expuesto, por ello, contamos con una oferta diferenciada para cada tipo de negocio.",
     "section": "Servicios",
     "page": "/service/paquetes-empresariales-y-pymes/"
   },
   {
-    "key": "eb6b53ac0d12c265d035e3c5",
-    "value": "Maquinaria y equipo electrónico",
+    "key": "e13f4cfe83fcdd4522375cac",
+    "value": "Queremos ayudarte a proteger a Grandes, Pequeñas y Medianas Empresas (PYMES) porque sabemos el esfuerzo que supone crear y mantener un negocio. De manera enunciativa más no limitativa, estos son algunos de los riesgos que podemos asegurar:",
+    "section": "Servicios",
+    "page": "/service/paquetes-empresariales-y-pymes/"
+  },
+  {
+    "key": "746a35d37f04e425e07cb043",
+    "value": "Incendio, terremoto y erupción volcánica, fenómenos hidrometeorologicos, pérdidas consecuenciales, responsabilidad civil, dinero y valores, robo de mercancías, cristales, anuncios, rotura de maquinaria, calderas y equipo a presión, equipo electrónico y equipo electrónico móvil y más. Acercate a nuestros expertos y protege tu patrimonio.",
     "section": "Servicios",
     "page": "/service/paquetes-empresariales-y-pymes/"
   },
@@ -1974,38 +2712,38 @@
     "page": "/service/protector-de-capital-privado/"
   },
   {
-    "key": "a319093dbeecccd1cf9b97dc",
-    "value": "Responsabilidad de la administración",
+    "key": "6a1c3972d7a6fa7146d25b45",
+    "value": "PRIVATE EQUITY PROTECTOR",
     "section": "Servicios",
     "page": "/service/protector-de-capital-privado/"
   },
   {
-    "key": "1c5a03643a69566165229b8e",
-    "value": "Servicios profesionales",
+    "key": "62dded91bb8e1357bf725f98",
+    "value": "Daños a la reputación Sujeto a los límites de responsabilidad, la aseguradora pagará los gastos en que se incurra para producir campañas que limpien la imagen del asegurado para mitigar los daños de imagen causados por el incidente.",
     "section": "Servicios",
     "page": "/service/protector-de-capital-privado/"
   },
   {
-    "key": "c8b86570d16aeeeef280275c",
-    "value": "Prácticas laborales",
+    "key": "ddffe8ccb003e1cb1fd84df1",
+    "value": "El reclamo debe ser directamente a una persona, director o funcionario NO en contra de la empresa, en virtud de que la responsabilidad deriva de la toma de decisiones.",
     "section": "Servicios",
     "page": "/service/protector-de-capital-privado/"
   },
   {
-    "key": "79b0dccbabbc7b506113a6cd",
-    "value": "Reclamos bursátiles",
+    "key": "654d8686a02059c1b4975ef6",
+    "value": "Cualquier acto, error u omisión en el desempeño de Servicios de Asesoría de Inversión, ya sean reales o supuestos, cometidos posteriormente a la Fecha de Retroactividad por: (a) cualquier Asegurado; o (b) cualquier otra persona por quien la Sociedad fuera legalmente responsable.",
     "section": "Servicios",
     "page": "/service/protector-de-capital-privado/"
   },
   {
-    "key": "2dc45c2e1ca6a20f759565dc",
-    "value": "Obligaciones fiduciarias",
+    "key": "c2bdd31634ee0661e6c32f20",
+    "value": "Descarge nuestro brochure Descubrirá información detallada sobre nuestras soluciones…",
     "section": "Servicios",
     "page": "/service/protector-de-capital-privado/"
   },
   {
-    "key": "bd9248efbd75bc3ee628540d",
-    "value": "Gestión de empresas de portafolio y estrategia de salida",
+    "key": "9b5b063c01b03ccb573ef07c",
+    "value": "Descargar brochure",
     "section": "Servicios",
     "page": "/service/protector-de-capital-privado/"
   },
@@ -2022,26 +2760,44 @@
     "page": "/service/responsabilidad-civil-2/"
   },
   {
-    "key": "c663e1d0629389261da67def",
-    "value": "Actos fraudulentos",
+    "key": "1e887d95a25d1306eb5eabb7",
+    "value": "Productos innovadores para tu empresa",
     "section": "Servicios",
     "page": "/service/responsabilidad-civil-2/"
   },
   {
-    "key": "94a647a039fd5888e9d9d4ac",
-    "value": "Consejeros y directivos",
+    "key": "5c75435c30f2d6a6d03e242b",
+    "value": "adecuados para la protección de empresas y personas físicas con actividad empresarial.",
     "section": "Servicios",
     "page": "/service/responsabilidad-civil-2/"
   },
   {
-    "key": "f126ce80e0d9c92e0140e138",
-    "value": "Fondos de capital privado",
+    "key": "bd76770e636bae408c92e907",
+    "value": "Actos Fraudulentos Seguro enfocado a cubrir cualquier acto deshonesto, con la intensión manifiesta de causar una pérdida u obtener lucro financiero en beneficio del que lo comete.",
     "section": "Servicios",
     "page": "/service/responsabilidad-civil-2/"
   },
   {
-    "key": "13dc468ce7335b2433adc65f",
-    "value": "Protección de datos",
+    "key": "6a7321164f0d0e6b1f87de39",
+    "value": "Consejeros y Directivos Cubre cualquier acto, error u omisión por parte de los consejeros y funcionarios de la empresa derivados de las funciones en su calidad de Consejeros o Directores.",
+    "section": "Servicios",
+    "page": "/service/responsabilidad-civil-2/"
+  },
+  {
+    "key": "a9bdad53b377f8b51cf9b536",
+    "value": "Fondos de Capital Privado Para satisfacer la necesidad descubrir la responsabilidad de la administración, servicios profesionales, prácticas laborales, reclamos bursátiles, obligaciones fiduciarias y gestión de las empresas de portafolio y estrategia de salida.",
+    "section": "Servicios",
+    "page": "/service/responsabilidad-civil-2/"
+  },
+  {
+    "key": "ec5fea0746e1b64b807a3947",
+    "value": "Protección de Datos Protección de datos personales, corporativos, seguridad de datos (virus, robos de códigos de acceso, violación, modificación de datos, etc), gastos de defensa, extorsión en la web, interrupción de negocio.",
+    "section": "Servicios",
+    "page": "/service/responsabilidad-civil-2/"
+  },
+  {
+    "key": "099d40c4e2d0e4644a553e0b",
+    "value": "Tenemos productos innovadores adecuados para la protección de empresas y personas físicas con actividad empresarial.",
     "section": "Servicios",
     "page": "/service/responsabilidad-civil-2/"
   },
@@ -2058,26 +2814,8 @@
     "page": "/service/seguro-de-hogar/"
   },
   {
-    "key": "36855eaf4b7fb213dc24fa50",
-    "value": "Estructura y contenidos",
-    "section": "Servicios",
-    "page": "/service/seguro-de-hogar/"
-  },
-  {
-    "key": "0f7d46d154f5f7eb997f32eb",
-    "value": "Robo",
-    "section": "Servicios",
-    "page": "/service/seguro-de-hogar/"
-  },
-  {
-    "key": "1a9ecf78c1b179ab1dcabeeb",
-    "value": "Incendio",
-    "section": "Servicios",
-    "page": "/service/seguro-de-hogar/"
-  },
-  {
-    "key": "676a1edbb054c6374188768d",
-    "value": "Catástrofes naturales",
+    "key": "259dc243a91adc45013e30ce",
+    "value": "Cotización",
     "section": "Servicios",
     "page": "/service/seguro-de-hogar/"
   },
@@ -2094,20 +2832,14 @@
     "page": "/service/seguro-de-vida/"
   },
   {
-    "key": "a4410bb3098c485a2ee30f88",
-    "value": "Protección",
+    "key": "fd026b9ad44dda0038b22850",
+    "value": "Prevenir el futuro de tu familia es nuestra prioridad",
     "section": "Servicios",
     "page": "/service/seguro-de-vida/"
   },
   {
-    "key": "eebbc510bdfeb0a9bc295025",
-    "value": "Ahorro",
-    "section": "Servicios",
-    "page": "/service/seguro-de-vida/"
-  },
-  {
-    "key": "e293d709c20bc9cd06e3a1b4",
-    "value": "Retiro",
+    "key": "8c2610551d12a44fb092b48d",
+    "value": "Los seguros de vida, están diseñados para proteger a las familias ante algún evento imprevisto que pueda impactar significativamente la economía, para garantizar la tranquilidad y bienestar de lo que más se ama pase lo que pase. Este tipo de seguro cuenta con diferentes enfoques, protección, ahorro y retiro. Tú decides cúal es el que mejor se adapta a tus proyectos y necesidades.",
     "section": "Servicios",
     "page": "/service/seguro-de-vida/"
   },
@@ -2124,20 +2856,26 @@
     "page": "/service/seguro-medico/"
   },
   {
-    "key": "d371d3c75813e63a56556a9a",
-    "value": "Gastos médicos y quirúrgicos",
+    "key": "3d7292d2875ff592a6c215fe",
+    "value": "Nuestra finalidad es velar por lo mas valioso",
     "section": "Servicios",
     "page": "/service/seguro-medico/"
   },
   {
-    "key": "2ec5edb93b3b03ed4f5c554b",
-    "value": "Análisis y medicamentos",
+    "key": "1729ed540813e224fb654a8e",
+    "value": "Tienen como finalidad resguardar la economía familiar ante una emergencia médica.",
     "section": "Servicios",
     "page": "/service/seguro-medico/"
   },
   {
-    "key": "28c2f6cba8e1218e805edfb8",
-    "value": "Alternativas de cobertura nacional e internacional",
+    "key": "98ad321effe1e319dfa08053",
+    "value": "Contando con un seguro quedarán cubiertos todos los gastos médicos quirúrgicos, de análisis, de medicamentos, etc) requeridos por el asegurado ante un accidente o una enfermedad, incluidos los de atención por maternidad en función de la Suma Asegurada contratada.",
+    "section": "Servicios",
+    "page": "/service/seguro-medico/"
+  },
+  {
+    "key": "38b60fab353fec25016b954b",
+    "value": "Contamos con cobertura nacional e internalcional.",
     "section": "Servicios",
     "page": "/service/seguro-medico/"
   },
@@ -2154,26 +2892,26 @@
     "page": "/service/transporte-de-mercancias/"
   },
   {
-    "key": "d060a709cb7bac1efe974143",
-    "value": "Transporte terrestre",
+    "key": "eb3e6bf56ba622b00f28ecf0",
+    "value": "Garatizamos toda tu operación",
     "section": "Servicios",
     "page": "/service/transporte-de-mercancias/"
   },
   {
-    "key": "aac15f9e621d560bfca6878c",
-    "value": "Transporte marítimo",
+    "key": "30e14a9b31ddc46f934ffb43",
+    "value": "Transportar mercancías en avión, camión, tren o barco y sufrir un siniestro con daños que afectan a la carga transportada puede comprometer tu inversión y tu empresa.",
     "section": "Servicios",
     "page": "/service/transporte-de-mercancias/"
   },
   {
-    "key": "b7d2102e3d381b3e3a4e6f27",
-    "value": "Transporte aéreo",
+    "key": "f0b8014b14a83a47d309ffb1",
+    "value": "Sabemos que, un seguro de mercancía que cubra estos riesgos y permita a la empresa continuar desarrollando su actividad económica tras un siniestro, te da la tranquilidad de saber que estarás siempre respaldado ante importantes pérdidas económicas. Las empresas de transporte están obligadas a responder en caso de daños en la carga en tránsito. Contratar un seguro de mercancías adicional para el transporte internacional es recomendable para proteger su mercancía. Un seguro de carga cubrirá los daños ocurridos durante el transporte desde el origen hasta el destino donde se puede incluir las maniobras de carga y descarga sea cual sea la modalidad de transporte, terrestre, marítimo o aéreo. Solicita una cotización de manera directa, compartiéndonos información como el tipo de póliza a elegir (anual a pronóstico con ajuste a final de la vigencia, anual a declaración o específica) pronóstico de ventas o embarques, mercancía y su tipo de embarque, origen y destino, medios de transporte, cobertura a elegir, límite máximo por embarque, valor para el seguro o base de evaluación, siniestralidad de los últimos 5 años.",
     "section": "Servicios",
     "page": "/service/transporte-de-mercancias/"
   },
   {
-    "key": "82771b066bf7a58651abdca9",
-    "value": "Maniobras de carga y descarga",
+    "key": "0ca99a8dd997362fea74715e",
+    "value": "Sabemos que, un seguro de mercancía que cubra",
     "section": "Servicios",
     "page": "/service/transporte-de-mercancias/"
   },
@@ -2184,8 +2922,8 @@
     "page": "/sobre-nosotros/"
   },
   {
-    "key": "cb58ba8c6a99e9adfb438fe7",
-    "value": "Somos una empresa mexicana dedicada a la asesoría en seguros y a la administración de riesgos.",
+    "key": "10b99d4dd0c8a9e812d875b5",
+    "value": "Somos una empresa mexicana, creada con el propósito de cuidar lo más preciado que tienes: tu vida y la de tu familia.",
     "section": "Páginas",
     "page": "/sobre-nosotros/"
   },
@@ -2202,14 +2940,50 @@
     "page": "/sobre-nosotros/"
   },
   {
-    "key": "1a60e54b7361dba5169816d6",
-    "value": "Cuidamos tu presente, aseguramos tu futuro",
+    "key": "f0e2c2711032d2cecb90b1fc",
+    "value": "En Bull and Bear Insurance Broker, cuidamos tu presente y aseguramos tu futuro",
     "section": "Páginas",
     "page": "/sobre-nosotros/"
   },
   {
-    "key": "ff44759e0ae5375028bf9e15",
-    "value": "Somos una empresa mexicana, creada con el propósito de cuidar lo más preciado que tienes: tu vida y la de tu familia. Nuestra labor se distingue por brindar alternativas que protejan tu bienestar y que se adapten a tu estilo de vida.",
+    "key": "305fbeea884749b3b329ecde",
+    "value": "Nuestra labor se distingue por brindar alternativas que protejan tu bienestar, y que se adapten a tu estilo de vida.",
+    "section": "Páginas",
+    "page": "/sobre-nosotros/"
+  },
+  {
+    "key": "75fccec4359a592448da9abc",
+    "value": "Contamos con cuatro principales pilares enfocados en personas físicas o morales:",
+    "section": "Páginas",
+    "page": "/sobre-nosotros/"
+  },
+  {
+    "key": "4795fa7534265b353f7c73aa",
+    "value": "¿Te gustaría saber más sobre nostros??",
+    "section": "Páginas",
+    "page": "/sobre-nosotros/"
+  },
+  {
+    "key": "e7ebf9039e5fabac9326d18d",
+    "value": "Descargar presentación",
+    "section": "Páginas",
+    "page": "/sobre-nosotros/"
+  },
+  {
+    "key": "6fc292e25ff09e22f860fe6d",
+    "value": "protegerte es nuestra prioridad",
+    "section": "Páginas",
+    "page": "/sobre-nosotros/"
+  },
+  {
+    "key": "ea649f098e06d1dd7499e99e",
+    "value": "Cuidamos tu presente,",
+    "section": "Páginas",
+    "page": "/sobre-nosotros/"
+  },
+  {
+    "key": "a19dcc2b5f18a118d052512c",
+    "value": "Aseguramos tu futuro",
     "section": "Páginas",
     "page": "/sobre-nosotros/"
   },
@@ -2220,8 +2994,14 @@
     "page": "/sobre-nosotros/"
   },
   {
-    "key": "33e1cf8b044abbe02a41779a",
-    "value": "Nuestra misión es brindar la mejor atención y todas las herramientas necesarias para proteger tu bienestar y el de tu familia. Buscamos asegurar tu tranquilidad, siempre anticipándonos a cualquier riesgo que la vida pueda presentar. Acompañamos a nuestros clientes en todo momento, creando lazos de confianza y compromiso con cada uno de ellos.",
+    "key": "becb5eb95187d1d517d21f85",
+    "value": "Nuestra misión es brindar la mejor atención y todas las herramientas necesarias para proteger tu bienestar y el de tu familia. Buscamos asegurar tu tranquilidad, siempre anticipándonos a cualquier riesgo que la vida pueda presentar.",
+    "section": "Páginas",
+    "page": "/sobre-nosotros/"
+  },
+  {
+    "key": "8fdd4329432f85897c16ecc5",
+    "value": "Acompañamos a nuestros clientes en todo momento, creando lazos de confianza y compromiso con cada uno de ellos.",
     "section": "Páginas",
     "page": "/sobre-nosotros/"
   },
@@ -2232,8 +3012,8 @@
     "page": "/sobre-nosotros/"
   },
   {
-    "key": "6c964b1e1cd02dde13dfa2cb",
-    "value": "Nuestra visión es construir un futuro a tu lado. Queremos formar parte importante de tu familia a través de nuevas experiencias, cumpliendo metas y superando retos.",
+    "key": "75937484ea2526557fe9b21c",
+    "value": "Nuestra visión es construir un futuro a tu lado. Queremos formar parte importante de tu familia a través de nuevas experiencias, cumpliendo metas y superando retos, garantizando que la seguridad no sea una limitante.",
     "section": "Páginas",
     "page": "/sobre-nosotros/"
   },
@@ -2276,6 +3056,12 @@
   {
     "key": "34c416133911b061c5283439",
     "value": "Confianza",
+    "section": "Páginas",
+    "page": "/sobre-nosotros/"
+  },
+  {
+    "key": "cf448d37ada19595bc42cc1a",
+    "value": "Read more ↗",
     "section": "Páginas",
     "page": "/sobre-nosotros/"
   },

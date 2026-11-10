@@ -1,0 +1,12 @@
+import { readFile } from 'node:fs/promises';
+import deployment from './deployment.json' with { type:'json' };
+import { api } from './lib.mjs';
+if(process.env.PUBLIC_URL!==deployment.url||!process.env.ADMIN_TOKEN)throw Error('Use this project’s Directus Railway environment.');
+const request=(path,method,body)=>api(process.env.PUBLIC_URL,process.env.ADMIN_TOKEN,path,method,body);
+const inventory=JSON.parse(await readFile('cms/content-inventory.json','utf8')),keys=new Set(inventory.map(row=>row.key));
+const rows=await request('/items/site_texts?limit=-1');
+const orphanEdits=rows.filter(row=>!keys.has(row.key)&&(row.draft_value!==null&&row.draft_value!==undefined||row.locale==='es'&&row.value!==row.source));
+if(orphanEdits.length)throw Error('Edited legacy content must be reconciled before archiving: '+[...new Set(orphanEdits.map(row=>row.key))].join(', '));
+const changes=rows.filter(row=>row.status!==(keys.has(row.key)?'published':'archived')).map(row=>({id:row.id,status:keys.has(row.key)?'published':'archived'}));
+for(let i=0;i<changes.length;i+=100)await request('/items/site_texts','PATCH',changes.slice(i,i+100));
+console.log('Current editorial catalogue:',inventory.length,'source texts;',changes.length,'status updates. Existing source edits and drafts were preserved.');

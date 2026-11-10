@@ -33,7 +33,9 @@
     button.disabled = true;
     if(out) out.textContent = form.dataset.pending;
     try {
-      const response = await fetch(form.action, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name: form.elements.name.value, email: form.elements.email.value, service: form.elements.service.value, consent: form.elements.consent.checked, website: form.elements.website.value, locale: form.dataset.locale || 'es' }) });
+      const choice = form.querySelector('#service option:checked');
+      const first = form.elements.name.value.trim(), last = form.elements.last_name.value.trim();
+      const response = await fetch(form.action, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name: `${first} ${last}`, first_name: first, last_name: last, email: form.elements.email.value, phone: form.elements.phone.value, message: form.elements.message?.value || '', form: form.dataset.form, insurance_type: choice?.value || 'auto', service: choice?.dataset.service || form.dataset.service, consent: form.elements.consent.checked, website: form.elements.website.value, locale: form.dataset.locale || 'es' }) });
       if (!response.ok) throw new Error('Submission failed');
       form.reset();
       if(out) out.textContent = form.dataset.success;

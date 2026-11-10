@@ -18,7 +18,7 @@ try{
   if(view==='dashboard')await page.screenshot({path:'test-results/studio-desktop.png',fullPage:true});
  }
  await page.locator('#navigation a[data-view="pages"]').click();await page.getByRole('button',{name:/Inicio y elementos compartidos/}).click();await expect(page.locator('.editor-item')).not.toHaveCount(0);
- const all=await (await page.request.get(base+'/api/content')).json();const source=all.data.find(row=>row.locale==='es'&&row.value==='Comparar');
+ const all=await (await page.request.get(base+'/api/content')).json();const source=all.data.find(row=>row.locale==='es'&&row.value==='Misión');
  const version=[...new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(source.draft_value??source.value)))].map(x=>x.toString(16).padStart(2,'0')).join('');
  const saved=await page.request.patch(base+'/api/content',{headers:{Origin:base},data:{key:source.key,value:source.value,version},timeout:180000});expect(saved.status(),await saved.text()).toBe(200);
  const changed=await (await page.request.get(base+'/api/content')).json();expect(changed.data.filter(row=>row.key===source.key&&row.draft_value!==null)).toHaveLength(6);expect(changed.data.find(row=>row.id===source.id).value).toBe(source.value);

@@ -2,6 +2,8 @@
 import ContactForm from "../components/ContactForm.astro";
 import SEO from "../components/SEO.astro";
 import Footer from "../components/Footer.astro";
+import OriginalContent from "../components/OriginalContent.astro";
+import original from "../data/original-content.json";
 const solutions = [
   {
     number: '01', category: 'PERSONAS Y PATRIMONIO',
@@ -25,11 +27,7 @@ const solutions = [
     href: '/service/lineas-financieras/', className: 'financial', value: 'Líneas financieras',
   },
 ];
-const faqs = [
-  { q: '¿Cómo elegir la cobertura adecuada?', a: 'El primer paso es identificar los riesgos más relevantes para tu situación. A partir de ahí, un asesor puede revisar alternativas y explicar sus coberturas, exclusiones y condiciones.' },
-  { q: '¿Puedo solicitar una revisión de mis seguros actuales?', a: 'Sí. Puedes plantear tus necesidades y solicitar una revisión de coberturas, sumas aseguradas y condiciones de las pólizas existentes.' },
-  { q: '¿Qué sucede cuando necesito usar mi seguro?', a: 'Cada producto y aseguradora tiene procesos específicos. Es importante conocerlos de antemano y contar con los canales adecuados para iniciar un reporte o una reclamación.' },
-];
+
 ---
 <!doctype html>
 <html lang="es-MX">
@@ -78,7 +76,7 @@ const faqs = [
       <div class="container philosophy-grid">
         <div class="philosophy-aside"><span class="section-number">01 / 04</span><span class="eyebrow dark"><span class="dot"></span> NUESTRA FILOSOFÍA</span></div>
         <div class="philosophy-heading"><h2>El futuro se construye<br/>con <em>buenas decisiones.</em></h2></div>
-        <div class="philosophy-copy"><p>Nuestra oferta de valor radica en la asesoría y asistencia en la administración de riesgos, a través de un equipo especializado y de amplia experiencia en el sector asegurador.</p><a class="line-link" href="#enfoque">Conoce nuestro enfoque <span aria-hidden="true">↗</span></a></div>
+        <div class="philosophy-copy"><p>{original.shared.philosophy}</p><a class="line-link" href="#enfoque">Conoce nuestro enfoque <span aria-hidden="true">↗</span></a></div>
         <div class="philosophy-mark" aria-hidden="true">B<span>&amp;</span>B</div>
       </div>
     </section>
@@ -107,13 +105,15 @@ const faqs = [
     <section class="process" id="enfoque" aria-labelledby="process-title">
       <div class="container">
         <div class="section-head process-head"><div><p class="eyebrow dark"><span class="dot"></span> NUESTRO ENFOQUE</p><h2 id="process-title">La tranquilidad<br/><em>se diseña.</em></h2></div><p class="section-head-note">Cada decisión comienza por entender qué deseas proteger.</p></div>
-        <div class="process-rows"><div class="process-row"><span class="process-no">01</span><h3>Comparar</h3><p>Presentamos opciones del mercado asegurador y sus diferenciadores. Nosotros te asesoramos, tú eliges.</p><span class="process-icon" aria-hidden="true">↗</span></div><div class="process-row"><span class="process-no">02</span><h3>Analizar</h3><p>Nuestro equipo técnico analiza los riesgos para orientar su colocación.</p><span class="process-icon" aria-hidden="true">↗</span></div><div class="process-row"><span class="process-no">03</span><h3>Acompañar</h3><p>Brindamos asesoría y gestión de siniestros de acuerdo con lo contratado en cada póliza.</p><span class="process-icon" aria-hidden="true">↗</span></div></div>
+        <div class="process-rows">{original.shared.process.map((widget, i) => <div class="process-row" data-source-widget={widget.id}><span class="process-no">{String(i + 1).padStart(2, '0')}</span><h3>{widget.blocks.find(block=>block.tag==='h2')?.text}</h3><p>{widget.blocks.filter(block=>block.tag==='p').map(block=>block.text).join(' ')}</p><span class="process-icon" aria-hidden="true">{widget.images[0] ? <img class="source-process-icon" src={widget.images[0].src} alt="" width="30" height="30" loading="lazy" /> : "↗"}</span></div>)}</div>
       </div>
     </section>
 
+    <section class="source-home-section" id="original-content"><div class="container"><OriginalContent path="/" /></div></section>
+
     <section class="contact" id="contacto" aria-labelledby="contact-title"><div class="container contact-grid"><div class="contact-copy"><p class="eyebrow on-dark"><span class="line"></span> EMPECEMOS UNA CONVERSACIÓN</p><h2 id="contact-title">Tu próxima gran<br/>decisión merece<br/><em>estar protegida.</em></h2><p>Cuéntanos qué necesitas cuidar. Diseñemos el siguiente paso.</p><div class="contact-lines"><a href="mailto:contacto@bullandbear-insurancebroker.com">contacto@bullandbear-insurancebroker.com <span>↗</span></a><a href="tel:+525515100605">+52 55 1510 0605 <span>↗</span></a></div></div><ContactForm /></div></section>
 
-    <section class="faq" aria-labelledby="faq-title"><div class="container faq-grid"><div><p class="eyebrow dark"><span class="dot"></span> PREGUNTAS FRECUENTES</p><h2 id="faq-title">Las preguntas<br/><em>correctas importan.</em></h2></div><div class="faq-items">{faqs.map((item, i) => <details class="faq-item" open={i===0}><summary>{item.q}<span class="faq-plus" aria-hidden="true">+</span></summary><p>{item.a}</p></details>)}</div></div></section>
+
   </main>
   <Footer />
 </body>

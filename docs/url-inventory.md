@@ -4,10 +4,10 @@
 | --- | --- |
 | `/` | Conservée |
 | `/aviso-de-privacidad/` | Conservée |
-| `/formulario-danos/` | 301 → /contacto/#interest-form |
-| `/formulario-cuidado-de-personas/` | 301 → /contacto/#interest-form |
-| `/formulario-automoviles/` | 301 → /contacto/#interest-form |
-| `/contacto-lineas-financieras/` | 301 → /contacto/#interest-form |
+| `/formulario-danos/` | Conservée : formulaire spécialisé et champs d’origine rétablis (10 novembre 2026) |
+| `/formulario-cuidado-de-personas/` | Conservée : formulaire spécialisé et champs d’origine rétablis (10 novembre 2026) |
+| `/formulario-automoviles/` | Conservée : formulaire spécialisé et champs d’origine rétablis (10 novembre 2026) |
+| `/contacto-lineas-financieras/` | Conservée : formulaire spécialisé et champs d’origine rétablis (10 novembre 2026) |
 | `/sobre-nosotros/` | Conservée |
 | `/contacto/` | Conservée |
 | `/reclutamiento/` | Conservée |

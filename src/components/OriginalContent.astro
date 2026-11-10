@@ -1,0 +1,26 @@
+---
+import original from '../data/original-content.json';
+const { path, widgets = original.pages[path]?.widgets || [] } = Astro.props;
+function cards(widget) {
+  const groups=[];let current;
+  for(const block of widget.blocks) {
+    if(block.tag==='h2'){current={title:block.text,paragraphs:[],links:[]};groups.push(current);}
+    else if(block.tag==='p'&&current)current.paragraphs.push(block.text);
+  }
+  for(const block of widget.blocks.filter(block=>block.tag==='a')) {
+    const titleMatch=groups.find(card=>card.title===block.text);
+    if(titleMatch){titleMatch.href=block.href;continue;}
+    const match=groups.find(card=>card.href===block.href)||groups.find(card=>!card.links.length);
+    if(match)match.links.push(block);
+  }
+  return groups;
+}
+---
+<div class="original-content" data-source-page={path}>
+  {widgets.map(widget => <section class:list={['source-widget', { 'source-logo-widget': widget.type === 'elementskit-client-logo.default', 'source-feature-widget': widget.type === 'instive-content-slider.default' }]} data-source-widget={widget.id}>
+    {['instive-insurance.default','elementskit-blog-posts.default'].includes(widget.type) && cards(widget).length ? <div class="original-cards">{cards(widget).map((card,i)=><article class="original-card">{widget.images[i]&&<img class:list={['original-card-media',{'original-card-icon':widget.type==='instive-insurance.default'}]} src={widget.images[i].src} alt={widget.images[i].alt} loading="lazy" decoding="async"/>}<h3>{card.href?<a href={card.href}>{card.title}</a>:card.title}</h3>{card.paragraphs.map(text=><p class:list={[{'source-excerpt':widget.type==='instive-insurance.default'&&!/[.!?…]$/.test(text)}]}>{text}</p>)}{card.links.map(link=><a class="source-link" href={link.href}>{link.text} ↗</a>)}</article>)}</div> : <>
+      {widget.blocks.map(block => block.tag === 'h2' ? <h2>{block.text}</h2> : block.tag === 'a' ? <a class="source-link" href={block.href} download={block.href.startsWith('/documents/') || undefined}>{block.text}<span aria-hidden="true"> ↗</span></a> : block.tag === 'li' ? <p class="source-list-item">{block.text}</p> : <p>{block.text}</p>)}
+      {widget.images.length > 0 && <div class:list={['source-images', { 'source-logos': widget.type === 'elementskit-client-logo.default' }]}>{widget.images.map(image => <img src={image.src} alt={image.alt} loading="lazy" decoding="async" />)}</div>}
+    </>}
+  </section>)}
+</div>

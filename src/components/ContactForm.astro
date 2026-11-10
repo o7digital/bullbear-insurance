@@ -1,10 +1,17 @@
-<form id="interest-form" class="contact-form" method="post" action="/api/contact" aria-describedby="contact-notice" data-success="Gracias. Tu solicitud se ha recibido. Nuestro equipo se pondrá en contacto contigo." data-error="No pudimos enviar tu solicitud. Inténtalo de nuevo o escríbenos por correo." data-pending="Enviando…">
-  <div class="form-top"><span>CONTACTO / 01</span><span>ASESORÍA PERSONALIZADA</span></div>
-  <h3>Hablemos de<br/><em>tu futuro.</em></h3>
-  <label for="name">Nombre</label><input id="name" maxlength="100" name="name" type="text" placeholder="Tu nombre" autocomplete="name" required />
+---
+import { forms } from '../../cms/forms.mjs';
+const { variant = 'general' } = Astro.props;
+const config = forms[variant];
+---
+<form id="interest-form" class="contact-form" method="post" action="/api/contact" aria-describedby="contact-notice" data-form={variant} data-service={config.service} data-success="Gracias. Tu solicitud se ha recibido. Nuestro equipo se pondrá en contacto contigo." data-error="No pudimos enviar tu solicitud. Inténtalo de nuevo o escríbenos por correo." data-pending="Enviando…">
+  <div class="form-top"><span>CONTACTO / 01</span><span>{config.title}</span></div>
+  <h3>Enviar<br/><em>solicitud.</em></h3>
+  <div class="form-name-grid"><div><label for="name">Nombre</label><input id="name" maxlength="80" name="name" type="text" placeholder="Nombre" autocomplete="given-name" required /></div><div><label for="last-name">Apellidos</label><input id="last-name" maxlength="80" name="last_name" type="text" placeholder="Apellidos" autocomplete="family-name" required /></div></div>
+  <label for="phone">Teléfono</label><input id="phone" maxlength="40" name="phone" type="tel" autocomplete="tel" />
   <label for="email">Correo electrónico</label><input id="email" maxlength="254" name="email" type="email" placeholder="nombre@empresa.com" autocomplete="email" required />
-  <label for="service">¿Qué te gustaría proteger?</label><select name="service" id="service" required><option value="" disabled selected>Selecciona una opción</option><option value="personal">Personas y patrimonio</option><option value="business">Empresas y negocios</option><option value="financial">Líneas financieras</option><option value="general">Asesoría general</option></select>
+  {config.choices.length > 0 && <><label for="service">Selecciona tipo de seguro</label><select name="service" id="service" required><option value="" disabled selected>Selecciona una opción</option>{config.choices.map(choice => <option value={choice.value} data-service={choice.service}>{choice.label}</option>)}</select></>}
+  {config.message && <><label for="message">Comentario o mensaje</label><textarea name="message" id="message" maxlength="4000" rows="4"></textarea></>}
   <div class="form-trap" aria-hidden="true"><label for="website">Website</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off" /></div>
   <label class="consent"><input type="checkbox" name="consent" required /> <span>He leído el <a href="/aviso-de-privacidad/">aviso de privacidad</a> y acepto el uso de mis datos para atender esta solicitud.</span></label>
-  <button class="form-submit" type="submit">Solicitar asesoría <span aria-hidden="true">↗</span></button><p class="form-privacy" id="contact-notice">Usaremos tu nombre, correo y área de interés para responder a tu solicitud. No incluyas información médica ni documentos.</p><p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+  <button class="form-submit" type="submit">Enviar solicitud <span aria-hidden="true">↗</span></button><p class="form-privacy" id="contact-notice">Usaremos tus datos de contacto y el tipo de seguro seleccionado para responder a tu solicitud. No incluyas información médica, bancaria ni documentos.</p><p class="form-message" id="form-message" role="status" aria-live="polite"></p>
 </form>

@@ -22,9 +22,9 @@ Les images (logo/portada) enregistrées dans Identidad e imágenes sont incluses
 
 ## Collections
 
-- `site_texts` : 406 textes × 6 langues ; source stable, valeur publiée, brouillon et empreinte de la source traduite.
+- `site_texts` : 537 textes × 6 langues ; source stable, valeur publiée, brouillon et empreinte de la source traduite.
 - `site_media` : logo officiel et illustration architecturale.
-- `inquiries` : nom, email, domaine d'intérêt, langue, consentement, version de l'avis, date, statut et notes.
+- `inquiries` : nom complet, prénom, nom de famille, téléphone, email, formulaire d’origine, type précis d’assurance, commentaire/message, domaine d’intérêt, langue, consentement, version de l’avis, date, statut et notes.
 
 Le frontend ne reçoit que le HTML, les images publiques du build et les messages de validation. Les secrets et les demandes restent côté serveur. Le compte Website build lit les collections de contenu et fichiers ; le compte Website contact a seulement le droit de création sur inquiries. Les autorisations anonymes Directus ne sont pas ouvertes. La licence Core permet ici les permissions par collection ; le choix des fiches publiées et des champs lus est appliqué dans le loader serveur.
 
@@ -38,7 +38,7 @@ railway run --no-local --service directus -- node cms/bootstrap.mjs
 
 Le bootstrap ajoute les collections et données manquantes, conserve les textes modifiés et met à jour leur classement éditorial. Ne pas le réexécuter pour restaurer un élément volontairement supprimé. Le catalogue initial est généré par `CONTENT_INVENTORY_ONLY=true npm run build` et traduit par `node cms/translate-seed.mjs` avec la clé dans l'environnement ; aucun secret ne doit être ajouté aux fichiers.
 
-Tests serveur : `npm run test:cms`. Contrôle réel du Studio : `railway run --no-local --service directus -- node cms/studio/browser-check.mjs`. Ce contrôle crée puis abandonne un brouillon sur le texte Comparar et ne publie rien. Les tests automatisés utilisent Chromium ; la consultation humaine des liens se fait dans Firefox.
+Tests serveur : `npm run test:cms`. Contrôle réel du Studio : `railway run --no-local --service directus -- node cms/studio/browser-check.mjs`. Ce contrôle crée puis abandonne un brouillon sur le texte Misión et ne publie rien. Les tests automatisés utilisent Chromium ; la consultation humaine des liens se fait dans Firefox.
 
 Le Studio se déploie via le CLI Railway avec `railway up cms --path-as-root --service studio --detach`. Le Dockerfile ne copie pas les scripts de bootstrap ni les exports source. Après succès, vérifier `/health`, la connexion et les écrans.
 
@@ -47,3 +47,9 @@ Le Studio se déploie via le CLI Railway avec `railway up cms --path-as-root --s
 Volumes séparés pour `/var/lib/postgresql/data` et `/directus/uploads`. Les sauvegardes Railway quotidiennes et hebdomadaires sont activées pour les deux volumes. La restauration n'a pas été exercée pendant cette livraison. Ne pas supprimer la base ni les uploads lors d'un redéploiement. Les variables Railway contiennent le secret Directus, les comptes techniques, le secret de session, le fournisseur de traduction et le hook Vercel. Les variables Preview de Vercel sont limitées à la branche `feat/atelier-v2-preview`.
 
 Les historiques de publication Vercel permettent de retrouver le dernier déploiement réussi. Les versions de contenu et l'activité Directus permettent de retracer les modifications. La durée de conservation des demandes doit être gérée par le propriétaire dans Solicitudes/Directus ; aucune purge automatique n'est configurée.
+
+## Migration complète du contenu du 10 novembre 2026
+
+Les contenus métier complets et les quatre formulaires spécialisés sont décrits dans [le rapport de migration](../docs/content-migration-2026-11-10.md). Les images et les deux PDF d’origine sont des assets statiques versionnés ; le Studio conserve l’édition des textes et l’interface existante de remplacement du logo et de l’image principale.
+
+Après l’import du nouveau catalogue, `railway run --no-local --service directus -- node cms/sync-content-manifest.mjs` archive les anciennes chaînes qui ne sont plus utilisées. Ce script refuse d’archiver une ancienne chaîne modifiée ou un brouillon sans réconciliation explicite. Il ne supprime ni utilisateur, ni rôle, ni demande reçue. Les champs supplémentaires de `inquiries` sont ajoutés sans toucher aux données existantes par le bootstrap.
