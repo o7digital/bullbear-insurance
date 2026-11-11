@@ -2,7 +2,7 @@
 import { site, indexable } from '../lib/site';
 const { title, description, type = 'website', service } = Astro.props;
 const canonical = new URL(Astro.url.pathname, site.url).href;
-const assetOrigin = import.meta.env.VERCEL_URL ? `https://${import.meta.env.VERCEL_URL}` : site.url;
+const assetOrigin = import.meta.env.PUBLIC_ASSET_ORIGIN || 'https://bullbear-insurance-preview.vercel.app';
 const schema = {
   '@context': 'https://schema.org', '@graph': [
     { '@type': 'InsuranceAgency', '@id': `${site.url}/#agency`, name: site.name, url: `${site.url}/`, telephone: '+525515100605', email: site.email,

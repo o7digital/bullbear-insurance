@@ -13,6 +13,7 @@ test('all pages, SEO, structured data and internal links', async ({ page, reques
     await expect(page.locator('h1')).toHaveCount(1);
     await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', 'noindex, nofollow');
     await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', `https://bullandbear-insurancebroker.com${path}`);
+    await expect(page.locator('meta[property="og:image"]')).toHaveAttribute('content', 'https://bullbear-insurance-preview.vercel.app/assets/architecture-hero.webp');
     expect((await page.title()).length).toBeGreaterThan(15);
     const desc = await page.locator('meta[name="description"]').getAttribute('content');
     expect(desc?.length).toBeGreaterThan(20);
