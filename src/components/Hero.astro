@@ -46,7 +46,7 @@ const slides = [
     {slides.map((slide, index) => <button type="button" data-hero-control={index} aria-label={slide.label} aria-pressed={index === 0 ? 'true' : 'false'} aria-controls="hero-title hero-subtitle">{String(index + 1).padStart(2, '0')}</button>)}
   </div>
   <div class="hero-slide-content" data-source-widget="96d11b5" hidden>
-    {slides.map((slide, index) => <div data-hero-slide={index} data-slide-kind={slide.kind}>
+    {slides.map((slide, index) => <div data-hero-slide={index} data-slide-kind={slide.kind} data-sentence-case={index === 1 ? 'true' : undefined}>
       <p data-slide-title set:html={slide.title} />
       <p data-slide-subtitle>{slide.subtitle}</p>
       <a data-slide-contact href={slide.href}>{slide.contact}</a>

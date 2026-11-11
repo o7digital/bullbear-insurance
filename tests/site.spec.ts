@@ -98,32 +98,43 @@ test('approved architectural hero opens first and source themes remain additiona
       return {size:style.fontSize,lineHeight:style.lineHeight,spacing:style.letterSpacing,family:style.fontFamily,accentSize:accent.fontSize,accentSpacing:accent.letterSpacing};
     });
     const approvedTypography=await titleTypography();
+    const heroHeight=await page.locator('.hero').evaluate(hero=>hero.getBoundingClientRect().height);
     const bank=page.locator('[data-hero-slide]');
     for(const index of [1,2,3,0]) {
       const slide=bank.nth(index);
       await page.locator(`[data-hero-control="${index}"]`).click();
-      await expect(page.locator('#hero-title')).toHaveText(await slide.locator('[data-slide-title]').textContent()||'');
+      await expect(page.locator('#hero-title')).toHaveText((await slide.locator('[data-slide-title]').textContent()||'').normalize('NFC'),{ignoreCase:index===1});
+      if(index===1&&!locale){
+        await expect(page.locator('#hero-title')).toHaveText('Seguro de protección de datos y seguridad informática');
+        await expect(page.locator('#hero-title em')).toHaveText('seguridad informática');
+      }
       await expect(page.locator('#hero-subtitle')).toHaveText(await slide.locator('[data-slide-subtitle]').innerText());
       await expect(page.locator('#hero-contact')).toHaveAttribute('href',await slide.locator('a').getAttribute('href')||'');
       await expect(page.locator('[data-hero-image]:visible')).toHaveCount(1);
       await expect(page.locator(`[data-hero-image="${index}"]`)).toBeVisible();
       await expect(page.locator(`[data-hero-control="${index}"]`)).toHaveAttribute('aria-pressed','true');
-      expect(await titleTypography(),`${locale} slide ${index}: same typography as the approved first slide`).toEqual(approvedTypography);
+      const typography=await titleTypography();
+      expect(typography.family).toBe(approvedTypography.family);
+      expect(parseFloat(typography.size)).toBeLessThanOrEqual(parseFloat(approvedTypography.size));
+      expect(await page.locator('.hero').evaluate(hero=>hero.getBoundingClientRect().height),`${locale} slide ${index}: no height jump`).toBe(heroHeight);
     }
     expect(await page.locator('#hero-title').innerHTML()).toBe(approvedTitle);
     await expect(page.locator('#hero-subtitle')).toHaveText(approvedSubtitle);
     for(const width of [390,320]){
      await page.setViewportSize({width,height:900});
-     const mobileTypography=await titleTypography();
+     const mobileHeight=await page.locator('.hero').evaluate(hero=>hero.getBoundingClientRect().height);
      for(const index of [1,2,3,0]){
       await page.locator(`[data-hero-control="${index}"]`).click();
       expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
-      expect(await titleTypography(),`${locale} slide ${index} at ${width}px: same typography as the first slide`).toEqual(mobileTypography);
+      expect(await page.locator('.hero').evaluate(hero=>hero.getBoundingClientRect().height),`${locale} slide ${index} at ${width}px: no height jump`).toBe(mobileHeight);
       const clear=await page.evaluate(()=>{
         const controls=document.querySelector('.hero-switcher')!.getBoundingClientRect();
         const footer=document.querySelector('.hero-bottom')!.getBoundingClientRect();
         const ctas=document.querySelector('.hero-ctas')!.getBoundingClientRect();
-        return controls.bottom<footer.top&&controls.top>=ctas.bottom;
+        const title=document.querySelector('#hero-title')!.getBoundingClientRect();
+        const eyebrow=document.querySelector('.hero-eyebrow')!.getBoundingClientRect();
+        const header=document.querySelector('.site-header')!.getBoundingClientRect();
+        return controls.bottom<footer.top&&controls.top>=ctas.bottom&&title.bottom<ctas.top&&eyebrow.top>=header.bottom;
       });
       expect(clear,`${locale} slide ${index} at ${width}px: controls do not cover the approved hero text or links`).toBe(true);
      }

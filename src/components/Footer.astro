@@ -3,4 +3,40 @@ import { site } from '../lib/site';
 import original from '../data/original-content.json';
 ---
 <section class="partner-section" id="partners"><div class="container"><h2>{original.shared.partnerHeading}</h2><div class="partner-logos">{original.shared.partners.map(image=><img src={image.src} alt={image.alt} loading="lazy" decoding="async" />)}</div></div></section>
-<footer class="site-footer" id="footer"><div class="container"><div class="footer-top"><span>BULL &amp; BEAR INSURANCE BROKER</span><a href="#inicio">VOLVER ARRIBA ↑</a></div><a class="footer-client-logo" href="/" aria-label="Bull &amp; Bear — inicio"><img src="/assets/client-logo-light.png" width="590" height="111" alt="Bull &amp; Bear Insurance Broker" loading="lazy" /></a><p class="footer-question">{original.shared.footer.question}</p><nav class="footer-links" aria-label="Información y servicios"><a href="/sobre-nosotros/">Nosotros</a><a href="/service/cuidado-de-personas/">Cuidado personal</a><a href="/service/danos/">Daños</a><a href="/service/automoviles/">Autos</a><a href="/service/lineas-financieras/">Líneas financieras</a><a href="/blog/">Artículos</a><a href="/reclutamiento/">Reclutamiento</a><a href="/contacto/">Contacto</a><a href="/aviso-de-privacidad/">Aviso de privacidad</a></nav><p class="footer-label">{original.shared.footer.office}</p><address>{site.address}</address><p class="footer-availability">{original.shared.footer.availability}</p><a class="footer-social" href={original.shared.footer.facebook} target="_blank" rel="noopener noreferrer">Facebook ↗</a><div class="footer-bottom"><a href={`mailto:${site.email}`}>{site.email}</a><a href="tel:+525515100605">{site.phone}</a><span>{original.shared.footer.copyright}</span></div></div></footer>
+<footer class="site-footer" id="footer">
+  <div class="container">
+    <div class="footer-top"><span>BULL &amp; BEAR INSURANCE BROKER</span><a href="#inicio">VOLVER ARRIBA ↑</a></div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="footer-client-logo" href="/" aria-label="Bull &amp; Bear — inicio"><img src="/assets/client-logo-light.png" width="590" height="111" alt="Bull &amp; Bear Insurance Broker" loading="lazy" /></a>
+        <p class="footer-question">{original.shared.footer.question}</p>
+      </div>
+      <nav class="footer-links" aria-label="Información y servicios">
+        <div class="footer-link-group">
+          <p class="footer-heading">Nosotros</p>
+          <a href="/sobre-nosotros/">Nosotros</a>
+          <a href="/blog/">Artículos</a>
+          <a href="/reclutamiento/">Reclutamiento</a>
+          <a href="/contacto/">Contacto</a>
+          <a href="/aviso-de-privacidad/">Aviso de privacidad</a>
+        </div>
+        <div class="footer-link-group">
+          <p class="footer-heading">Productos</p>
+          <a href="/service/cuidado-de-personas/">Cuidado personal</a>
+          <a href="/service/danos/">Daños</a>
+          <a href="/service/automoviles/">Autos</a>
+          <a href="/service/lineas-financieras/">Líneas financieras</a>
+        </div>
+      </nav>
+      <div class="footer-contact">
+        <p class="footer-heading">{original.shared.footer.office}</p>
+        <address>{site.address}</address>
+        <a href={`mailto:${site.email}`}>{site.email}</a>
+        <a href="tel:+525515100605">{site.phone}</a>
+        <p class="footer-availability">{original.shared.footer.availability}</p>
+        <a class="footer-social" href={original.shared.footer.facebook} target="_blank" rel="noopener noreferrer">Facebook ↗</a>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>{original.shared.footer.copyright}</span></div>
+  </div>
+</footer>

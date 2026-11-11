@@ -26,11 +26,27 @@
   });
   const heroSlides=[...document.querySelectorAll('[data-hero-slide]')];
   const heroControls=[...document.querySelectorAll('[data-hero-control]')];
+  // Preserve source/CMS wording while displaying all-caps headings in sentence case.
+  const sentenceCase = element => {
+    const locale=document.documentElement.lang;
+    if(element.textContent!==element.textContent.toLocaleUpperCase(locale))return;
+    const walker=document.createTreeWalker(element,NodeFilter.SHOW_TEXT);
+    let node,first=true;
+    while((node=walker.nextNode())){
+      node.textContent=node.textContent.toLocaleLowerCase(locale).normalize('NFC');
+      if(first&&/\p{L}/u.test(node.textContent)){
+        node.textContent=node.textContent.replace(/\p{L}/u,letter=>letter.toLocaleUpperCase(locale));
+        first=false;
+      }
+    }
+  };
+  document.querySelectorAll('.source-feature-card h2').forEach(sentenceCase);
   heroControls.forEach(button=>button.addEventListener('click',()=>{
     const index=Number(button.dataset.heroControl),slide=heroSlides[index];
     if(!slide)return;
     document.querySelector('.atelier-hero').dataset.heroKind=slide.dataset.slideKind;
     document.querySelector('#hero-title').innerHTML=slide.querySelector('[data-slide-title]').innerHTML;
+    if(slide.dataset.sentenceCase)sentenceCase(document.querySelector('#hero-title'));
     document.querySelector('#hero-subtitle').textContent=slide.querySelector('[data-slide-subtitle]').textContent;
     const contact=document.querySelector('#hero-contact'),link=slide.querySelector('[data-slide-contact]');
     contact.setAttribute('href',link.getAttribute('href'));
